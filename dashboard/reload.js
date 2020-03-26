@@ -1,31 +1,3 @@
-/*$("#typ").focus();
-$(document).on('load', function(){
-  $("#search").keyup(function(){
-    var newId = $("#id").val();
-    if (!$("#typ").val()) {
-      var newTyp = "";
-      alert('empty');
-      //alert('typ');
-    } else {
-      var newTyp = $("#typ").val();
-    }
-    if (!$("#kapazitaet").val()) {
-      var newKapazitaet = "";
-      //alert('kapa');
-    } else {
-      var newKapazitaet = $("#kapazitaet").val();
-    }
-    $("#search").empty();
-    $("#output").empty();
-    alert(newTyp);
-    $("#search").load("load.php", {
-      id: newId,
-      typ: newTyp,
-      kapazitaet: newKapazitaet
-      });
-  });
-});*/
-
 function updateData() {
   $("#output").load("load.php", {
     fzgLabel: checkInput("#fahrzeug"), //Fahrzeug.Label
@@ -50,7 +22,4 @@ function selectRow(value){
   var selectInTable = document.getElementsByTagName('tr');
   $(selectedRow).addClass('selected');
   $(selectInTable).not(selectedRow).removeClass('selected');
-  
-  //selectedRow.toggleClass("selected");
-  //selectedRow.not(selectedRow).removeClass("selected");
 }
