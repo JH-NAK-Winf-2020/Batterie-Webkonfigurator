@@ -8,7 +8,7 @@
 <div id="output" class="output">
 <div>
   <table class="wrapper scrollbar">
-    <thead class="fixedHeader" position="fixed">
+    <thead>
 		<tr>
 		  <th>Fahrzeugtyp </th>
 		  <th>ab Baujahr</th>
@@ -27,6 +27,7 @@
 				  <td style="width:auto"><?php echo htmlspecialchars($dataset['brLabel'])?></td>
 				  <td style="width:auto"><?php echo htmlspecialchars($dataset['baKapa'])?></td>
 				  <td style="width:auto"><?php echo htmlspecialchars($dataset['baTyp'])?></td>
+				  <td style="width:auto"><?php echo htmlspecialchars($dataset['baMaterial'])?></td>
 				  <td style="width:auto"><?php echo htmlspecialchars($dataset['baMaterial'])?></td>
 				</tr>
 	        <?php $id=$id+2; } ?>
