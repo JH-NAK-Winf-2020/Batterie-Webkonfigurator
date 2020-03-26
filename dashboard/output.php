@@ -21,7 +21,7 @@
     </thead>
     <tbody>
             <?php foreach ($data as $dataset) { //Ausgabe der Suchergbnisse?>
-    	        <tr id="<?php echo htmlspecialchars($dataset['masterId']) ?>"< onclick="selectRow(<?php echo $id ?>)">
+    	        <tr id="<?php echo htmlspecialchars($dataset['masterId']) ?>"< onclick="selectRow(<?php echo htmlspecialchars($dataset['masterId'])?>)">
 		          <td style="width:auto"><?php echo htmlspecialchars($dataset['fzgLabel'])?></td>
 		          <td style="width:auto"><?php echo htmlspecialchars($dataset['fzgSop'])?></td>
 				  <td style="width:auto"><?php echo htmlspecialchars($dataset['brLabel'])?></td>
