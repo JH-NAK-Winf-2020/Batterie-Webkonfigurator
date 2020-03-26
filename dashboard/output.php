@@ -7,7 +7,7 @@
  ?>
 <div id="output" class="output">
 <div>
-  <table class="wrapper scrollbar">
+  <table class="fixed-header">
     <thead>
 		<tr>
 		  <th>Fahrzeugtyp </th>
