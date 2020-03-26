@@ -33,7 +33,8 @@ function updateData() {
     brLabel: checkInput("#batterieraum"), //Batterieraum.Label
     baKapa: checkInput("#baKapa"),
     baTyp: checkInput("#baTyp"),
-    baMaterial: checkInput("#baMaterial")
+    baMaterial: checkInput("#baMaterial"),
+    asLabel: checkInput("#asLabel")
     });
 }
 function checkInput(FieldName){
