@@ -28,7 +28,7 @@
 				  <td style="width:auto"><?php echo htmlspecialchars($dataset['baTyp'])?></td>
 				  <td style="width:auto"><?php echo htmlspecialchars($dataset['baMaterial'])?></td>
 				</tr>
-	        <?php $id=$id+1; } ?>
+	        <?php $id=$id+2; } ?>
     </tbody>
   </table>
 
