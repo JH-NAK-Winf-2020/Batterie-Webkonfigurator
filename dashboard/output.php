@@ -16,6 +16,7 @@
 		  <th>Batterie Kapazitaet</th>
 		  <th>Batterie Typ</th>
 		  <th>Batterie Materialnummer</th>
+		  <th>Zugangssystem</th>
 		</tr>
     </thead>
     <tbody>
