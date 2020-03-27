@@ -22,4 +22,8 @@ function selectRow(value){
   var selectInTable = document.getElementsByTagName('tr');
   $(selectedRow).addClass('selected');
   $(selectInTable).not(selectedRow).removeClass('selected');
+
+    $("#outputNSatz").load("load_NSatz.php", {
+    masterID: value //passender MasterID 
+    });
 }
