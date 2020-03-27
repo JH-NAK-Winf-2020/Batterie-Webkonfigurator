@@ -8,7 +8,7 @@
 <div id="output" class="output">
 <div>
   <table class="wrapper scrollbar">
-    <thead class="fixedHeader" position="fixed">
+    <thead>
 		<tr>
 		  <th>Fahrzeugtyp </th>
 		  <th>ab Baujahr</th>
@@ -16,19 +16,21 @@
 		  <th>Batterie Kapazitaet</th>
 		  <th>Batterie Typ</th>
 		  <th>Batterie Materialnummer</th>
+		  <th>Zugangssystem</th>
 		</tr>
     </thead>
     <tbody>
             <?php foreach ($data as $dataset) { //Ausgabe der Suchergbnisse?>
-    	        <tr id="<?php echo $id ?>"< onclick="selectRow(<?php echo $id ?>)">
+    	        <tr id="<?php echo htmlspecialchars($dataset['masterId']) ?>"< onclick="selectRow(<?php echo htmlspecialchars($dataset['masterId'])?>)">
 		          <td style="width:auto"><?php echo htmlspecialchars($dataset['fzgLabel'])?></td>
 		          <td style="width:auto"><?php echo htmlspecialchars($dataset['fzgSop'])?></td>
 				  <td style="width:auto"><?php echo htmlspecialchars($dataset['brLabel'])?></td>
 				  <td style="width:auto"><?php echo htmlspecialchars($dataset['baKapa'])?></td>
 				  <td style="width:auto"><?php echo htmlspecialchars($dataset['baTyp'])?></td>
 				  <td style="width:auto"><?php echo htmlspecialchars($dataset['baMaterial'])?></td>
+				  <td style="width:auto"><?php echo htmlspecialchars($dataset['asLabel'])?></td>
 				</tr>
-	        <?php $id=$id+1; } ?>
+	        <?php } ?>
     </tbody>
   </table>
 
