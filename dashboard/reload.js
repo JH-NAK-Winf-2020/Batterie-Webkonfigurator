@@ -3,7 +3,7 @@ function updateData() {
     fzgLabel: checkInput("#fahrzeug"), //Fahrzeug.Label
     fzgSop: checkInput("#sop"),       //Fahrzeug.sop
     brLabel: checkInput("#batterieraum"), //Batterieraum.Label
-    baKapa: checkInput("#baKapa"),
+    baKapa: checkInput("#baKapa"),    
     baTyp: checkInput("#baTyp"),
     baMaterial: checkInput("#baMaterial"),
     asLabel: checkInput("#asLabel")

@@ -5,3 +5,39 @@
 
 tr:hover {background-color:#f5f5f5;}
 
+.fixed-header tbody {
+  display:block;
+  overflow:auto;
+  height:300px;
+  width:100%;
+}
+.fzg-data td{
+ background-color: beige;
+}
+
+.batterie-data td{
+ background-color: bisque;
+}
+
+.ausstattung-data td{
+ background-color: blanchedalmond;
+}
+
+.fixed-header thead tr{
+  display:block;
+  background-color: burlywood;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  padding:0.3em 0.5em;
+}
+caption{
+  font-size:1.5em;
+}
+
+td {
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
