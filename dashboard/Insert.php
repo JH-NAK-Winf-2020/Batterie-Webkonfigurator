@@ -21,6 +21,7 @@ while($rows = $resultSet->fetch_assoc())
 }
 ?>
 <br><br>
+<br><br>
 </select> 
 <input type = 'submit' name = 'submit' value = 'choose Table'/> <br><br>
 </form>
