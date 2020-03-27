@@ -11,5 +11,6 @@
   <input type="text" id="baTyp" name="baTyp"  placeholder="Batterietyp" onkeyup="updateData()" >
   <input type="text" id="baMaterial" name="baMaterial"  placeholder="Batterie-Materialnr" onkeyup="updateData()" >
   <input type="text" id="asLabel" name="asLabel"  placeholder="Ausstattung-Zugangssystem" onkeyup="updateData()" >
+  <input type="text" id="a2sLabel" name="asLabel"  placeholder="Ausstattung-Zugangssystem" onkeyup="updateData()" >
 
 </form>
