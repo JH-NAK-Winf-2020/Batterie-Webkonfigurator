@@ -1,6 +1,5 @@
 
  <?php
-echo "Hallo";
  ?>
 <div id="outputNSatz" class="outputNSatz">
 <div>
@@ -9,17 +8,17 @@ echo "Hallo";
 		<tr>
 		  <th>Nachruestsatz </th>
 		  <th>Nachruestart</th>
-		  <th> Kommentar </th>
+		  <th>Kommentar </th>
 		</tr>
     </thead>
     <tbody>
-            <?php foreach ($nSatzData as $nSatzDataset) { //Ausgabe der Suchergbnisse?>
-    	        <tr id="<?php echo htmlspecialchars($dataset['masterId']) ?>"< onclick="selectRow(<?php echo htmlspecialchars($dataset['masterId'])?>)">
-		          <td style="width:auto"><?php echo htmlspecialchars($nSatzDataset['fzgLabel'])?></td>
-		          <td style="width:auto"><?php echo htmlspecialchars($nSatzDataset['fzgSop'])?></td>
-				  <td style="width:auto"><?php echo htmlspecialchars($nSatzDataset['brLabel'])?></td>
+			<?php if($nSatzData != ''){ foreach ($nSatzData as $nSatzDataset) { //Ausgabe der Suchergbnisse?>
+    	        <tr>
+		          <td><?php echo empty(htmlspecialchars($nSatzDataset['nartLabel']))? 'NULL': htmlspecialchars($nSatzDataset['nartLabel'])?></td>
+		          <td><?php echo htmlspecialchars($nSatzDataset['nsatzLabel'])?></td>
+				  <td><?php echo htmlspecialchars($nSatzDataset['nsatzKomm'])?></td>
 				</tr>
-	        <?php } ?>
+	        <?php }} ?>
     </tbody>
   </table>
 
