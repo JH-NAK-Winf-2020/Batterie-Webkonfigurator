@@ -5,13 +5,40 @@
 
 tr:hover {background-color:#f5f5f5;}
 
-.fixed-header tbody{
+.fixed-header tbody {
   display:block;
   overflow:auto;
   height:300px;
   width:100%;
 }
+.test tr{
+ border-top: 1px ;
+ border-top-color: cadetblue;
+ border-bottom-color: cadetblue;
+ border-bottom: 1px;
+  
+}
 .fixed-header thead tr{
   display:block;
+  background-color: burlywood;
+    border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  border-left: 1px solid #666;
+  border-right: 1px solid #666
+}
+
+table, th, td {
+  border-collapse: collapse;
+  padding:0.3em 0.5em;
+}
+caption{
+  font-size:1.5em;
+}
+
+td {
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  border-left: 1px solid #666;
+  border-right: 1px solid #666;
 }
 
