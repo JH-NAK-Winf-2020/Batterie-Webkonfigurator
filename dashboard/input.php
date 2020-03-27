@@ -4,16 +4,16 @@
 -->
 
 <nav>
-  <ul style="list-style-type:square">
+  <ul>
   
 <form class="search" id='search' name='search' method="POST">
   <input type="text" id="fahrzeug" name="fahrzeug" placeholder="Fahrzeugtyp" onkeyup="updateData()" >
    <input type="text" id="sop" name="sop" placeholder="Baujahr"  onkeyup="updateData()" >
   <input type="text" id="batterieraum" name="batterieraum"  placeholder="Batterieraum" onkeyup="updateData()" >
-  <input type="text" id="baKapa" name="baKapa"  placeholder="Batteriekapazitaet" onkeyup="updateData()" >
+  <input width="20" height="10" type="text" id="baKapa" name="baKapa"  placeholder="Batteriekapazitaet" onkeyup="updateData()" >
   <input type="text" id="baTyp" name="baTyp"  placeholder="Batterietyp" onkeyup="updateData()" >
   <input type="text" id="baMaterial" name="baMaterial"  placeholder="Batterie-Materialnr" onkeyup="updateData()" >
-  <input type="text" id="asLabel" name="asLabel"  placeholder="Ausstattung-Zugangssystem" onkeyup="updateData()" >
+  <input type="text" id="asLabel" name="asLabel"  placeholder="Zugangssystem" onkeyup="updateData()" >
 </form>
 </ul>
 </nav>
