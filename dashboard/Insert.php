@@ -1,6 +1,6 @@
 <?php
 
-include 'config/connect.php'; //Verbinung SQL DB herstellen
+include 'config/connect.php'; //Verbinung SQL DB herstellen 
 
 $resultSet = $conn->query("SELECT table_name FROM information_schema.tables 
                             WHERE table_schema = 'batterie-nak'") or die($conn->error);
@@ -8,7 +8,7 @@ $resultSet = $conn->query("SELECT table_name FROM information_schema.tables
 <html>
 <head>
 </head>
-<body>
+<body> 
 <center>
 <form method ="POST">
 <select name="batterie-nak">
