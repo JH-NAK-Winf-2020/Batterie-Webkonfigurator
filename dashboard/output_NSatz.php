@@ -1,10 +1,10 @@
 
  <?php
- $id=1;
+echo "Hallo";
  ?>
-<div id="outputNSatz" class="output">
+<div id="outputNSatz" class="outputNSatz">
 <div>
-  <table class="wrapper scrollbar">
+  <table class="">
     <thead>
 		<tr>
 		  <th>Nachruestsatz </th>
