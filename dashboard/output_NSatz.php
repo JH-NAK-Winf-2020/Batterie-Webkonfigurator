@@ -6,17 +6,17 @@
   <table class="">
     <thead>
 		<tr>
-		  <th>Nachruestsatz </th>
-		  <th>Nachruestart</th>
+		  <th>Nachruestart </th>
+		  <th>Nachruestsatz</th>
 		  <th>Kommentar </th>
 		</tr>
     </thead>
     <tbody>
 			<?php if($nSatzData != ''){ foreach ($nSatzData as $nSatzDataset) { //Ausgabe der Suchergbnisse?>
     	        <tr>
-		          <td><?php echo empty(htmlspecialchars($nSatzDataset['nartLabel']))? 'NULL': htmlspecialchars($nSatzDataset['nartLabel'])?></td>
-		          <td><?php echo htmlspecialchars($nSatzDataset['nsatzLabel'])?></td>
-				  <td><?php echo htmlspecialchars($nSatzDataset['nsatzKomm'])?></td>
+		          <td><?php echo isset($nSatzDataset['nartLabel'])? htmlspecialchars($nSatzDataset['nartLabel']):'NULL'?></td>
+		          <td><?php echo isset($nSatzDataset['nsatzLabel'])? htmlspecialchars($nSatzDataset['nsatzLabel']):'kein Nachruestsatz vorhanden'?></td>
+				  <td><?php echo isset($nSatzDataset['nsatzLabel'])? htmlspecialchars($nSatzDataset['nsatzLabel']):'kein Nachruestsatz vorhanden'?></td>
 				</tr>
 	        <?php }} ?>
     </tbody>
