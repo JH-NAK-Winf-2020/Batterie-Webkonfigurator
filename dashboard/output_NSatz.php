@@ -2,7 +2,6 @@
  <?php
  ?>
 <div id="outputNSatz" class="outputNSatz">
-<div>
   <table class="">
     <thead>
 		<tr>
@@ -21,6 +20,4 @@
 	        <?php }} ?>
     </tbody>
   </table>
-
-</div>
 </div>
