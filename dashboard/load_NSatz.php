@@ -16,7 +16,7 @@
   $sqlCheckNsatz = "SELECT master.nachruestsatz as masterNsatz FROM master WHERE master.id = $masterID";
   $checkResult = mysqli_query($conn, $sqlCheckNsatz);
   $checkArray = mysqli_fetch_all($checkResult, MYSQLI_ASSOC);
-  if($checkArray[0]['masterNsatz']== ''){#
+  if($checkArray[0]['masterNsatz']== ''){
   //kein Nachruestsatzvorhanden
     $sql = "SELECT nachruestart.label as nartLabel FROM nachruestart WHERE nachruestart.id = (SELECT master.nachruestart FROM master WHERE master.id = $masterID)";
   }else{
