@@ -3,7 +3,7 @@ function updateData() {
     fzgLabel: checkInput("#fahrzeug"), //Fahrzeug.Label
     fzgSop: checkInput("#sop"),       //Fahrzeug.sop
     brLabel: checkInput("#batterieraum"), //Batterieraum.Label
-    baKapa: checkInput("#baKapa"),
+    baKapa: checkInput("#baKapa"),    
     baTyp: checkInput("#baTyp"),
     baMaterial: checkInput("#baMaterial"),
     asLabel: checkInput("#asLabel")
@@ -22,4 +22,7 @@ function selectRow(value){
   var selectInTable = document.getElementsByTagName('tr');
   $(selectedRow).addClass('selected');
   $(selectInTable).not(selectedRow).removeClass('selected');
+    $("#outputNSatz").load("load_NSatz.php", {
+    masterID: value //passender MasterID 
+    });
 }

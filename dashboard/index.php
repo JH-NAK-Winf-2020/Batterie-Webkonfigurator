@@ -8,6 +8,6 @@ include 'config/connect.php'; //Verbinung SQL DB herstellen
  
   mysqli_free_result($result);
   mysqli_close($conn);
-
+ $nSatzData = '';
 include 'initial.php'; //Seitenaufbau der ersten Seite (ohne Nachladen)
 ?>
