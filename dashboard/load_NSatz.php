@@ -10,11 +10,6 @@
   include 'config/connect.php'; //Verbinung SQL DB herstellen
 
   $masterID =  mysqli_real_escape_string($conn, $_POST['masterID']);#
-<<<<<<< HEAD
-  //echo $masterID;
-=======
-  // echo $masterID;
->>>>>>> fa9e7edb6c92bd2307875790ca46c97057514e3f
 
     //Check if Nachruesatzexists
   $sqlCheckNsatz = "SELECT master.nachruestsatz as masterNsatz FROM master WHERE master.id = $masterID";
