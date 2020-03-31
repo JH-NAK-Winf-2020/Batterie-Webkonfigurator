@@ -17,7 +17,7 @@
 		          <td><?php echo isset($nSatzDataset['nsatzLabel'])? htmlspecialchars($nSatzDataset['nsatzLabel']):'kein Nachruestsatz vorhanden'?></td>
 				  <td><?php echo isset($nSatzDataset['nsatzLabel'])? htmlspecialchars($nSatzDataset['nsatzLabel']):'kein Nachruestsatz vorhanden'?></td>
 				</tr>
-	        <?php }} ?>
+	        <?php };}; ?>
     </tbody>
   </table>
 </div>
