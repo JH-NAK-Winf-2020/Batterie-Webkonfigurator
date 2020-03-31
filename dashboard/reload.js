@@ -9,6 +9,13 @@ function updateData() {
     asLabel: checkInput("#asLabel")
     });
 }
+
+function updateDropDown(){
+  $("#input").load("loadInput.php",{
+    
+
+  });
+}
 function checkInput(FieldName){
     if (!$(FieldName).val()) {
       return "";

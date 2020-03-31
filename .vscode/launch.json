@@ -11,6 +11,22 @@
       "port": 9286,
       "webRoot": "${workspaceFolder}",
       "url": "http://127.0.0.1:58105/p/projekt_lit/dashboard/header.html?_cmAuth\u003duplpmquyms"
+    },
+    {
+      "name": "Launch index.php",
+      "type": "php",
+      "request": "launch",
+      "port": 9000,
+      "cwd": "${workspaceFolder}/dashboard",
+      "program": "${workspaceFolder}/dashboard/index.php"
+    },
+    {
+      "name": "Launch load.php",
+      "type": "php",
+      "request": "launch",
+      "port": 9000,
+      "cwd": "${workspaceFolder}/dashboard",
+      "program": "${workspaceFolder}/dashboard/load.php"
     }
   ]
 }

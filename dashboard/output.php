@@ -2,9 +2,7 @@
    Nimmt als Input $data entgegen, welches aktuelle Suchergebnisse enthält (beim 1. Laden aus index.php, für Aktualisierungen aus load.php )
    Wird durch js/jquery Funktion updateData() als Teil der Seite seperat nachgeladen (ajax)
  -->
- <?php
- $id=1;
- ?>
+
 <div id="output" class="output">
 <div>
   <table class="fixed-header">
