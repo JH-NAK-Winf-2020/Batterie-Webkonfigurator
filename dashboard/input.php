@@ -5,13 +5,18 @@
 <nav id='input'>
   <ul>
 <form class="search" id='search' name='search' method="POST">
-  <input type="text" id="fahrzeug" name="fahrzeug" placeholder="Fahrzeugtyp" onkeyup="updateData()" > </br>
-  <select id="sop" name="sop" placeholder="Baujahr" placeholder="ab Baujahr" onChange="updateData()">
-     <?php foreach($options as $option){?>
-      <option value=<?php echo $option?>><?php if($option==''){echo 'ab Baujahr';}else{echo 'ab '. $option;};?></option>
-    <?php }?>
+  <input type="text" id="fahrzeug" name="fahrzeug" placeholder="Fahrzeugtyp" value="<?php echo $_POST['fzgLabel'];?>" onkeyup="updateData()" > </br>
+  <select id="sop" name="sop" placeholder="ab Baujahr" onChange="updateData()">
+    <?php foreach($optionsFzgSop as $optionFzgSop){?>
+      <option value="<?php echo $optionFzgSop;?>"><?php if($optionFzgSop==''){echo 'ab Baujahr';}else{echo 'ab '. $optionFzgSop;};?></option>
+    <?php };?>
+  </select>
+  </br>
+   <select id="batterieraum" name="batterieraum"  placeholder="Batterieraum" onChange="updateData()">
+     <?php foreach($optionsBrLabel as $optionBrLabel){?>
+      <option value="<?php echo $optionBrLabel;?>"><?php if($optionBrLabel==''){echo 'Batterieraum';}else{echo $optionBrLabel;};?></option>
+     <?php };?>
   </select></br>
-  <input type="text" id="batterieraum" name="batterieraum" placeholder="Batterieraum" onkeyup="updateData()">
   <input type="text" id="baKapa" name="baKapa"  placeholder="Batteriekapazitaet" onkeyup="updateData()" >
   <input type="text" id="baTyp" name="baTyp"  placeholder="Batterietyp" onkeyup="updateData()" >
   <input type="text" id="asLabel" name="asLabel"  placeholder="Zugangssystem" onkeyup="updateData()" >

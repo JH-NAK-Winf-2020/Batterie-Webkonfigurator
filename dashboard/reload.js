@@ -21,14 +21,15 @@ function checkInput(FieldName){
 }
 
 function onInputChange(){
-  $("#sop").load("loadInput.php", {
-    fzgLabel: checkInput("#fahrzeug"), //Fahrzeug.Label
-    fzgSop: checkInput("#sop"),       //Fahrzeug.sop
-    brLabel: checkInput("#batterieraum"), //Batterieraum.Label
+  $("#search").load("loadInput.php", {
+    fzgLabel: checkInput("#fahrzeug"),
+    fzgSop: checkInput("#sop"),
+    brLabel: checkInput("#batterieraum"), 
     baKapa: checkInput("#baKapa"),    
     baTyp: checkInput("#baTyp"),
     asLabel: checkInput("#asLabel")
     });
+
 }
 
 function selectRow(value){
