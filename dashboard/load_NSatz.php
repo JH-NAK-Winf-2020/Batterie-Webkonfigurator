@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
    function createSQLlike(String $spaltenName, String $inputValue){
      if(!empty($inputValue)){
        return  $spaltenName. " like '%" . $inputValue . "%'";
@@ -28,6 +29,11 @@
   mysqli_free_result($nSatzResult); //Inhalte result loeschen
   mysqli_close($conn);  //close Connection
 
+=======
+include 'db_result.php';
+  $object = new DB_result();
+  $nSatzData = $object->getNsatz($_POST['masterID']);
+>>>>>>> SQLChanges
   include 'output_NSatz.php'; //Teil des zu erneuernden Contents -> Iteriert ueber $data
   
   ?>
