@@ -8,18 +8,26 @@ function updateData() {
     baMaterial: checkInput("#baMaterial"),
     asLabel: checkInput("#asLabel")
     });
+    onInputChange();
 }
 
-function updateDropDown(){
-  $("#input").load("loadInput.php",{
-    
-
-  });
+function checkInput(FieldName){
+    if (!$(FieldName).val()) {
+      return "";
+    } else {
+      return $(FieldName).val();
+    }
 }
-function onInputChange(value){
-  alert(value);
+
+function onInputChange(){
   $("#input").load("loadInput.php", {
-    fzgSop: value
+    fzgLabel: checkInput("#fahrzeug"), //Fahrzeug.Label
+    fzgSop: checkInput("#sop"),       //Fahrzeug.sop
+    brLabel: checkInput("#batterieraum"), //Batterieraum.Label
+    baKapa: checkInput("#baKapa"),    
+    baTyp: checkInput("#baTyp"),
+    baMaterial: checkInput("#baMaterial"),
+    asLabel: checkInput("#asLabel")
     });
 }
 

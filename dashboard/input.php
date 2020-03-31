@@ -5,15 +5,14 @@
 <nav id='input'>
   <ul>
 <form class="search" id='search' name='search' method="POST">
-  <input type="text" id="fahrzeug" name="fahrzeug" placeholder="Fahrzeugtyp" onkeyup="updateData()" >
-  <select id="sop" name="sop" placeholder="Baujahr" onChange="onInputChange(this.value)">
-    <?php //foreach($baOptions as $baOption){?>
-      <option value="2011">2011</option>
-      <option value="2012">2012</option>
-    <?php //}?>
+  <input type="text" id="fahrzeug" name="fahrzeug" placeholder="Fahrzeugtyp" value="<?php echo $_POST['fzgLabel']?>" onkeyup="updateData()" >
+  <select id="sop" name="sop" placeholder="Baujahr" onChange="onInputChange()">
+    <?php foreach($options as $option){?>
+      <option value="<?php echo $option?>"><?php echo $option?></option>
+    <?php }?>
   </select>
 
-  <input type="text" id="batterieraum" name="batterieraum" placeholder="Batterieraum"  onkeyup="updateData()">
+  <input type="text" id="batterieraum" name="batterieraum" placeholder="Batterieraum" onkeyup="updateData()">
   <input type="text" id="baKapa" name="baKapa"  placeholder="Batteriekapazitaet" onkeyup="updateData()" >
   <input type="text" id="baTyp" name="baTyp"  placeholder="Batterietyp" onkeyup="updateData()" >
   <input type="text" id="baMaterial" name="baMaterial"  placeholder="Batterie-Materialnr" onkeyup="updateData()" >

@@ -71,6 +71,18 @@
 	  $data = $this->passSqlToDb($sql);
 	  return $data;
    }
+
+   function getOptionsFzgSop($fzgLabel, $fzgSop, $brLabel, $baKapa, $baTyp, $baMaterial, $asLabel){
+	   $currOutput = $this->getFullResult($fzgLabel, $fzgSop, $brLabel, $baKapa, $baTyp, $baMaterial, $asLabel);
+	   $allOptions = array();
+	   array_push($allOptions, '');
+		foreach($currOutput as $currOutputSet){
+			array_push($allOptions,$currOutputSet['fzgSop']);
+		}
+
+		return array_merge(array_unique($allOptions));
+
+   }
    
 }
   ?>
