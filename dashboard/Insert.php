@@ -26,8 +26,10 @@ while($rows = $resultSet->fetch_assoc())
 </form>
 <?php 
 if(isset($_POST["submitTable"]))
-{
+{   
     $getTable = $_POST["final_lit"];
+    if (empty($_POST["final_lit"])) echo "Please select a table!";
+    else 
     echo 'The selected table is: '.$getTable;
     echo "<br><br>";
     
@@ -39,23 +41,26 @@ if(isset($_POST["submitTable"]))
     {
         $column_name=$columns['column_name'];
         echo "<label for=$column_name>$column_name</label> <input type = 'text' name = $column_name> <br><br>";
-        array_push($arrColumns, $column_name);
+        $arrColumns = array($column_name => $column_name);
     }
+    echo "<form action = 'insert.php' method = 'POST'>";
     echo "<input type = 'submit' name = 'submitInsert' value = 'Insert'/> <br><br>";
+    echo "</form>";
+
 }
 
 if(isset($_POST["submitInsert"]))
 {
+    if (!empty($arrColumns)) echo "array is empty";
     $arrValues = array();
     $i = 0;
-    echo 'dNKE';
     while($textFields = $arrColumns->fetch_assoc())
     {
         $newValue = $_POST[$arrColumns[$i]];
         //$newValue = $textFields ['newValue'];
         array_push($arrValues, $newValue);
         $i = $i + 1;
-        echo 'dNKE';
+
     }
     
 }
