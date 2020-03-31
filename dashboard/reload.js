@@ -1,14 +1,15 @@
 function updateData() {
+  $(document).ready(function(){
   $("#output").load("load.php", {
     fzgLabel: checkInput("#fahrzeug"), //Fahrzeug.Label
     fzgSop: checkInput("#sop"),       //Fahrzeug.sop
     brLabel: checkInput("#batterieraum"), //Batterieraum.Label
     baKapa: checkInput("#baKapa"),    
     baTyp: checkInput("#baTyp"),
-    baMaterial: checkInput("#baMaterial"),
     asLabel: checkInput("#asLabel")
     });
     onInputChange();
+  });   
 }
 
 function checkInput(FieldName){
@@ -20,13 +21,12 @@ function checkInput(FieldName){
 }
 
 function onInputChange(){
-  $("#input").load("loadInput.php", {
+  $("#sop").load("loadInput.php", {
     fzgLabel: checkInput("#fahrzeug"), //Fahrzeug.Label
     fzgSop: checkInput("#sop"),       //Fahrzeug.sop
     brLabel: checkInput("#batterieraum"), //Batterieraum.Label
     baKapa: checkInput("#baKapa"),    
     baTyp: checkInput("#baTyp"),
-    baMaterial: checkInput("#baMaterial"),
     asLabel: checkInput("#asLabel")
     });
 }

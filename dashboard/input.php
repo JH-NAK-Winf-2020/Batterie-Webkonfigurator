@@ -5,17 +5,15 @@
 <nav id='input'>
   <ul>
 <form class="search" id='search' name='search' method="POST">
-  <input type="text" id="fahrzeug" name="fahrzeug" placeholder="Fahrzeugtyp" value="<?php echo $_POST['fzgLabel']?>" onkeyup="updateData()" >
-  <select id="sop" name="sop" placeholder="Baujahr" onChange="onInputChange()">
-    <?php foreach($options as $option){?>
-      <option value="<?php echo $option?>"><?php echo $option?></option>
+  <input type="text" id="fahrzeug" name="fahrzeug" placeholder="Fahrzeugtyp" onkeyup="updateData()" > </br>
+  <select id="sop" name="sop" placeholder="Baujahr" placeholder="ab Baujahr" onChange="updateData()">
+     <?php foreach($options as $option){?>
+      <option value=<?php echo $option?>><?php if($option==''){echo 'ab Baujahr';}else{echo 'ab '. $option;};?></option>
     <?php }?>
-  </select>
-
+  </select></br>
   <input type="text" id="batterieraum" name="batterieraum" placeholder="Batterieraum" onkeyup="updateData()">
   <input type="text" id="baKapa" name="baKapa"  placeholder="Batteriekapazitaet" onkeyup="updateData()" >
   <input type="text" id="baTyp" name="baTyp"  placeholder="Batterietyp" onkeyup="updateData()" >
-  <input type="text" id="baMaterial" name="baMaterial"  placeholder="Batterie-Materialnr" onkeyup="updateData()" >
   <input type="text" id="asLabel" name="asLabel"  placeholder="Zugangssystem" onkeyup="updateData()" >
 </form>
 </ul>
