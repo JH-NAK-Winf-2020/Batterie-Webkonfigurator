@@ -16,12 +16,11 @@ function updateDropDown(){
 
   });
 }
-function checkInput(FieldName){
-    if (!$(FieldName).val()) {
-      return "";
-    } else {
-      return $(FieldName).val();
-    }
+function onInputChange(value){
+  alert(value);
+  $("#input").load("loadInput.php", {
+    fzgSop: value
+    });
 }
 
 function selectRow(value){

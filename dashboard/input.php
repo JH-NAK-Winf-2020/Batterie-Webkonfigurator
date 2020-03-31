@@ -6,9 +6,10 @@
   <ul>
 <form class="search" id='search' name='search' method="POST">
   <input type="text" id="fahrzeug" name="fahrzeug" placeholder="Fahrzeugtyp" onkeyup="updateData()" >
-  <select id="sop" name="sop" placeholder="Baujahr" onClick="javascript:updateData();">
+  <select id="sop" name="sop" placeholder="Baujahr" onChange="onInputChange(this.value)">
     <?php //foreach($baOptions as $baOption){?>
       <option value="2011">2011</option>
+      <option value="2012">2012</option>
     <?php //}?>
   </select>
 
