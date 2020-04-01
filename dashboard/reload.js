@@ -50,5 +50,15 @@ function selectRow(value){
 }
 
 function resetInput(){
-  $('#input').load("resetInput.php");
+  document.getElementById('fahrzeug').val('');
+  document.getElementById('asLabel').val('');
+  $("#DropDowns").load("loadInput.php", {
+    fzgLabel: "",
+    fzgSop: "",
+    brLabel: "", 
+    baKapa: "",    
+    baTyp: "",
+    asLabel: ""
+  });
+
 }
