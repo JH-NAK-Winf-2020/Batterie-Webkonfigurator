@@ -186,3 +186,19 @@ margin: auto;
 .ListenPosition {
   margin-top: 12%;
 }
+
+.button {
+  float: right;
+   width: 100px;
+  height: 35px;
+  background: linear-gradient(to bottom, #ffb900 , #FFCC99);
+  box-shadow: inset 0px 0px 4px #fff, inset 0px 0px 4px #fff;
+  border: 1px solid #3c464b;
+  border-radius:1em;
+  margin: 1em;
+}
+
+.button:hover,
+.button:focus {
+    box-shadow:rgba(0,0,0,0.7) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+  }

@@ -45,7 +45,7 @@
        <input type="text" id="asLabel" name="asLabel"  placeholder="Zugangssystem" onkeyup="updateData()" >
       </ul>
 </div>
-<input type="submit" value="Reset" onClick="resetInput()">
+<input type="submit" class="button" value="Reset" onClick="resetInput()">
 </form>
 
 </ul>
