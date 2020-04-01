@@ -22,14 +22,44 @@
 <th>Spalte2</th>
 <th>Spalte3</th>
 </tr>
-	<?php foreach($dataZusatz as $datasetNsatz){?>
+<tr>
+<td>Material</td>
+<td>Label</td>
+<td>Kommentar</td>
+</tr>
+	<?php foreach($dataNsatz as $datasetNsatz){?>
 	<tr>
-	<td><?php echo $datasetNsatz['zuMaterial']; ?></td>
-	<td><?php echo $datasetNsatz['zuLabel']; ?></td>
-	<td><?php echo $datasetNsatz['zuHinweis']; ?></td>
+	<td><?php echo $datasetNsatz['nsatzMaterial'].'test'; ?></td>
+	<td><?php echo $datasetNsatz['nsatzLabel']; ?></td>
+	<td><?php echo $datasetNsatz['nsatzKomm']; ?></td>
     </tr>
 	<?php }?>
+<tr>
 
+<tr>
+<td>Material</td>
+<td>Label</td>
+<td>Frei</td>
+</tr>
+	<?php foreach($dataNdetail as $datasetNdetail){?>
+	<tr>
+	<td><?php echo $datasetNdetail['ndetailMaterial'].'test'; ?></td>
+	<td><?php echo $datasetNdetail['ndetailLabel']; ?></td>
+	<td><?php echo ''; ?></td>
+    </tr>
+	<?php }?>
+<tr>
+<td>Material</td>
+<td>Label</td>
+<td>Hinweis</td>
+</tr>	
+	<?php foreach($dataZusatz as $datasetZusatz){?>
+	<tr>
+	<td><?php echo $datasetZusatz['zuMaterial']; ?></td>
+	<td><?php echo $datasetZusatz['zuLabel']; ?></td>
+	<td><?php echo $datasetZusatz['zuHinweis']; ?></td>
+    </tr>
+	<?php }?>
 </table>
 
 </form>
