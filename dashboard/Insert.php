@@ -20,16 +20,17 @@ while($rows = $resultSet->fetch_assoc())
     echo "<option value=$table_name>$table_name</option>";
 }
 ?>
+
 <br><br><br>
  </select>
 <input type = 'submit' name = 'submitTable' value = 'Select Table'/> <br><br>
 </form>
+
 <?php
 session_start();
 //"Select Table" button
 if(isset($_POST["submitTable"]))
 {   
-    
     if (empty($_POST["final_lit"])) echo "Please select a table!";
     else {
     $getTable = $_POST["final_lit"];
@@ -43,8 +44,13 @@ if(isset($_POST["submitTable"]))
     while($columns = $columnsResult->fetch_assoc())
     {
         $column_name=$columns['column_name'];
-        echo "<label for=$column_name>$column_name</label> <input type = 'text' name = $column_name> <br><br>";
-        array_push($arrColumns, $column_name);
+        if ($column_name == "id"){
+            echo "<label for=$column_name> $column_name </label> <input type = 'text' name = $column_name disabled> <br><br>";
+            //array_push($arrColumns, $column_name);
+        } else {
+            echo "<label for=$column_name> $column_name </label> <input type = 'text' name = $column_name> <br><br>";
+            array_push($arrColumns, $column_name);
+        }
     }
     echo "<form action = 'insert.php' method = 'POST'>";
     echo "<input type = 'submit' name = 'submitInsert' value = 'Insert'/> <br><br>";
@@ -56,48 +62,43 @@ if(isset($_POST["submitTable"]))
 //"Insert" button
 if(isset($_POST["submitInsert"]))
 {
-    //get Array and Variable values
+
+//get Array and Variable values from upper code
     $arrColumns1 = $_SESSION['Insert1'];
     $_SESSION['Insert1'] = $arrColumns1;
     $getTable1 = $_SESSION['Insert2'];
-    $_SESSION['Insert2'] = $getTable1;
-    
-    //echo "<br> <br>"; print_r(array_values($arrColumns1));
-    //echo $getTable1;
-    //$i = 0;
-    $newValues = array();
-    foreach ($arrColumns1 as $value) {
-        //array_push($newValues, ($value => $_POST[$value]));
-        //replace_array_key($newValues, $i, $value);
-        array_push($newValues, $_POST[$value]);
-        //$newValues = array($value => $_POST[$value]);
-        //$temp[$value] = $newValues[$i];
-        //unset($newValues[$i]);
-        //$newValues = $tmpa + $newValues;
-        //$newValues = array($value => $newValues[$i]);
-        //$newValues[$value] = $newValues[$i];
-        //change_key($newValues, $i, $value);
-        //$i = $i + 1;
-        //$val[$i] = $val[$value];
-        //unset($val[$i]);
-        //$newValues = $newValues + array($value => $_POST[$value]);
-        //$newValues = array_fill_keys($arrColumns1, $_POST[$value]);
-        //echo "<br>"; echo $value; echo "<br>";
-        //$newValues = array($value => $_POST[$value]);
-    }
-    ///////////////////////////////////
-    //function rename_keys($newValues, $arrColumns1)  {
-    //return array_combine($arrColumns1, array_values($newValues));
-    ////////////////////////////////////
-    //array_flip($newValues);
-    echo "<br> <br>"; print_r(array_values($newValues));
-    //$newValues =array_fill_keys(
+    $_SESSION['Insert2'] = $getTable1;  
 
-        
+//insert new values into array
+    $newValues = array();
+    foreach ($arrColumns1 as $value) 
+    {
+        if (empty($_POST[$value]))
+        {
+            echo "ERROR! all available fields are required!";
+            exit();
+        } else {
+            array_push($newValues, $_POST[$value]);
+        }
+    }
+    echo "<br> <br>"; print_r(array_values($arrColumns1));
+    echo "<br> <br>"; print_r(array_values($newValues));
+    $sepCol = implode(', ', $arrColumns1);
+    $sepVal = implode(', ', $newValues);
+
+//Insert new values into Database
+    $sql = $conn->query("INSERT INTO $getTable1 ($sepCol) VALUES ($sepVal)");
+    mysqli_query($sql) or exit(mysql_error()); 
+    
+    if (mysqli_query($conn, $sql)) {
+        echo "New values added to database successfully". "<br><br>". $sepVal;
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
 }
 echo "</form>";
-
 ?>
+
 </center>
 </body>
 </html>
