@@ -3,8 +3,8 @@
   Triggert updateData() in jquery.js, wenn in einem der Inputfelder eine Taste gedrückt wird -> Erneuerung des Contents der Ausgabe
 -->
 <nav id='input'>
-  <ul>
 <form class="search" id='search' name='search' method="POST">
+<<<<<<< HEAD
   <input type="text" id="fahrzeug" name="fahrzeug" placeholder="Fahrzeugtyp" onkeyup="updateData()" > 
   </br>
   <div id='DropDowns'>
@@ -31,6 +31,31 @@
   </select></br>
     </div>
   <input type="text" id="asLabel" name="asLabel"  placeholder="Zugangssystem" onkeyup="updateData()" >
+=======
+  
+  <div class="ListenPosition">
+<h5 class="UeberschriftInput">Fahrzeugdaten:</h5>
+    <ul id='Liste' class="InputListe">
+      <input type="text" id="fahrzeug" name="fahrzeug" placeholder="Fahrzeugtyp" onkeyup="updateData()" > </br>
+        <select id="sop" name="sop" placeholder="Baujahr" placeholder="ab Baujahr" onChange="updateData()">
+          <?php foreach($options as $option){?>
+           <option value=<?php echo $option?>><?php if($option==''){echo 'ab Baujahr';}else{echo 'ab '. $option;};?></option>
+           <?php }?>
+         </select></br>
+      <input type="text" id="batterieraum" name="batterieraum" placeholder="Batterieraum" onkeyup="updateData()">
+    </ul></div>
+
+<h5 class="UeberschriftInput">Batteriedaten:</h5>
+    <ul class="InputListe">
+       <input type="text" id="baKapa" name="baKapa"  placeholder="Batteriekapazitaet" onkeyup="updateData()" >
+       <input type="text" id="baTyp" name="baTyp"  placeholder="Batterietyp" onkeyup="updateData()" >
+    </ul>
+
+ <h5 class="UeberschriftInput">Ausstattung:</h5>
+    <ul class="InputListe">
+       <input type="text" id="asLabel" name="asLabel"  placeholder="Zugangssystem" onkeyup="updateData()" >
+      </ul>
+
+>>>>>>> cssEntwicklung
 </form>
-</ul>
 </nav>
