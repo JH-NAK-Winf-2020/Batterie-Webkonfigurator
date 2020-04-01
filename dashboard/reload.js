@@ -13,10 +13,15 @@ function updateData() {
 }
 
 function checkInput(FieldName){
+    // if (!$(FieldName).val()) {
+    //   return "";
+    // } else if($(FieldName).val()=='(leer)'){
+    //   return "(leer)";
+    // }else{
+    //   return $(FieldName).val();
+    // }
     if (!$(FieldName).val()) {
       return "";
-    } else if($(FieldName).val()=='(leer)'){
-      return "(leer)";
     }else{
       return $(FieldName).val();
     }

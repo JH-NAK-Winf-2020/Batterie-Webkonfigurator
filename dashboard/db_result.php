@@ -23,10 +23,17 @@
 	}
    }
 	function createSQLequal(String $spaltenName, String $inputValue){
-	    if($inputValue == '(leer)'){
-	        $whereStatement = $spaltenName . " is NULL";
-	        return $whereStatement;
-	    } elseif($inputValue != ''){
+// 	    if($inputValue == '(leer)'){
+// 	        $whereStatement = $spaltenName . " is NULL";
+// 	        return $whereStatement;
+// 	    } elseif($inputValue != ''){
+// 	        $whereStatement = $spaltenName . " = '" . $inputValue . "'";
+// 	        return $whereStatement;
+// 	    } else {
+// 	        return '1';
+// 	    }
+
+	    if($inputValue != ''){
 	        $whereStatement = $spaltenName . " = '" . $inputValue . "'";
 	        return $whereStatement;
 	    } else {
@@ -97,14 +104,15 @@
        unset($allOptions);
        $allOptions = array();
        array_push($allOptions, $value);
+       array_push($allOptions, '');
        foreach($currOutput as $currOutputSet){
-           if($currOutputSet[$columnName]==''){
-               array_push($allOptions, '(leer)');
-           }else{
-               array_push($allOptions,$currOutputSet[$columnName]);
-           }
+//            if($currOutputSet[$columnName]==''){
+//                array_push($allOptions, '(leer)');
+//            }else{
+//                array_push($allOptions,$currOutputSet[$columnName]);
+//            }
+           array_push($allOptions,$currOutputSet[$columnName]);
        }
-       //echo print_r(array_merge(array_unique($allOptions)));
        return array_merge(array_unique($allOptions));
    }
    
