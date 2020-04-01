@@ -1,0 +1,32 @@
+// Use IntelliSense to learn about possible attributes.
+// Hover to view descriptions of existing attributes.
+// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome 127.0.0.1",
+      "type": "chrome",
+      "request": "launch",
+      "port": 9286,
+      "webRoot": "${workspaceFolder}",
+      "url": "http://127.0.0.1:58105/p/projekt_lit/dashboard/header.html?_cmAuth\u003duplpmquyms"
+    },
+    {
+      "name": "Launch index.php",
+      "type": "php",
+      "request": "launch",
+      "port": 9000,
+      "cwd": "${workspaceFolder}/dashboard",
+      "program": "${workspaceFolder}/dashboard/index.php"
+    },
+    {
+      "name": "Launch load.php",
+      "type": "php",
+      "request": "launch",
+      "port": 9000,
+      "cwd": "${workspaceFolder}/dashboard",
+      "program": "${workspaceFolder}/dashboard/load.php"
+    }
+  ]
+}
