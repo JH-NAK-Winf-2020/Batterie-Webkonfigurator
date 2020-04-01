@@ -26,7 +26,6 @@
 
 <h5 class="UeberschriftInput">Batteriedaten:</h5>
     <ul class="InputListe">
-    </br> 
   <select id="baKapa" name="baKapa"  placeholder="Batteriekapazitaet" onChange="updateData()">
      <?php foreach($optionsBaKapa as $optionBaKapa){?>
       <option value="<?php echo $optionBaKapa;?>"><?php if($optionBaKapa==''){echo 'Batteriekapazitaet';}else{echo $optionBaKapa;};?></option>
