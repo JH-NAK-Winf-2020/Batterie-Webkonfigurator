@@ -16,11 +16,22 @@
 <aside>
 <div style="float:right">
 <form action="">
+<table>
+<tr>
+<th>Materialnummer</th>
+<th>Spalte2</th>
+<th>Spalte3</th>
+</tr>
 	<?php foreach($dataZusatz as $datasetNsatz){?>
-	<
-	<label><?php echo $datasetNsatz['zuMaterial'] . $datasetNsatz['zuLabel'] . $datasetNsatz['zuHinweis'];?></label>
-    </br>
+	<tr>
+	<td><?php echo $datasetNsatz['zuMaterial']; ?></td>
+	<td><?php echo $datasetNsatz['zuLabel']; ?></td>
+	<td><?php echo $datasetNsatz['zuHinweis']; ?></td>
+    </tr>
 	<?php }?>
+
+</table>
+
 </form>
 </div>
 </aside>
