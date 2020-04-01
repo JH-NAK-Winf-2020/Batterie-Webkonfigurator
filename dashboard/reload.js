@@ -48,3 +48,7 @@ function selectRow(value){
     masterID: value //passender MasterID 
     });
 }
+
+function resetInput(){
+  
+}
