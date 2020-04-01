@@ -5,7 +5,7 @@
 
 <div id="output" class="output">
 <div>
-  <table class="fixed-header">
+  <table id= "InfoTable" class="fixed-header">
     <thead>
 		<tr>
 		  <th style="width: 120px">Fahrzeugtyp </th>
