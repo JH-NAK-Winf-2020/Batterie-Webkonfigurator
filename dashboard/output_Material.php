@@ -15,6 +15,7 @@
 <html>
 <form action="">
 	<?php foreach($dataZusatz as $datasetNsatz){?>
+	<
 	<label><?php echo $datasetNsatz['zuMaterial'] . $datasetNsatz['zuLabel'] . $datasetNsatz['zuHinweis'];?></label>
 	<?php }?>
 </form>
