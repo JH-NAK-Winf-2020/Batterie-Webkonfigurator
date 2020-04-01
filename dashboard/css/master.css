@@ -189,7 +189,7 @@ margin: auto;
 
 .button {
   float: right;
-   width: 100px;
+  width: 100px;
   height: 35px;
   background: linear-gradient(to bottom, #ffb900 , #FFCC99);
   box-shadow: inset 0px 0px 4px #fff, inset 0px 0px 4px #fff;
@@ -201,4 +201,18 @@ margin: auto;
 .button:hover,
 .button:focus {
     box-shadow:rgba(0,0,0,0.7) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+  }
+
+  aside {
+    background: red;
+    border-radius: 15px;
+    float: right;
+    opacity: 0.9em;
+    width: 300px;
+    height: auto;
+    border-top-style: solid;
+    border-top-width: 0px;
+    position: fixed;
+    right: 0;
+    margin-top: 12%;
   }

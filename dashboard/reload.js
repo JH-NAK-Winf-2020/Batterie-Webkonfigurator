@@ -50,7 +50,6 @@ function selectRow(value){
     $("#outputNSatz").load("output_Material.php", {
       masterID: value
     });
-    alert(value);
 
 }
 

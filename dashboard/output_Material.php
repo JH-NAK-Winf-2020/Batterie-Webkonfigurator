@@ -13,9 +13,14 @@
     $dataLadeoption = $Ladeoption->getLadeoption($masterID);
 ?>
 <html>
+<aside>
+<div style="float:right">
 <form action="">
 	<?php foreach($dataZusatz as $datasetNsatz){?>
 	<label><?php echo $datasetNsatz['zuMaterial'] . $datasetNsatz['zuLabel'] . $datasetNsatz['zuHinweis'];?></label>
+    </br>
 	<?php }?>
 </form>
+</div>
+</aside>
 </html>
