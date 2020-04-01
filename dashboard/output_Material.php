@@ -17,6 +17,8 @@
 <div Id="NsatzDiv" style="float:right">
 <form action="">
 <h1>Nachr&uumlstung auf:</h1>
+<label>Hier wird die Nachruestart angezeigt werden</label>
+
 <table>
 <tr>
 <th>Materialnummer</th>
@@ -28,13 +30,16 @@
 <td>Label</td>
 <td>Kommentar</td>
 </tr>
-	<?php foreach($dataNsatz as $datasetNsatz){?>
+	<?php if($dataNsatz == ''){?>
+	    <tr> <td>kein Nachruestsatz vorhanden</td><td>---</td><td>---</td>
+		</tr>
+	<?php }else{ foreach($dataNsatz as $datasetNsatz){?>
 	<tr>
 	<td><?php echo $datasetNsatz['nsatzMaterial']; ?></td>
 	<td><?php echo $datasetNsatz['nsatzLabel']; ?></td>
 	<td><?php echo $datasetNsatz['nsatzKomm']; ?></td>
     </tr>
-	<?php }?>
+	<?php };};?>
 <tr>
 
 <tr>
@@ -61,6 +66,29 @@
 	<td><?php echo $datasetZusatz['zuHinweis']; ?></td>
     </tr>
 	<?php }?>
+</table>
+<label>zu bestellendes Ladegerat</label>
+<table>
+<tr>
+<th>Materialnummer</th>
+<th>Label</th>
+<th>Klasse</th>
+</tr>
+	<?php foreach($dataLadeg as $datasetLadeg){?>
+	<tr>
+	<td><?php echo $datasetLadeg['laMaterial']; ?></td>
+	<td><?php echo $datasetLadeg['laLabel']; ?></td>
+	<td><?php echo $datasetLadeg['laKlasse']; ?></td>
+    </tr>
+	<?php }?>
+	<?php foreach($dataLadeoption as $datasetLadeoption){?>
+	<tr>
+	<td><?php echo $datasetLadeoption['loMaterial']; ?></td>
+	<td><?php echo $datasetLadeoption['loLabel']; ?></td>
+	<td><?php echo $datasetLadeoption['loKomm']; ?></td>
+    </tr>
+	<?php }?>
+
 </table>
 
 </form>

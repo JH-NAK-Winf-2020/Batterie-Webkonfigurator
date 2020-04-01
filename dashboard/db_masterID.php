@@ -39,7 +39,7 @@ class DB_MasterID{
 
     function getLadeoption($masterID){
         //sql MatNr Ladegerätoption
-        $sql = "SELECT ladegeraeteoption.material, ladegeraeteoption.label, ladegeraeteoption.kommentar FROM ladegeraeteoption WHERE ladegeraeteoption.id IN (SELECT master2ladegeraeteoption.ladegeraeteoption FROM master2ladegeraeteoption WHERE master2ladegeraeteoption.master = $masterID);";
+        $sql = "SELECT ladegeraeteoption.material as loMaterial, ladegeraeteoption.label as loLabel, ladegeraeteoption.kommentar as loKomm FROM ladegeraeteoption WHERE ladegeraeteoption.id IN (SELECT master2ladegeraeteoption.ladegeraeteoption FROM master2ladegeraeteoption WHERE master2ladegeraeteoption.master = $masterID);";
         $result = $this->passSqlToDb($sql);
         return $result;
     }
