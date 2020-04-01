@@ -25,7 +25,6 @@
 	function createSQLequal(String $spaltenName, String $inputValue){
 	    if($inputValue == '(leer)'){
 	        $whereStatement = $spaltenName . " is NULL";
-	        echo 'NULL';
 	        return $whereStatement;
 	    } elseif($inputValue != ''){
 	        $whereStatement = $spaltenName . " = '" . $inputValue . "'";
@@ -61,7 +60,6 @@
   		$sqlAsLabel = $this->createSQLlike('ausstattung.label', mysqli_real_escape_string($conn, $this->asLabel));
 		mysqli_close($conn);
 		$sql = "SELECT sel_master.id as masterId, sel_master.nachruestsatz as masterNsatz, sel_master.nachruestart as masterNart, fahrzeug.label as fzgLabel, fahrzeug.sop_Date as fzgSop, batterieraum.label as brLabel, batterie.kapazitaet as baKapa, batterie.typ as baTyp, batterie.material as baMaterial, ausstattung.label as asLabel FROM (SELECT MASTER.nachruestart, MASTER.nachruestsatz, MASTER.fahrzeug, master.batterieraum, master.batterie, master.ausstattung, master.id FROM MASTER WHERE MASTER.fahrzeug IN (SELECT fahrzeug.id FROM fahrzeug WHERE $sqlFzgLabel AND $sqlFzgSop) AND MASTER.batterieraum IN (SELECT batterieraum.id FROM batterieraum WHERE $sqlBrLabel) AND MASTER.batterie IN (SELECT batterie.id FROM batterie WHERE $sqlBaKapa AND $sqlBaTyp)AND MASTER.ausstattung IN ( SELECT ausstattung.id FROM ausstattung WHERE $sqlAsLabel)) AS sel_master, fahrzeug, batterieraum, batterie, ausstattung WHERE sel_master.fahrzeug = fahrzeug.id AND sel_master.batterieraum = batterieraum.id AND sel_master.batterie = batterie.id AND sel_master.ausstattung =ausstattung.id;";  
-		echo $sql;
 		return $this->passSqlToDb($sql);
    }
 
@@ -106,6 +104,7 @@
                array_push($allOptions,$currOutputSet[$columnName]);
            }
        }
+       //echo print_r(array_merge(array_unique($allOptions)));
        return array_merge(array_unique($allOptions));
    }
    

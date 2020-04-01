@@ -13,7 +13,7 @@
 <div id='DropDowns'>
   <select id="sop" name="sop" placeholder="ab Baujahr" onChange="updateData()">
     <?php foreach($optionsFzgSop as $optionFzgSop){?>
-      <option value="<?php echo $optionFzgSop;?>"><?php if($optionFzgSop==''){echo 'ab Baujahr';}else{echo 'ab '. $optionFzgSop;};?></option>
+      <option value="<?php echo $optionFzgSop;?>"><?php if($optionFzgSop=='(leer)'){echo '(leer)';}elseif($optionFzgSop==''){echo 'ab Baujahr';}else{echo 'ab '. $optionFzgSop;};?></option>
     <?php };?>
   </select>
   </br>
@@ -24,12 +24,12 @@
   </select></br>
   <select id="baKapa" name="baKapa"  placeholder="Batteriekapazitaet" onChange="updateData()">
      <?php foreach($optionsBaKapa as $optionBaKapa){?>
-      <option value="<?php echo $optionBaKapa;?>"><?php if($optionBaKapa==''){echo 'Batteriekapazitaet';}else{echo $optionBaKapa;};?></option>
+      <option value="<?php echo $optionBaKapa;?>"><?php if($optionBaKapa=='(leer)'){echo '(leer)';}elseif($optionBaKapa==''){echo 'Batteriekapazitaet';}else{echo $optionBaKapa;};?></option>
      <?php };?>
   </select></br>
   <select id="baTyp" name="baTyp"  placeholder="Batterietyp" onChange="updateData()">
      <?php foreach($optionsBaTyp as $optionBaTyp){?>
-      <option value="<?php echo $optionBaTyp;?>"><?php if($optionBaTyp==''){echo 'Batterietyp';}else{echo $optionBaTyp;};?></option>
+      <option value="<?php echo $optionBaTyp;?>"><?php if($optionBaTyp=='(leer)'){echo '(leer)';}elseif($optionBaTyp==''){echo 'Batterietyp';}else{echo $optionBaTyp;};?></option>
      <?php };?>
   </select></br>
 </div>

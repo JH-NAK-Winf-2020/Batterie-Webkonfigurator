@@ -16,7 +16,6 @@ function checkInput(FieldName){
     if (!$(FieldName).val()) {
       return "";
     } else if($(FieldName).val()=='(leer)'){
-      alert('null');
       return "(leer)";
     }else{
       return $(FieldName).val();
