@@ -14,9 +14,10 @@
 ?>
 <html>
 
-<div style="float:right">
+<div Id="NsatzDiv" style="float:right">
 <form action="">
-<table Id="NsatzTable">
+<h1>Nachr&uumlstung auf:</h1>
+<table>
 <tr>
 <th>Materialnummer</th>
 <th>Spalte2</th>
