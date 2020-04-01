@@ -20,7 +20,20 @@
 		 return $test;
    	} else {
        	return '1';
-	}}
+	}
+   }
+	function createSQLequal(String $spaltenName, String $inputValue){
+	    if($inputValue == '(leer)'){
+	        $whereStatement = $spaltenName . " is NULL";
+	        echo 'NULL';
+	        return $whereStatement;
+	    } elseif($inputValue != ''){
+	        $whereStatement = $spaltenName . " = '" . $inputValue . "'";
+	        return $whereStatement;
+	    } else {
+	        return '1';
+	    }
+	}
 
 	function passSqlToDb($sql){
 		include './config/connect.php';
@@ -41,14 +54,14 @@
 
 	   include './config/connect.php';
 	   	$sqlFzgLabel = $this->createSQLlike('fahrzeug.label', mysqli_real_escape_string($conn, $this->fzgLabel));
-  		$sqlFzgSop = $this->createSQLlike('fahrzeug.sop_Date', mysqli_real_escape_string($conn, $this->fzgSop));
-  		$sqlBrLabel = $this->createSQLlike('batterieraum.label', mysqli_real_escape_string($conn, $this->brLabel));
-  		$sqlBaKapa = $this->createSQLlike('batterie.kapazitaet', mysqli_real_escape_string($conn, $this->baKapa));
-  		$sqlBaTyp = $this->createSQLlike('batterie.typ', mysqli_real_escape_string($conn, $this->baTyp));
+  		$sqlFzgSop = $this->createSQLequal('fahrzeug.sop_Date', mysqli_real_escape_string($conn, $this->fzgSop));
+  		$sqlBrLabel = $this->createSQLequal('batterieraum.label', mysqli_real_escape_string($conn, $this->brLabel));
+  		$sqlBaKapa = $this->createSQLequal('batterie.kapazitaet', mysqli_real_escape_string($conn, $this->baKapa));
+  		$sqlBaTyp = $this->createSQLequal('batterie.typ', mysqli_real_escape_string($conn, $this->baTyp));
   		$sqlAsLabel = $this->createSQLlike('ausstattung.label', mysqli_real_escape_string($conn, $this->asLabel));
 		mysqli_close($conn);
 		$sql = "SELECT sel_master.id as masterId, sel_master.nachruestsatz as masterNsatz, sel_master.nachruestart as masterNart, fahrzeug.label as fzgLabel, fahrzeug.sop_Date as fzgSop, batterieraum.label as brLabel, batterie.kapazitaet as baKapa, batterie.typ as baTyp, batterie.material as baMaterial, ausstattung.label as asLabel FROM (SELECT MASTER.nachruestart, MASTER.nachruestsatz, MASTER.fahrzeug, master.batterieraum, master.batterie, master.ausstattung, master.id FROM MASTER WHERE MASTER.fahrzeug IN (SELECT fahrzeug.id FROM fahrzeug WHERE $sqlFzgLabel AND $sqlFzgSop) AND MASTER.batterieraum IN (SELECT batterieraum.id FROM batterieraum WHERE $sqlBrLabel) AND MASTER.batterie IN (SELECT batterie.id FROM batterie WHERE $sqlBaKapa AND $sqlBaTyp)AND MASTER.ausstattung IN ( SELECT ausstattung.id FROM ausstattung WHERE $sqlAsLabel)) AS sel_master, fahrzeug, batterieraum, batterie, ausstattung WHERE sel_master.fahrzeug = fahrzeug.id AND sel_master.batterieraum = batterieraum.id AND sel_master.batterie = batterie.id AND sel_master.ausstattung =ausstattung.id;";  
-		
+		echo $sql;
 		return $this->passSqlToDb($sql);
    }
 
@@ -75,16 +88,24 @@
    function getOptionsBrLabel($fzgLabel, $fzgSop, $brLabel, $baKapa, $baTyp, $asLabel){
        return $this->getOptionsDropDown('brLabel', $brLabel, $fzgLabel, $fzgSop, $brLabel, $baKapa, $baTyp, $asLabel);
    }
+   function getOptionsBaKapa($fzgLabel, $fzgSop, $brLabel, $baKapa, $baTyp, $asLabel){
+       return $this->getOptionsDropDown('baKapa', $baKapa, $fzgLabel, $fzgSop, $brLabel, $baKapa, $baTyp, $asLabel);
+   }
+   function getOptionsBaTyp($fzgLabel, $fzgSop, $brLabel, $baKapa, $baTyp, $asLabel){
+       return $this->getOptionsDropDown('baTyp', $baTyp, $fzgLabel, $fzgSop, $brLabel, $baKapa, $baTyp, $asLabel);
+   }
    function getOptionsDropDown($columnName, $value, $fzgLabel, $fzgSop, $brLabel, $baKapa, $baTyp, $asLabel){
        $currOutput = $this->getFullResult($fzgLabel, $fzgSop, $brLabel, $baKapa, $baTyp, $asLabel);
        unset($allOptions);
        $allOptions = array();
        array_push($allOptions, $value);
-       array_push($allOptions, '');
        foreach($currOutput as $currOutputSet){
-           array_push($allOptions,$currOutputSet[$columnName]);
+           if($currOutputSet[$columnName]==''){
+               array_push($allOptions, '(leer)');
+           }else{
+               array_push($allOptions,$currOutputSet[$columnName]);
+           }
        }
-       //echo print_r(array_merge(array_unique($allOptions)));
        return array_merge(array_unique($allOptions));
    }
    

@@ -15,13 +15,16 @@ function updateData() {
 function checkInput(FieldName){
     if (!$(FieldName).val()) {
       return "";
-    } else {
+    } else if($(FieldName).val()=='(leer)'){
+      alert('null');
+      return "(leer)";
+    }else{
       return $(FieldName).val();
     }
 }
 
 function onInputChange(){
-  $("#search").load("loadInput.php", {
+  $("#DropDowns").load("loadInput.php", {
     fzgLabel: checkInput("#fahrzeug"),
     fzgSop: checkInput("#sop"),
     brLabel: checkInput("#batterieraum"), 
