@@ -50,5 +50,5 @@ function selectRow(value){
 }
 
 function resetInput(){
-  
+  $('#input').load("resetInput.php");
 }
