@@ -29,7 +29,7 @@
 </tr>
 	<?php foreach($dataNsatz as $datasetNsatz){?>
 	<tr>
-	<td><?php echo $datasetNsatz['nsatzMaterial'].'test'; ?></td>
+	<td><?php echo $datasetNsatz['nsatzMaterial']; ?></td>
 	<td><?php echo $datasetNsatz['nsatzLabel']; ?></td>
 	<td><?php echo $datasetNsatz['nsatzKomm']; ?></td>
     </tr>
