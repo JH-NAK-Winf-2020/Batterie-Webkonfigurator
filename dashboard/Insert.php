@@ -81,14 +81,11 @@ if(isset($_POST["submitInsert"]))
             array_push($newValues, $_POST[$value]);
         }
     }
-    echo "<br> <br>"; print_r(array_values($arrColumns1));
-    echo "<br> <br>"; print_r(array_values($newValues));
     $sepCol = implode(', ', $arrColumns1);
-    $sepVal = implode(', ', $newValues);
-
+    $sepVal = implode("', '", $newValues);
+    $sepVal = "'".$sepVal."'";
 //Insert new values into Database
-    $sql = $conn->query("INSERT INTO $getTable1 ($sepCol) VALUES ($sepVal)");
-    mysqli_query($sql) or exit(mysql_error()); 
+    $sql = "INSERT INTO $getTable1 ($sepCol) VALUES ($sepVal)";
     
     if (mysqli_query($conn, $sql)) {
         echo "New values added to database successfully". "<br><br>". $sepVal;
@@ -98,7 +95,6 @@ if(isset($_POST["submitInsert"]))
 }
 echo "</form>";
 ?>
-
 </center>
 </body>
 </html>
