@@ -13,10 +13,10 @@
     $dataLadeoption = $Ladeoption->getLadeoption($masterID);
 ?>
 <html>
-<aside>
+
 <div style="float:right">
 <form action="">
-<table>
+<table Id="NsatzTable">
 <tr>
 <th>Materialnummer</th>
 <th>Spalte2</th>
@@ -64,5 +64,4 @@
 
 </form>
 </div>
-</aside>
 </html>
