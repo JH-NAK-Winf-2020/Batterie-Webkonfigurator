@@ -44,14 +44,20 @@ function selectRow(value){
   var selectInTable = document.getElementsByTagName('tr');
   $(selectedRow).addClass('selected');
   $(selectInTable).not(selectedRow).removeClass('selected');
-    $("#outputNSatz").load("load_NSatz.php", {
-    masterID: value //passender MasterID 
+    //   $("#outputNSatz").load("load_NSatz.php", {
+    // masterID: value //passender MasterID 
+    // });
+    $("#outputNSatz").load("output_Material.php", {
+      masterID: value
     });
+    alert(value);
+
 }
 
 function resetInput(){
   document.getElementById('fahrzeug').val('');
   document.getElementById('asLabel').val('');
+
   $("#DropDowns").load("loadInput.php", {
     fzgLabel: "",
     fzgSop: "",
