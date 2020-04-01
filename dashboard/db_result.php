@@ -9,9 +9,6 @@
 
 
 		public function __construct(){
-			//String $fzgLabel, String $fzgSop, String $brLabel, String $baKapa, String $baTyp, String $baMaterial, String $asLabel
-			// $fzgLabel, $fzgSop, $brLabel, $baKapa, $baTyp, $baMaterial, $asLabel
-
 		}
 	
    function createSQLlike(String $spaltenName, String $inputValue){
