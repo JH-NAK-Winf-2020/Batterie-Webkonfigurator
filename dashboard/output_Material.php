@@ -104,41 +104,41 @@ $matnrListe = array();
 	<?php };};?>
 
 </table>
-</td>
-	<td style="width:'100px'">
-		<textarea id="matnrAusgabe" style="resize: none; width: 50px; height: 100px;" cols="" rows="">
+			</td>
+		<td style="width:'100px'">
+			<textarea id="matnrAusgabe"
+					style="resize: none; width: 100px; height: 100px;" cols="" rows="">
 			<?php foreach($matnrListe as $matnr){echo $matnr . '&#13;&#10;';};?>
-		</textarea>
-	</td>
-</tr>
-</table>
+			</textarea></td>
+		</tr>
+	</table>
 </div>
 
-<div id="LadeDiv" style="float:bottom">
-<table>
-<tread>
-<tr>
-<th>Materialnummer</th>
-<th>Label</th>
-<th>Text</th>
-</tr>
-</tread>
-<tbody>
+<div id="LadeDiv" style="float: bottom">
+	<table>
+		<tread>
+		<tr>
+			<th>Materialnummer</th>
+			<th>Label</th>
+			<th>Text</th>
+		</tr>
+		</tread>
+		<tbody>
 	<?php foreach($dataLadeg as $datasetLadeg){?>
 	<tr>
-		<td><?php echo $datasetLadeg['laMaterial']; ?></td>
-		<td><?php echo $datasetLadeg['laLabel']; ?></td>
-		<td><?php echo $datasetLadeg['laKlasse']; ?></td>
-	</tr>
+				<td><?php echo $datasetLadeg['laMaterial']; ?></td>
+				<td><?php echo $datasetLadeg['laLabel']; ?></td>
+				<td><?php echo $datasetLadeg['laKlasse']; ?></td>
+			</tr>
 	<?php }?>
 	<?php foreach($dataLadeoption as $datasetLadeoption){?>
 	<tr>
-		<td><?php echo $datasetLadeoption['loMaterial']; ?></td>
-		<td><?php echo $datasetLadeoption['loLabel']; ?></td>
-		<td><?php echo $datasetLadeoption['loKomm']; ?></td>
-	</tr>
+				<td><?php echo $datasetLadeoption['loMaterial']; ?></td>
+				<td><?php echo $datasetLadeoption['loLabel']; ?></td>
+				<td><?php echo $datasetLadeoption['loKomm']; ?></td>
+			</tr>
 	<?php }?>
 </tbody>
-</table>
+	</table>
 </div>
 </html>
