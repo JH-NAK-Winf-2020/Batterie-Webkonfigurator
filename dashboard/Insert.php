@@ -45,6 +45,7 @@ if(isset($_POST["submitTable"]))
     $getTable = $_POST["final_lit"];
     echo "<label style='text-align:center'>".'The selected table is: '.$getTable."</label>";
     echo "<br><br>";
+    
     echo "<form action = 'insert.php' method = 'POST'>";
     $columnsResult = $conn->query("SELECT column_name FROM information_schema.columns 
                     WHERE table_schema = 'final_lit'
@@ -54,10 +55,10 @@ if(isset($_POST["submitTable"]))
     {
         $column_name=$columns['column_name'];
         if ($column_name == "id"){
-            echo "<label for=$column_name> $column_name </label> <input type = 'text' name = $column_name disabled> <br><br>";
+            echo "<label for=$column_name> $column_name </label> <br> <input type = 'text' name = $column_name disabled> <br><br>";
             //array_push($arrColumns, $column_name);
         } else {
-            echo "<label for=$column_name> $column_name </label> <input type = 'text' name = $column_name> <br><br>";
+            echo "<label for=$column_name> $column_name </label> <br> <input type = 'text' name = $column_name> <br><br>";
             array_push($arrColumns, $column_name);
         }
     }
@@ -97,15 +98,16 @@ if(isset($_POST["submitInsert"]))
     $sql = "INSERT INTO $getTable1 ($sepCol) VALUES ($sepVal)";
     
     if (mysqli_query($conn, $sql)) {
-        echo "New values added to database successfully". "<br><br>". $sepVal;
+        echo "New values added to database 'final_lit' into table '".
+                $getTable1. "' successfully:". "<br><br>". $sepVal; 
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 }
 echo "</form>";
 ?>
-<div>
 
+  </div>
 </body>
  <footer>
       <h5>Diese Seite wurde von Studenten erstellt</h5>

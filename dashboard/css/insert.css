@@ -51,27 +51,25 @@ background-position: bottom right;
 
 
 .select1 {
-	margin-left: 150%;
+	margin-left: 180%;
 	margin-right: 0%;
 	margin-top: 60%;
 	margin-bottom: auto;
 }
 
 .input1 {
-	margin-left: 165%;
+	margin-left: 190%;
 	margin-right: 0%;
 	margin-top: 3%;
 	margin-bottom: auto;
-}
-
-.input2 {
-	margin: 0%;
 }
 
 .SelectTable {
-	margin-left: 165%;
+	margin-left: 180%;
 	margin-right: 0%;
-	margin-top: 3%;
+	margin-top: 4%;
 	margin-bottom: auto;
-	text-align: center;
+  width: 400px;
 }
+
+ 
