@@ -28,7 +28,7 @@ while($rows = $resultSet->fetch_assoc())
     $table_name=$rows['table_name'];
     echo "<option value=$table_name>$table_name</option>";
 }?>
-<br><br><br>
+<br><br>
  </select>
 
 <input class="input1" type = 'submit' name = 'submitTable' value = 'Select Table'/> <br><br>
@@ -43,7 +43,7 @@ if(isset($_POST["submitTable"]))
     if (empty($_POST["final_lit"])) echo "Please select a table!";
     else {
     $getTable = $_POST["final_lit"];
-    echo "<label style=''>".'The selected table is: '.$getTable."</label>";
+    echo "<label style='text-align:center'>".'The selected table is: '.$getTable."</label>";
     echo "<br><br>";
     echo "<form action = 'insert.php' method = 'POST'>";
     $columnsResult = $conn->query("SELECT column_name FROM information_schema.columns 
