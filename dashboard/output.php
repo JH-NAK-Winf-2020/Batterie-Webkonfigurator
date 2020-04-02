@@ -4,8 +4,8 @@
  -->
 
 <div id="output" class="output">
-<div id="InfoBox" class="InfoBox">
-  <table id=InfoTable class="fixed-header">
+<div class="InfoBox">
+  <table class="fixed-header InfoTable">
     <thead>
     	<tr>
 		  <th colspan="3" style="width: 270px">Fahrzeug </th>

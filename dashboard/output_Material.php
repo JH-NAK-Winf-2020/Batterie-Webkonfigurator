@@ -114,15 +114,15 @@ $matnrListe = array();
 	</table>
 </div>
 
-<div id="LadeDiv" class="LadeAusgabe">
-	<table>
-		<tread>
+<div class="LadeAusgabe">
+	<table class="fixed-header InfoTable">
+		<thead>
 		<tr>
 			<th>Materialnummer</th>
 			<th>Label</th>
 			<th>Text</th>
 		</tr>
-		</tread>
+		</thead>
 		<tbody>
 	<?php foreach($dataLadeg as $datasetLadeg){?>
 	<tr>
