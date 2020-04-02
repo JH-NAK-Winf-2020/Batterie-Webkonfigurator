@@ -115,10 +115,11 @@ padding:0.3em 0.5em;
 table, th, td {
   border-collapse: collapse;
   padding: 0.1em 0.3em;
+  font-size: 11pt;
 }
 
 caption {
-  font-size:1.5em;
+  font-size:1 em;
 }
 
 .InfoTable thead, caption {

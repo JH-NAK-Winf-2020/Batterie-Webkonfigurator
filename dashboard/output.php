@@ -8,14 +8,14 @@
   <table class="fixed-header InfoTable">
     <thead>
     	<tr>
-		  <th colspan="3" style="width: 270px">Fahrzeug </th>
+		  <th colspan="3" style="width: ??px">Fahrzeug </th>
 		  <th colspan="2" style="width: 170px">Batterie </th>
 		  <th style="width: 400px" >Ausstattung</th>
 		</tr>
 		<tr>
-		  <th style="width: 120px">Fahrzeugtyp </th>
+		  <th style="width: 120px">Fzg Typ </th>
 		  <th style="width: 50px">ab Baujahr</th>
-		  <th style="width: 100px">Batterieraum</th>
+		  <th style="width: 100px">Batterie Raum</th>
 		  <th style="width: 100px">Batterie Kapazitaet</th>
 		  <th style="width: 70px">Batterie Typ</th>
 		  <th style="width: 400px">Zugangssystem</th>
@@ -24,7 +24,7 @@
     <tbody>
             <?php foreach ($data as $dataset) { //Ausgabe der Suchergbnisse?>
     	        <tr class="test" id="<?php echo htmlspecialchars($dataset['masterId']) ?>"< onclick="selectRow(<?php echo htmlspecialchars($dataset['masterId'])?>)">
-		          <td class="fzg-data" style="width: 120px"><?php echo htmlspecialchars($dataset['fzgLabel'])?></td>
+		          <td class="fzg-data" style="width: 200px"><?php echo htmlspecialchars($dataset['fzgLabel'])?></td>
 		          <td class="fzg-data" style="width: 50px"><?php echo htmlspecialchars($dataset['fzgSop'])?></td>
 				  <td class="fzg-data" style="width: 100px"><?php echo htmlspecialchars($dataset['brLabel'])?></td>
 				  <td class="batterie-data" style="width: 100px"><?php echo htmlspecialchars($dataset['baKapa'])?></td>
