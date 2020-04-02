@@ -33,7 +33,7 @@ while($rows = $resultSet->fetch_assoc())
 
 <input class="input1" type = 'submit' name = 'submitTable' value = 'Select Table'/> <br><br>
 </form>
-
+<hr class="Trennlinie">
 <div class="SelectTable">
 <?php
 session_start();
@@ -43,7 +43,7 @@ if(isset($_POST["submitTable"]))
     if (empty($_POST["final_lit"])) echo "Please select a table!";
     else {
     $getTable = $_POST["final_lit"];
-    echo "<label style='text-align:center'>".'The selected table is: '.$getTable."</label>";
+    echo "<label style='margin-left: -13%'>".'The selected table is: '.$getTable."</label>";
     echo "<br><br>";
     
     echo "<form action = 'insert.php' method = 'POST'>";
