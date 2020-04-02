@@ -61,7 +61,7 @@ footer {
 }
 
 #InfoTable tr {
-    background-color: #F3E2A9;
+    background-color: #F7F2E0;
 }
 
 /* #InfoTable hr {
@@ -76,7 +76,6 @@ footer {
 #InfoBox {
   margin: auto;
   margin-top: 13%;
-  margin-bottom: auto;
   margin-left: 35%;
 }
 
@@ -221,3 +220,10 @@ margin: auto;
     height: 150px;
     position:fixed;
   }
+.LadeAusgabe {
+  margin-top: 70%;
+  margin-bottom: 15%;
+  /* margin-right: ; */
+  /* margin-left: ; */
+
+}

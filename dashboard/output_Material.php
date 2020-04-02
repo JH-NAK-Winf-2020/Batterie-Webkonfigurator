@@ -114,7 +114,7 @@ $matnrListe = array();
 	</table>
 </div>
 
-<div id="LadeDiv" style="float: bottom">
+<div id="LadeDiv" class="LadeAusgabe">
 	<table>
 		<tread>
 		<tr>
