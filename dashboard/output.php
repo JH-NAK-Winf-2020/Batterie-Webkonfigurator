@@ -3,8 +3,8 @@
    Wird durch js/jquery Funktion updateData() als Teil der Seite seperat nachgeladen (ajax)
  -->
 
-<div id="output" class="output">
-<div class="InfoBox">
+
+<div id="output" class="InfoBox">
   <table class="fixed-header InfoTable">
     <thead>
     	<tr>
@@ -35,5 +35,4 @@
     </tbody>
   </table>
   <label id='count'><?php echo 'Eintraege:' . count($data);?></label>
-</div>
 </div>
