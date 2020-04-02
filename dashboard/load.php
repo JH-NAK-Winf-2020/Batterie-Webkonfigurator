@@ -7,3 +7,5 @@
   include 'output.php'; //Teil des zu erneuernden Contents -> Iteriert ueber $data
   
   ?>
+  
+  

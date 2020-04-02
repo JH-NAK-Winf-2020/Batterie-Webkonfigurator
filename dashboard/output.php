@@ -4,8 +4,8 @@
  -->
 
 <div id="output" class="output">
-<div>
-  <table id= "InfoTable" class="fixed-header">
+<div id="InfoBox" class="InfoBox">
+  <table id=InfoTable class="fixed-header">
     <thead>
     	<tr>
 		  <th colspan="3" style="width: 270px">Fahrzeug </th>
@@ -31,9 +31,9 @@
 				  <td class="batterie-data" style="width: 70px"><?php echo htmlspecialchars($dataset['baTyp'])?></td>
 				  <td class="ausstattung-data" style="width: 400px"><?php echo htmlspecialchars($dataset['asLabel'])?></td>
 				</tr>
-	        <?php } ?>
+	        <?php }; ?>
     </tbody>
   </table>
-
+  <label id='count'><?php echo 'Eintraege:' . count($data);?></label>
 </div>
 </div>

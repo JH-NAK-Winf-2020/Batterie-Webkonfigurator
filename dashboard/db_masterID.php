@@ -43,5 +43,31 @@ class DB_MasterID{
         $result = $this->passSqlToDb($sql);
         return $result;
     }
+    
+    function getNart($masterID){
+        $sql = "SELECT nachruestart.label as naLabel FROM nachruestart WHERE nachruestart.id IN (SELECT master.nachruestart FROM master WHERE master.id = $masterID);";
+        $result = $this->passSqlToDb($sql);
+        return $result;
+    }
+    function getAuMaterial($masterID){
+        //Ausstattung to Material (von MasterID nach Materialnummer)
+        $sql = "SELECT ausstattung2material.material as auMaterial FROM ausstattung2material WHERE ausstattung2material.ausstattung IN (SELECT master.ausstattung FROM master WHERE master.id = $masterID);";
+        $result = $this->passSqlToDb($sql);
+        return $result;
+    }
+
+    function getBaMaterial($masterID){
+        //Batterie Materialnr (von MasterID Batterienummer)
+        $sql = "SELECT batterie.material as baMaterial, batterie.abmessung as baAbmessung, batterie.kapazitaet as baKapa FROM batterie WHERE batterie.id = (SELECT master.batterie FROM master WHERE master.id = $masterID);";
+        $result = $this->passSqlToDb($sql);
+        return $result;
+    }
+    
+    function getZusatzInfo($masterID){
+        //zusatzinfo
+        $sql = "SELECT zusatzinfo.text as zuText, zusatzinfo.art as zuArt FROM zusatzinfo WHERE zusatzinfo.id IN (SELECT master2zusatzinfo.zusatzinfo FROM master2zusatzinfo WHERE master2zusatzinfo.master = $masterID);";
+        $result = $this->passSqlToDb($sql);
+        return $result;
+    }    
 }
 ?>
