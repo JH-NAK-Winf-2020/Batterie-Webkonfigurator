@@ -89,7 +89,8 @@ if(isset($_POST["submitInsert"]))
 //Insert new values into Database
     $sql = "INSERT INTO $getTable1 ($sepCol) VALUES ($sepVal)";
     if (mysqli_query($conn, $sql)) {
-        echo "New values added to database successfully". "<br><br>". $sepVal;
+        echo "New values added to database 'final_lit' into table '".
+                $getTable1. "' successfully:". "<br><br>". $sepVal;
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
