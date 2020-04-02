@@ -115,7 +115,7 @@ $matnrListe = array();
 </div>
 
 <div class="LadeAusgabe">
-	<table class="fixed-header InfoTable">
+	<table id="scroll" class="fixed-header InfoTable">
 		<thead>
 		<tr>
 			<th>Materialnummer</th>
