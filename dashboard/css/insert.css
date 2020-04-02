@@ -1,0 +1,77 @@
+header {
+  background-color: #ffb900;
+  background-image: url("logo.jpg");
+  background-size: 165px;
+  background-position: left;
+  background-position-x: 2%;
+  background-position-y: auto;
+  background-repeat: no-repeat;
+  height: 90px;
+  width: 100%;
+  margin-bottom: 5px;
+  margin-top: -5px; 
+  z-index: 5;
+  border-radius: 2px;
+  padding-top:5px;
+  position: fixed;
+  text-align: center;
+  padding: .6em;
+  left: 0;
+  right: 0;
+}
+
+body {
+font-family: Arial;
+font-size: 17px;
+background-color: #bdbdbd;
+margin: 3px auto;
+width: auto;
+margin-top: 4px;
+position: fixed;
+}
+
+footer {
+background-color: #ffffff;
+border-radius: 10px;
+opacity: 0.6;
+text-align: center;
+clear: both;
+width: 100%;
+position: fixed;
+padding: .9em;
+left: 0;
+right: 0;
+bottom: 0px;
+background-image: url("Battery.jpg");
+background-repeat: no-repeat;
+background-size: 10%;
+background-attachment: fixed;
+background-position: bottom right;
+}
+
+
+.select1 {
+	margin-left: 150%;
+	margin-right: 0%;
+	margin-top: 60%;
+	margin-bottom: auto;
+}
+
+.input1 {
+	margin-left: 165%;
+	margin-right: 0%;
+	margin-top: 3%;
+	margin-bottom: auto;
+}
+
+.input2 {
+	margin: 0%;
+}
+
+.SelectTable {
+	margin-left: 165%;
+	margin-right: 0%;
+	margin-top: 3%;
+	margin-bottom: auto;
+	text-align: center;
+}

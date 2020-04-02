@@ -4,13 +4,22 @@ $resultSet = $conn->query("SELECT table_name FROM information_schema.tables
                             WHERE table_schema = 'final_lit'") or die($conn->error);
 ?>
 
-<html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="frame">
+
 <head>
+    <meta charset="utf-8">
+    <title>Lithium-Ionen Webkonfigurator</title>
+    <link rel="stylesheet" href="./css/insert.css?v=1">
 </head>
-<body> 
-<center>
+
+<body>
+<header>
+    <h1>Lithium-Ionen Webkonfigurator f&uumlr Nachr&uumlsts&aumltze</h1> 
+</header>
+
 <form method ="POST">
-<select name="final_lit">
+<select class="select1" name="final_lit">
 
 <?php
 echo "<option selected disabled>-- select table --</option>";
@@ -18,14 +27,14 @@ while($rows = $resultSet->fetch_assoc())
 {
     $table_name=$rows['table_name'];
     echo "<option value=$table_name>$table_name</option>";
-}
-?>
-
+}?>
 <br><br><br>
  </select>
-<input type = 'submit' name = 'submitTable' value = 'Select Table'/> <br><br>
+
+<input class="input1" type = 'submit' name = 'submitTable' value = 'Select Table'/> <br><br>
 </form>
 
+<div class="SelectTable">
 <?php
 session_start();
 //"Select Table" button
@@ -34,7 +43,7 @@ if(isset($_POST["submitTable"]))
     if (empty($_POST["final_lit"])) echo "Please select a table!";
     else {
     $getTable = $_POST["final_lit"];
-    echo 'The selected table is: '.$getTable;
+    echo "<label style=''>".'The selected table is: '.$getTable."</label>";
     echo "<br><br>";
     echo "<form action = 'insert.php' method = 'POST'>";
     $columnsResult = $conn->query("SELECT column_name FROM information_schema.columns 
@@ -95,6 +104,10 @@ if(isset($_POST["submitInsert"]))
 }
 echo "</form>";
 ?>
-</center>
+<div>
+
 </body>
+ <footer>
+      <h5>Diese Seite wurde von Studenten erstellt</h5>
+    </footer>
 </html>
