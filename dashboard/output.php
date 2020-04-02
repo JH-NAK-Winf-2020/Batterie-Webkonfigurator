@@ -7,6 +7,11 @@
 <div>
   <table id= "InfoTable" class="fixed-header">
     <thead>
+    	<tr>
+		  <th colspan="3" style="width: 270px">Fahrzeug </th>
+		  <th colspan="2" style="width: 170px">Batterie </th>
+		  <th style="width: 400px" >Ausstattung</th>
+		</tr>
 		<tr>
 		  <th style="width: 120px">Fahrzeugtyp </th>
 		  <th style="width: 50px">ab Baujahr</th>

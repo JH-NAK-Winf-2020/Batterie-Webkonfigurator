@@ -21,31 +21,23 @@
 
 <table>
 <tr>
-<th>Materialnummer</th>
-<th>Spalte2</th>
-<th>Spalte3</th>
+<th colspan="3">Nachruestsatz</th>
 </tr>
-<tr>
-<td>Material</td>
-<td>Label</td>
-<td>Kommentar</td>
-</tr>
-	<?php if($dataNsatz == ''){?>
-	    <tr> <td>kein Nachruestsatz vorhanden</td><td>---</td><td>---</td>
+	<?php if(empty($dataNsatz)){?>
+	    <tr> 
+	    	<td colspan="3">- kein Nachruestsatz vorhanden -</td>
 		</tr>
 	<?php }else{ foreach($dataNsatz as $datasetNsatz){?>
 	<tr>
-	<td><?php echo $datasetNsatz['nsatzMaterial']; ?></td>
+	<td><?php echo $datasetNsatz['nsatzMaterial']; ?></td> 
 	<td><?php echo $datasetNsatz['nsatzLabel']; ?></td>
 	<td><?php echo $datasetNsatz['nsatzKomm']; ?></td>
     </tr>
 	<?php };};?>
 <tr>
-
+<?php if(!empty($dataNdetail)){?>
 <tr>
-<td>Material</td>
-<td>Label</td>
-<td>Frei</td>
+<td colspan="3">Nachruestsatz-Details</td>
 </tr>
 	<?php foreach($dataNdetail as $datasetNdetail){?>
 	<tr>
@@ -53,11 +45,10 @@
 	<td><?php echo $datasetNdetail['ndetailLabel']; ?></td>
 	<td><?php echo ''; ?></td>
     </tr>
-	<?php }?>
+	<?php };};?>
 <tr>
-<td>Material</td>
-<td>Label</td>
-<td>Hinweis</td>
+<?php if(!empty($dataZusatz)){?>
+<td colspan="3">Zusatzmaterial</td>
 </tr>	
 	<?php foreach($dataZusatz as $datasetZusatz){?>
 	<tr>
@@ -65,14 +56,12 @@
 	<td><?php echo $datasetZusatz['zuLabel']; ?></td>
 	<td><?php echo $datasetZusatz['zuHinweis']; ?></td>
     </tr>
-	<?php }?>
+	<?php };};?>
 </table>
 <label>zu bestellendes Ladegerat</label>
 <table>
 <tr>
-<th>Materialnummer</th>
-<th>Label</th>
-<th>Klasse</th>
+<td colspan="3">Ladegeraet</td>
 </tr>
 	<?php foreach($dataLadeg as $datasetLadeg){?>
 	<tr>
