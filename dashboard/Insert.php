@@ -100,11 +100,11 @@ if(isset($_POST["submitInsert"]))
     $sql = "INSERT INTO $getTable1 ($sepCol) VALUES ($sepVal)";
     if (mysqli_query($conn, $sql)) {
         echo "New values added to database 'final_lit' into table '".
-<<<<<<< HEAD
+
                 $getTable1. "' successfully:". "<br><br>". $sepVal; 
-=======
+
                 $getTable1. "' successfully:". "<br><br>". $sepVal;
->>>>>>> d000f77e4e6a1d0df0f90ad24842584736c6c678
+
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
@@ -112,11 +112,11 @@ if(isset($_POST["submitInsert"]))
 echo "</form>";
 ?>
 
-<<<<<<< HEAD
+
   </div>
-=======
+
 </center>
->>>>>>> d000f77e4e6a1d0df0f90ad24842584736c6c678
+
 </body>
  <footer>
       <h5>Diese Seite wurde von Studenten erstellt</h5>
