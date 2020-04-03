@@ -21,16 +21,6 @@ header {
   right: 0;
 }
 
-/* ?? Kann weggelassen werden?? */
-/* body, html {
-	margin: 0;
-	padding: 0;
-  height: 100%;
-  position: absolute;
-  height: 90px;
-  width: 100%;
-} */
-
 body {
 font-family: Arial;
 font-size: 17px;
@@ -60,43 +50,33 @@ footer {
   background-position: bottom right;
 }
 
-/* #InfoTable hr {
-	background-color: #3c3c3c;
-	color: #009697;
-	height: 45px;
-	width: 100%;
-	margin: 0 auto;
-} */
-
 /* Ausrichtung der großen Informationstabelle */
 .InfoBox {
   top: 15%;
-  left:  15%;
+  left:  20%;
+  right: 40%;
   height: 50%;
-  width: auto;
   overflow: hidden;
   position: fixed;
 }
 
 .InfoTable table {
 border: 1px solid #000000;
-background-color: #EEEEEE;
+background-color: #fbf3ea;
 width: 100%;
 text-align: left;
 border-collapse: collapse;
-background: #A4950D;
 }
 
 table, th, td {
   border-collapse: collapse;
   padding: 3px 2px;
   font-size: 11pt;
-  width: 100%;
+ 
 }
 
 th {
 border-collapse: collapse;
-padding: 3px 2px;
 }
 
 .InfoTable td {
@@ -106,18 +86,16 @@ padding: 3px 2px;
   font-size: 13px;
   padding: 3px 2px;
   border: 1px solid #666;
-  width: auto;
 }
 
 .fixed-header tbody {
   display:block;
   overflow:scroll;
-  height:300px;
-  width: auto;
+  max-height:300px;
   font-size: 13px;
 }
 
-#scroll tbody {
+.scroll tbody {
 overflow:scroll;
 height:auto;
 }
@@ -127,7 +105,7 @@ height:auto;
 }
 
 .InfoTable tr {
-  background-color: #F7F2E0;
+  background-color: #fbf3ea;
 }
 
 .InfoTable thead, caption {
@@ -137,7 +115,7 @@ height:auto;
 
 .fixed-header thead tr {
   display:block;
-  background-color: burlywood;
+  background-color: #ebcfae;
   border-top: 1px solid #666;
   border-bottom: 1px solid #666;
   border-left: 1px solid #666;
@@ -185,9 +163,6 @@ margin: auto;
   padding-left: 1em;
 }
 
-/* .ListenPosition {
-} */
-
 .button {
   float: right;
   width: 100px;
@@ -220,8 +195,7 @@ margin: auto;
 
   #count {
     font-size:10pt;
-      margin-top: 50%;
-      margin-left: 35%;
+    text-align: left;
   }
 
   #matnrAugabe {
@@ -233,11 +207,10 @@ margin: auto;
 
 .LadeAusgabe {
   position: fixed;
-  left: 15%;
-  top: 55%;
+  left: 20%;
+  top: 62%;
+  max-height: 150px;
 }
-
-
 
 /* Tabelle Nachrüstung */
 
@@ -246,7 +219,7 @@ margin: auto;
 }
 
 .MatnrAusgabe table {
-	border-collapse: separate;
+	border-collapse: collapse;
 	border-spacing: 0.2em;
 	margin-left: 2em;
 	box-shadow: 0 0 0.1em #666;
@@ -256,24 +229,26 @@ margin: auto;
 
 .MatnrAusgabe th,
 td {
-	padding: 0.2em 0.5em;
-	border-radius: 0.1em;
+  padding: 0.2em 0.5em;
+   text-align: left;
 }
 
-.MatnrAusgabe thead th {
-	background-color: #ffebe6;
-	color: #000000;
+.MatnrAusgabe th {
+  background-color: #ebcfae;
+ 
 }
 
 .MatnrAusgabe td {
 	font-style: italic;
 	text-align: right;
-	box-shadow: inset 1px 3px 5px -3px rgba(0, 0, 0, 0.5);
 }
 
-.MatnrAusgabe tbody tr:nth-child(even) {
-	background-color: #e4ebf2;
-	color: #000;
+.MatnrAusgabe tbody tr {
+	background-color: #fbf3ea;
+  color: #000;
+  border-top: #000000;
+  border-bottom: #000000;
+  border: 1px solid #000000;
 }
 
 .MatnrAusgabe td:empty {
@@ -283,7 +258,6 @@ td {
 
 .MatnrAusgabe th[scope=row] {
 	color: #000000;
-	text-align: right;
 	background-color: #fff;
 }
 
@@ -293,7 +267,7 @@ td {
 	font-size: 1.5em;
 	box-shadow: 0.1em 0.1em 0.1em 0 hsl(0, 0%, 50%);
 	padding: 0.2em 0.2em 0.2em 2em;
-	width: 10em;
+	width: 18em;
 	margin-left: -.6em;
 	position: relative;
 }
@@ -311,14 +285,3 @@ td {
 	border-color: transparent hsl(13, 96%, 35%) transparent transparent;
 	z-index: -1;
 }
-
-.MatnrAusgabe tbody tr:hover,
-tfoot tr:hover {
-	background-color: #fce4a2;
-}
-
-.MatnrAusgabe tbody td:hover,
-tfoot td:hover {
-	background-color: #fce4a2;
-}
-
