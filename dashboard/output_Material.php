@@ -21,6 +21,8 @@ $BaMaterial = new DB_MasterID();
 $dataBaMaterial = $BaMaterial->getBaMaterial($masterID);
 $Fzg = new DB_MasterID();
 $dataFzg = $Fzg->getFzg($masterID);
+$AuLabel = new DB_MasterID();
+$dataAuLabel = $AuLabel->getAuLabel($masterID);
 
 unset($matnrListe);
 $matnrListe = array();
@@ -101,9 +103,10 @@ $matnrListe = array();
 <tr>
 						<th rowspan="<?php echo count($dataAuMaterial); ?>" scope="row>">Ausstattung</th>
 	<?php foreach($dataAuMaterial as $datasetAuMaterial){?>
-					
 						<td colspan='1'><?php echo $datasetAuMaterial['auMaterial']; array_push($matnrListe, $datasetAuMaterial['auMaterial']); ?></td>
-						<td colspan='2'></td>
+							<?php foreach($dataAuLabel as $datasetAuLabel){?>
+						<td colspan='2'><?php echo $datasetAuLabel['auLabel'];?></td>
+							<?php };?>
 					</tr>
 	<?php };};?>
 
