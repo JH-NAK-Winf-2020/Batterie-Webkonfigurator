@@ -118,12 +118,10 @@ $matnrListe = array();
 </div>
 
 <div class="LadeAusgabe">
-	<table class="fixed-header InfoTable scroll">
+	<table Id="LadeTable" class="fixed-header InfoTable scroll">
 		<thead>
 		<tr>
-			<th>Materialnummer</th>
-			<th>Label</th>
-			<th>Text</th>
+			<th colspan="3">Ladeger&aumlte</th>
 		</tr>
 		</thead>
 		<tbody>

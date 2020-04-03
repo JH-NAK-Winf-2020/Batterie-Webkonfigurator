@@ -56,27 +56,21 @@ footer {
   left:  20%;
   right: 40%;
   height: 50%;
-  overflow: hidden;
   position: fixed;
 }
 
 .InfoTable table {
-border: 1px solid #000000;
-background-color: #fbf3ea;
-width: 100%;
-text-align: left;
-border-collapse: collapse;
+  border: 1px solid #000000;
+  background-color: #fbf3ea;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
 }
 
 table, th, td {
   border-collapse: collapse;
   padding: 3px 2px;
   font-size: 11pt;
- 
-}
-
-th {
-border-collapse: collapse;
 }
 
 .InfoTable td {
@@ -90,14 +84,16 @@ border-collapse: collapse;
 
 .fixed-header tbody {
   display:block;
-  overflow:scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   max-height:300px;
   font-size: 13px;
 }
 
 .scroll tbody {
-overflow:scroll;
-height:auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height:auto;
 }
 
 .hover tr:hover {
@@ -113,7 +109,7 @@ height:auto;
   color: #000000;
 } 
 
-.fixed-header thead tr {
+.fixed-header thead tr  {
   display:block;
   background-color: #ebcfae;
   border-top: 1px solid #666;
@@ -210,6 +206,10 @@ margin: auto;
   left: 20%;
   top: 62%;
   max-height: 150px;
+}
+
+#LadeTable {
+  min-width: 200px;
 }
 
 /* Tabelle Nachrüstung */
