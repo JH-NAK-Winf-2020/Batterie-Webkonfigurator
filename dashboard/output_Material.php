@@ -19,6 +19,8 @@ $ZusatzInfo = new DB_MasterID();
 $dataZusatzInfo = $ZusatzInfo->getZusatzInfo($masterID);
 $BaMaterial = new DB_MasterID();
 $dataBaMaterial = $BaMaterial->getBaMaterial($masterID);
+$Fzg = new DB_MasterID();
+$dataFzg = $Fzg->getFzg($masterID);
 
 unset($matnrListe);
 $matnrListe = array();
@@ -36,6 +38,19 @@ $matnrListe = array();
 						<caption><?php foreach($dataNart as $datasetNart){echo $datasetNart['naLabel'];};?></caption>
 					</thead>
 					<tbody>
+		<tr>
+						<th scope="row>">fuer Fahrzeug:</th>
+	<?php if(!empty($dataFzg)){?>
+	<?php foreach($dataFzg as $datasetFzg){?>
+						<td><?php echo $datasetFzg['fzgLabel']; ?></td>
+						<td><?php echo $datasetFzg['fzgSop']; ?></td>
+						<td><?php echo $datasetFzg['baLabel']; ?></td>
+				
+	<?php };}else{?>
+			<td colspan="3">- kein Fahrzeug ausgewaehlt -</td>
+		
+	<?php };?>
+	</tr>
 	<?php if(empty($dataNsatz)){?>
 	  				 <tr>
 						<th scope="row>">Nachr&uumlstsatz</th>				
