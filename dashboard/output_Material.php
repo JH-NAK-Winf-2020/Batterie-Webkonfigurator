@@ -47,7 +47,6 @@ $matnrListe = array();
 					</tr>
 	<?php }else{ foreach($dataNsatz as $datasetNsatz){?>
 	<tr>
-						
 						<td><?php echo $datasetNsatz['nsatzMaterial']; array_push($matnrListe, $datasetNsatz['nsatzMaterial']);?></td>
 						<td><?php echo $datasetNsatz['nsatzLabel']; ?></td>
 						<td><?php echo $datasetNsatz['nsatzKomm']; ?></td>
