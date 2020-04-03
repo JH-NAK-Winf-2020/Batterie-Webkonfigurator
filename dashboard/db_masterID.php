@@ -68,6 +68,13 @@ class DB_MasterID{
         $sql = "SELECT zusatzinfo.text as zuText, zusatzinfo.art as zuArt FROM zusatzinfo WHERE zusatzinfo.id IN (SELECT master2zusatzinfo.zusatzinfo FROM master2zusatzinfo WHERE master2zusatzinfo.master = $masterID);";
         $result = $this->passSqlToDb($sql);
         return $result;
+    }
+    function getFzg($masterID){
+        //Fahrzeugdaten ausgabe
+        $sql = "SELECT fahrzeug.label as fzgLabel, fahrzeug.sop_Date as fzgSop, batterieraum.label as baLabel FROM fahrzeug, batterieraum WHERE fahrzeug.id IN (SELECT master.fahrzeug FROM master WHERE master.id = $masterID) AND batterieraum.id IN (SELECT master.batterieraum FROM master WHERE master.id = $masterID);";
+        $result = $this->passSqlToDb($sql);
+        echo print_r($result);
+        return $result;
     }    
 }
 ?>
