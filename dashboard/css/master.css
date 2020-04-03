@@ -285,4 +285,11 @@ td {
 	border-color: transparent hsl(13, 96%, 35%) transparent transparent;
 	z-index: -1;
 }
-/* test */
+
+textarea {
+  resize: none; 
+  width: 100px;
+  height: 100px;
+  top: 150px;
+  left: 50%;
+}

@@ -122,10 +122,9 @@ $matnrListe = array();
 </table>
 </main>
 			</td>
-		<td style="width:'100px'">
+		<td style="width:200px">
 		<label>Materialnummer:</label></br>
-			<textarea id="matnrAusgabe"
-					style="resize: none; width: 100px; height: 100px;" cols="" rows="">
+			<textarea id="matnrAusgabe" cols="" rows="">
 			<?php foreach($matnrListe as $matnr){echo $matnr . '&#13;&#10;';};?>
 			</textarea></td>
 		</tr>
