@@ -5,13 +5,13 @@ include 'db_result.php';
     $firstOutput = new DB_Result();
     $data = $firstOutput->initialOutput();
     $initialFzgSop = new DB_Result();
-    $optionsFzgSop = $initialFzgSop->getOptionsFzgSop('','','','','','');
+    $optionsFzgSop = $initialFzgSop->getOptionsDropDown('fzgSop','all','','','','','','');
     $initialBrLabel = new DB_Result();
-    $optionsBrLabel = $initialBrLabel->getOptionsBrLabel('','','','','','');
+    $optionsBrLabel = $initialBrLabel->getOptionsDropDown('brLabel','all','','','','','','');
     $initialBaKapa = new DB_Result();
-    $optionsBaKapa = $initialBaKapa->getOptionsBaKapa('','','','','','');
+    $optionsBaKapa = $initialBaKapa->getOptionsDropDown('baKapa','all','','','','','','');
     $initialBaTyp = new DB_Result();
-    $optionsBaTyp = $initialBaTyp->getOptionsBaTyp('','','','','','');
- $nSatzData = '';
-include 'initial.php'; //Seitenaufbau der ersten Seite (ohne Nachladen)
+    $optionsBaTyp = $initialBaTyp->getOptionsDropDown('baTyp','all','','','','','','');
+    $nSatzData = '';
+    include 'initial.php'; //Seitenaufbau der ersten Seite (ohne Nachladen)
 ?>
