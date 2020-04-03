@@ -26,22 +26,28 @@ $matnrListe = array();
 <html>
 
 <div Id="NsatzDiv" style="float: right">
-	<table>
-		<tr>
-			<h4>Nachr&uumlstung auf: <?php foreach($dataNart as $datasetNart){echo $datasetNart['naLabel'];};?></h4>
+	<main><table>
+		
+	<tr>
+			<caption><h4>Nachr&uumlstung auf: <?php foreach($dataNart as $datasetNart){echo $datasetNart['naLabel'];};?></h4></caption>
 		</tr>
 		<tr>
 			<td>
-				<table>
-					<tr>
+				<table class="MatnrAusgabe">
+					<thead>
+						 
+				<tr>
+					<td rowspan="2"></td>
 						<th colspan="3">Nachruestsatz</th>
 					</tr>
+					</thead>
 	<?php if(empty($dataNsatz)){?>
-	    <tr>
+	  <tbody> <tr>
 						<td colspan="3">- kein Nachruestsatz vorhanden -</td>
 					</tr>
 	<?php }else{ foreach($dataNsatz as $datasetNsatz){?>
 	<tr>
+						
 						<td><?php echo $datasetNsatz['nsatzMaterial']; array_push($matnrListe, $datasetNsatz['nsatzMaterial']);?></td>
 						<td><?php echo $datasetNsatz['nsatzLabel']; ?></td>
 						<td><?php echo $datasetNsatz['nsatzKomm']; ?></td>
@@ -100,7 +106,7 @@ $matnrListe = array();
 	<tr>
 						<td colspan='2'><?php echo $datasetZusatzInfo['zuText'];?></td>
 						<td colspan='1'><?php echo $datasetZusatzInfo['zuArt'];?></td>
-					</tr>
+					</tr></tbody>
 	<?php };};?>
 
 </table>
@@ -111,7 +117,7 @@ $matnrListe = array();
 			<?php foreach($matnrListe as $matnr){echo $matnr . '&#13;&#10;';};?>
 			</textarea></td>
 		</tr>
-	</table>
+	</table></main>
 </div>
 
 <div class="LadeAusgabe">

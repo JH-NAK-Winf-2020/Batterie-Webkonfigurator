@@ -242,4 +242,84 @@ margin: auto;
 
 /* Tabelle Nachrüstung */
 
+.MatnrAusgabe main {
+	background-color: #fff;
+}
+
+.MatnrAusgabe table {
+	border-collapse: separate;
+	border-spacing: 0.2em;
+	margin-left: 2em;
+	box-shadow: 0 0 0.1em #666;
+	position: relative;
+	z-index: 1;
+}
+
+.MatnrAusgabe th,
+td {
+	padding: 0.2em 0.5em;
+	border-radius: 0.1em;
+}
+
+.MatnrAusgabe thead th {
+	background-color: #ffebe6;
+	color: #000000;
+}
+
+.MatnrAusgabe td {
+	font-style: italic;
+	text-align: right;
+	box-shadow: inset 1px 3px 5px -3px rgba(0, 0, 0, 0.5);
+}
+
+.MatnrAusgabe tbody tr:nth-child(even) {
+	background-color: #e4ebf2;
+	color: #000;
+}
+
+.MatnrAusgabe td:empty {
+	box-shadow: none;
+	background-color: none;
+}
+
+.MatnrAusgabe th[scope=row] {
+	color: #000000;
+	text-align: right;
+	background-color: #fff;
+}
+
+.MatnrAusgabe caption {
+	color: white;
+	background: #ffb900;
+	font-size: 1.5em;
+	box-shadow: 0.1em 0.1em 0.1em 0 hsl(0, 0%, 50%);
+	padding: 0.2em 0.2em 0.2em 2em;
+	width: 10em;
+	margin-left: -.6em;
+	position: relative;
+}
+
+.MatnrAusgabe caption::before {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 0;
+	width: 0;
+	top: 1em;
+	left: -0.6em;
+	border-style: solid;
+	border-width: 0.6em;
+	border-color: transparent hsl(13, 96%, 35%) transparent transparent;
+	z-index: -1;
+}
+
+.MatnrAusgabe tbody tr:hover,
+tfoot tr:hover {
+	background-color: #fce4a2;
+}
+
+.MatnrAusgabe tbody td:hover,
+tfoot td:hover {
+	background-color: #fce4a2;
+}
 
