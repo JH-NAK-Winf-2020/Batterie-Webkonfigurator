@@ -71,10 +71,15 @@ class DB_MasterID{
     }
     function getFzg($masterID){
         //Fahrzeugdaten ausgabe
-        $sql = "SELECT fahrzeug.label as fzgLabel, fahrzeug.sop_Date as fzgSop, batterieraum.label as baLabel FROM fahrzeug, batterieraum WHERE fahrzeug.id IN (SELECT master.fahrzeug FROM master WHERE master.id = $masterID) AND batterieraum.id IN (SELECT master.batterieraum FROM master WHERE master.id = $masterID);";
+        $sql = "SELECT fahrzeug.label as fzgLabel, fahrzeug.sop_Date as fzgSop, batterieraum.label as baLabel FROM fahrzeug, batterieraum WHERE fahrzeug.id IN (SELECT master.fahrzeug FROM master WHERE master.id = '$masterID) AND batterieraum.id IN (SELECT master.batterieraum FROM master WHERE master.id = $masterID);";
         $result = $this->passSqlToDb($sql);
-        echo print_r($result);
         return $result;
-    }    
-}
+    } 
+    function getAuLabel($masterID){
+        //Fahrzeugdaten ausgabe
+        $sql = "SELECT ausstattung.label as auLabel FROM ausstattung WHERE ausstattung.id = (SELECT master.ausstattung FROM master WHERE master.id = $masterID)";
+        $result = $this->passSqlToDb($sql);
+        return $result;
+    }   
+    }
 ?>
