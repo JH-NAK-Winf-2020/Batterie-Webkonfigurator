@@ -48,7 +48,7 @@ $matnrListe = array();
 						<td><?php echo $datasetNsatz['nsatzLabel']; ?></td>
 						<td><?php echo $datasetNsatz['nsatzKomm']; ?></td>
 					</tr>
-	<?php };};?>
+	<?php };?>
 
 <?php if(!empty($dataNdetail)){?>
 <tr>
@@ -66,8 +66,8 @@ $matnrListe = array();
 	<?php foreach($dataBaMaterial as $datasetBaMaterial){?>
 					
 						<td><?php echo $datasetBaMaterial['baMaterial'];array_push($matnrListe, $datasetBaMaterial['baMaterial']); ?></td>
-						<td colspan="1"><?php echo $datasetBaMaterial['baAbmessung']; ?></td>
-						<td colspan="1"><?php echo $datasetBaMaterial['baKapa']; ?></td>
+						<td colspan="1"><?php echo $datasetBaMaterial['baTyp']; ?></td>
+						<td colspan="1"><?php echo $datasetBaMaterial['baKapa']. 'Ah'; ?></td>
 					</tr>
 	<?php };};?>
 
@@ -87,7 +87,8 @@ $matnrListe = array();
 						<th rowspan="<?php echo count($dataAuMaterial); ?>" scope="row>">Ausstattung</th>
 	<?php foreach($dataAuMaterial as $datasetAuMaterial){?>
 					
-						<td colspan='3'><?php echo $datasetAuMaterial['auMaterial']; array_push($matnrListe, $datasetAuMaterial['auMaterial']); ?></td>
+						<td colspan='1'><?php echo $datasetAuMaterial['auMaterial']; array_push($matnrListe, $datasetAuMaterial['auMaterial']); ?></td>
+						<td colspan='2'></td>
 					</tr>
 	<?php };};?>
 
@@ -101,11 +102,13 @@ $matnrListe = array();
 					</tr>
 	
 	<?php };};?>
+	<?php };//closing tag sobald ein nachruest vorhanden?>
 </tbody>
 </table>
 </main>
 			</td>
 		<td style="width:'100px'">
+		<label>Materialnummer:</label>
 			<textarea id="matnrAusgabe"
 					style="resize: none; width: 100px; height: 100px;" cols="" rows="">
 			<?php foreach($matnrListe as $matnr){echo $matnr . '&#13;&#10;';};?>

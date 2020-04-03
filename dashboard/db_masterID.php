@@ -58,7 +58,7 @@ class DB_MasterID{
 
     function getBaMaterial($masterID){
         //Batterie Materialnr (von MasterID Batterienummer)
-        $sql = "SELECT batterie.material as baMaterial, batterie.abmessung as baAbmessung, batterie.kapazitaet as baKapa FROM batterie WHERE batterie.id = (SELECT master.batterie FROM master WHERE master.id = $masterID);";
+        $sql = "SELECT batterie.material as baMaterial, batterie.typ as baTyp, batterie.kapazitaet as baKapa FROM batterie WHERE batterie.id = (SELECT master.batterie FROM master WHERE master.id = $masterID);";
         $result = $this->passSqlToDb($sql);
         return $result;
     }
