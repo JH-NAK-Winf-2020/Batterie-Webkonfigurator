@@ -21,6 +21,7 @@ $BaMaterial = new DB_MasterID();
 $dataBaMaterial = $BaMaterial->getBaMaterial($masterID);
 $Fzg = new DB_MasterID();
 $dataFzg = $Fzg->getFzg($masterID);
+
 $AuLabel = new DB_MasterID();
 $dataAuLabel = $AuLabel->getAuLabel($masterID);
 
@@ -44,7 +45,7 @@ $matnrListe = array();
 						<th scope="row>">fuer Fahrzeug:</th>
 	<?php if(!empty($dataFzg)){?>
 	<?php foreach($dataFzg as $datasetFzg){?>
-						<td><?php echo $datasetFzg['fzgLabel']; ?></td>
+						<td><?php echo $datasetFzg['fzgLabel'];//$datasetFzg['fzgLabel']; ?></td>
 						<td><?php echo $datasetFzg['fzgSop']; ?></td>
 						<td><?php echo $datasetFzg['baLabel']; ?></td>
 				
