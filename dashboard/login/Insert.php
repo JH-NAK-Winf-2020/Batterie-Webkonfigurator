@@ -18,7 +18,7 @@ $resultSet = $conn->query("SELECT table_name FROM information_schema.tables
     <h1>Lithium-Ionen Webkonfigurator f&uumlr Nachr&uumlsts&aumltze</h1> 
 </header>
 
-<form method ="POST">
+<form method ="POST" >
 <select class="select1" name="final_lit">
 
 <?php
