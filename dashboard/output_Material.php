@@ -26,7 +26,6 @@ $Fzg = new DB_MasterID();
 $dataFzg = $Fzg->getFzg($masterID);
 $AuLabel = new DB_MasterID();
 $dataAuLabel = $AuLabel->getAuLabel($masterID);
-
 unset($matnrListe);
 $matnrListe = array();
 ?>
@@ -129,7 +128,7 @@ $matnrListe = array();
 </main>
 		</td>
 		<td style="min-width:200px; position: relative;">
-		<label style="position:absolute;top:15px;left:0;" >Materialnummern:</label></br>
+		<label style="position:absolute;top:40px;left:0;" >Materialnummern:</label></br>
 
 			<textarea id="matnrAusgabe"><?php foreach($matnrListe as $matnr){echo $matnr . '&#13;&#10;';};?></textarea>
 
