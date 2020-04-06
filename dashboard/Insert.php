@@ -109,12 +109,9 @@ echo "</form>";
 
   </div>
 </body>
-<<<<<<< HEAD
+
+<!--  <footer> -->
+<!--       <h5>Diese Seite wurde von Studenten erstellt</h5> -->
+<!--     </footer> -->
 </html>
 
-=======
- <footer>
-      <h5>Diese Seite wurde von Studenten erstellt</h5>
-    </footer>
-</html>
->>>>>>> origin/Ahmad
