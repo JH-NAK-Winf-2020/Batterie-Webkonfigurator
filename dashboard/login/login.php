@@ -85,7 +85,5 @@
         include "login-formular.html"; 
         mysqli_close($link); 
         exit(); 
-        
         } 
- 
     ?>
