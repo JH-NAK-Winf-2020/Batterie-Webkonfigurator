@@ -1,6 +1,6 @@
 function updateData() {
   $(document).ready(function(){
-  $("#output").load("../infoTable/load_infoTable.php", {
+  $("#output").load("./infoTable/load_infoTable.php", {
     fzgLabel: checkInput("#fahrzeug"), //Fahrzeug.Label
     fzgSop: checkInput("#sop"),       //Fahrzeug.sop
     brLabel: checkInput("#batterieraum"), //Batterieraum.Label
@@ -28,7 +28,7 @@ function checkInput(FieldName){
 }
 
 function onInputChange(){
-  $("#DropDowns").load("../input/load_input.php", {
+  $("#DropDowns").load("./input/load_input.php", {
     fzgLabel: checkInput("#fahrzeug"),
     fzgSop: checkInput("#sop"),
     brLabel: checkInput("#batterieraum"), 
@@ -47,7 +47,7 @@ function selectRow(value){
     //   $("#outputNSatz").load("load_NSatz.php", {
     // masterID: value //passender MasterID 
     // });
-    $("#outputNSatz").load("./output/output_Nsatz.php", {
+    $("#outputNSatz").load("./output/nsatzTable.php", {
       masterID: value
     });
 
@@ -57,7 +57,7 @@ function resetInput(){
   document.getElementById('fahrzeug').val('');
   document.getElementById('asLabel').val('');
 
-  $("#DropDowns").load("../input/load_input.php", {
+  $("#DropDowns").load("./input/load_input.php", {
     fzgLabel: "",
     fzgSop: "",
     brLabel: "", 
