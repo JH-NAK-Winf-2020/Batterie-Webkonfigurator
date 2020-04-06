@@ -19,9 +19,11 @@ $ZusatzInfo = new DB_MasterID();
 $dataZusatzInfo = $ZusatzInfo->getZusatzInfo($masterID);
 $BaMaterial = new DB_MasterID();
 $dataBaMaterial = $BaMaterial->getBaMaterial($masterID);
+if ($dataBaMaterial['baMaterial'] == '' && $dataBaMaterial['baTyp'] == ''){
+    $dataBaMaterial='';
+};
 $Fzg = new DB_MasterID();
 $dataFzg = $Fzg->getFzg($masterID);
-
 $AuLabel = new DB_MasterID();
 $dataAuLabel = $AuLabel->getAuLabel($masterID);
 
@@ -144,20 +146,30 @@ $matnrListe = array();
 		</tr>
 		</thead>
 		<tbody>
+	<?php if(!empty($dataLadeg)){?>
 	<?php foreach($dataLadeg as $datasetLadeg){?>
-	<tr>
+			<tr>
 				<td><?php echo $datasetLadeg['laMaterial']; ?></td>
 				<td><?php echo $datasetLadeg['laLabel']; ?></td>
 				<td><?php echo $datasetLadeg['laKlasse']; ?></td>
 			</tr>
-	<?php }?>
+	<?php }}else{?>
+	    	<tr>
+				<td colspan="3"><?php echo "kein Ladegeraet vorhanden"; ?></td>
+			</tr>
+	<?php };?>
+	<?php if(!empty($dataLadeoption)){?>
 	<?php foreach($dataLadeoption as $datasetLadeoption){?>
-	<tr>
+			<tr>
 				<td><?php echo $datasetLadeoption['loMaterial']; ?></td>
 				<td><?php echo $datasetLadeoption['loLabel']; ?></td>
 				<td><?php echo $datasetLadeoption['loKomm']; ?></td>
 			</tr>
-	<?php }?>
+	<?php }}else{?>
+		    <tr>
+				<td colspan="3"><?php echo "keine Ladegeraet-Option vorhanden"; ?></td>
+			</tr>
+	<?php };?>
 </tbody>
 	</table>
 </div>
