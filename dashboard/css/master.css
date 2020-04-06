@@ -84,14 +84,19 @@ table, th, td {
 
 .fixed-header tbody {
   display:block;
+  overflow: auto;
   overflow-x: hidden;
+  -ms-overflow: scroll;
   overflow-y: scroll;
+  scroll-behavior: smooth;
   max-height:300px;
   font-size: 13px;
 }
 
 .scroll tbody {
+  overflow: auto;
   overflow-x: hidden;
+   -ms-overflow: hidden;
   overflow-y: scroll;
   height:auto;
 }

@@ -42,7 +42,7 @@ $matnrListe = array();
 					</thead>
 					<tbody>
 		<tr>
-						<th scope="row>">fuer Fahrzeug:</th>
+						<th scope="row>">f&uumlr Fahrzeug:</th>
 	<?php if(!empty($dataFzg)){?>
 	<?php foreach($dataFzg as $datasetFzg){?>
 						<td><?php echo $datasetFzg['fzgLabel'];//$datasetFzg['fzgLabel']; ?></td>
