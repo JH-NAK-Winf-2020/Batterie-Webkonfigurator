@@ -1,4 +1,5 @@
 <?php 
+//Class enthält alle Statements, die aus dem Füllen der Input felder die Ausgabe beeinflussen(InfoTable)
 	class DB_result{
 		private $fzgLabel;
 		private $fzgSop;
@@ -6,42 +7,37 @@
 		private $baKapa;
 		private $baTyp;
 		private $asLabel;
-
-
-		public function __construct(){
-		}
-	
+		private $includePATH = '/git/dashboard/config/connect.php';
+//function zum generieren einer Where-Klausel mit Like Operator auf Basis des Spaltennamens und eingegeben Values
    function createSQLlike(String $spaltenName, String $inputValue){
     if($inputValue != ''){
+        //filtern nach entsprechender funktion
 		 $test = $spaltenName . " like '%" . $inputValue . "%'";		
 		 return $test;
    	} else {
        	return '1';
 	}
    }
+//function zum generieren einer Where-Klausel mit '=' Operator auf Basis des Spaltennamens und eingegeben Values
 	function createSQLequal(String $spaltenName, String $inputValue){
 	    if($inputValue == '(leer)'){
+	        //wenn Felder in der DB mit NULL angegeben sind
 	        $whereStatement = $spaltenName . " is NULL";
 	        return $whereStatement;
 	    }elseif($inputValue == 'all'){
+	        //User möchte keine Eintraege filtern
 	        return '1';
 	    }elseif($inputValue == ''){
 	       return '1';
 	    }else{
+	        //Filtern nach einer Option
 	        $whereStatement = $spaltenName . " = '" . $inputValue . "'";
 	        return $whereStatement;
 	    }
-
-// 	    if($inputValue != ''){
-// 	        $whereStatement = $spaltenName . " = '" . $inputValue . "'";
-// 	        return $whereStatement;
-// 	    } else {
-// 	        return '1';
-// 	    }
 	}
 
 	function passSqlToDb2($sql){
-		include './config/connect.php';
+	    include $_SERVER['DOCUMENT_ROOT']. $this->includePATH;
 		$result = mysqli_query($conn, $sql);
 		$data = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		mysqli_free_result($result);
@@ -57,7 +53,7 @@
 			$this->baTyp = $baTyp;
 			$this->asLabel = $asLabel;
 
-	   include './config/connect.php';
+	   include $_SERVER['DOCUMENT_ROOT']. $this->includePATH;
 	   	$sqlFzgLabel = $this->createSQLlike('fahrzeug.label', mysqli_real_escape_string($conn, $this->fzgLabel));
   		$sqlFzgSop = $this->createSQLequal('fahrzeug.sop_Date', mysqli_real_escape_string($conn, $this->fzgSop));
   		$sqlBrLabel = $this->createSQLequal('batterieraum.label', mysqli_real_escape_string($conn, $this->brLabel));
@@ -71,7 +67,7 @@
    }
 
    function getNSatz($masterID){
-	   include './config/connect.php';
+       include $_SERVER['DOCUMENT_ROOT']. $this->includePATH;
 	   $masterID =  mysqli_real_escape_string($conn, $masterID);
 		$sqlCheckNsatz = "SELECT master.nachruestsatz as masterNsatz FROM master WHERE master.id = $masterID";
 		$checkResult = $this->passSqlToDb2($sqlCheckNsatz);

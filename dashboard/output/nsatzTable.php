@@ -1,16 +1,19 @@
 <?php
-include 'db_masterID.php';
+include './../include/class/db_masterID.php';
 $masterID = $_POST['masterID'];
 $Nsatz = new DB_MasterID();
 $dataNsatz = $Nsatz->getNsatz($masterID);
 $Ndetail = new DB_MasterID();
 $dataNdetail = $Ndetail->getNdetail($masterID);
 $Zusatz = new DB_MasterID();
+
+
 $dataZusatz = $Zusatz->getZusatz($masterID);
 $Ladeg = new DB_MasterID();
 $dataLadeg = $Ladeg->getLadeg($masterID);
 $Ladeoption = new DB_MasterID();
 $dataLadeoption = $Ladeoption->getLadeoption($masterID);
+
 $Nart = new DB_MasterID();
 $dataNart = $Nart->getNart($masterID);
 $AuMaterial = new DB_MasterID();

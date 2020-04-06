@@ -1,8 +1,8 @@
-<!--Ausgabe der aktuellen Filterergebnisse
-   Nimmt als Input $data entgegen, welches aktuelle Suchergebnisse enthält (beim 1. Laden aus index.php, für Aktualisierungen aus load.php )
-   Wird durch js/jquery Funktion updateData() als Teil der Seite seperat nachgeladen (ajax)
- -->
-
+<?php 
+// Ausgabe der aktuellen Filterergebnisse
+// Nimmt als Input $data entgegen, welches aktuelle Suchergebnisse enthält (beim 1. Laden aus index.php, für Aktualisierungen aus load.php )
+// Wird durch js/jquery Funktion updateData() als Teil der Seite seperat nachgeladen (ajax)
+?>
 
 <div id="output" class="InfoBox">
   <table  class="fixed-header InfoTable">

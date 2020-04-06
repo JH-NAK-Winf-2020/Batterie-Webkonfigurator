@@ -1,6 +1,6 @@
 function updateData() {
   $(document).ready(function(){
-  $("#output").load("load.php", {
+  $("#output").load("./infoTable/load_infoTable.php", {
     fzgLabel: checkInput("#fahrzeug"), //Fahrzeug.Label
     fzgSop: checkInput("#sop"),       //Fahrzeug.sop
     brLabel: checkInput("#batterieraum"), //Batterieraum.Label
@@ -28,7 +28,7 @@ function checkInput(FieldName){
 }
 
 function onInputChange(){
-  $("#DropDowns").load("loadInput.php", {
+  $("#DropDowns").load("./input/load_input.php", {
     fzgLabel: checkInput("#fahrzeug"),
     fzgSop: checkInput("#sop"),
     brLabel: checkInput("#batterieraum"), 
@@ -47,7 +47,7 @@ function selectRow(value){
     //   $("#outputNSatz").load("load_NSatz.php", {
     // masterID: value //passender MasterID 
     // });
-    $("#outputNSatz").load("output_Material.php", {
+    $("#outputNSatz").load("./output/nsatzTable.php", {
       masterID: value
     });
 
@@ -57,7 +57,7 @@ function resetInput(){
   document.getElementById('fahrzeug').val('');
   document.getElementById('asLabel').val('');
 
-  $("#DropDowns").load("loadInput.php", {
+  $("#DropDowns").load("./input/load_input.php", {
     fzgLabel: "",
     fzgSop: "",
     brLabel: "", 
@@ -69,6 +69,6 @@ function resetInput(){
 
   function getInfoAu(){
       $(document).ready(function(){
-        alert("Geben Sie hier Attribute ein, die das Zugangssystem des Fahrzeugsbeschreiben: zB:'ISM'");
+        alert("Geben Sie hier Attribute ein, die das Zugangssystem des Fahrzeug beschreiben: zB:'ISM'");
       });
   }
