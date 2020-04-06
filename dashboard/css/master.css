@@ -97,7 +97,7 @@ table, th, td {
   overflow: auto;
   overflow-x: hidden;
    -ms-overflow: hidden;
-  overflow-y: hidden;
+  overflow-y: scroll;
   height:auto;
 }
 
