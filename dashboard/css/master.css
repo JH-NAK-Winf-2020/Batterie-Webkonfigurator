@@ -298,3 +298,7 @@ textarea {
   height: 150px;
   top:65px;
 }
+
+.login {
+  float: left;
+}

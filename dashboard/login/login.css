@@ -1,5 +1,5 @@
 /* Reset CSS */
-html, body, div, span, applet, object, iframe,
+/* html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
@@ -15,15 +15,48 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-size: 100%;
 	vertical-align: baseline;
 	background: transparent;
+} */
+
+header {
+  background-color: #ffb900;
+  background-image: url("logo.jpg");
+  background-size: 165px;
+  background-position: left;
+  background-position-x: 2%;
+  background-position-y: auto;
+  background-repeat: no-repeat;
+  height: 90px;
+  width: 100%;
+  margin-bottom: 5px;
+  margin-top: -5px; 
+  z-index: 5;
+  border-radius: 2px;
+  padding-top:5px;
+  position: fixed;
+  text-align: center;
+  padding: .6em;
+  left: 0;
+  right: 0;
 }
 
 body {
-	background-image: url("Batterie.jpg");
+	background-image: URL("Battery.jpg");
+	background-repeat: no-repeat;
+	background-color: bdbdbd;
+	background-position-x:  55%;
+	background-position-y: 3%;
+	background-color: #bdbdbd;
 	color: #000;
 	font: 14px Arial;
 	margin: 0 auto;
 	padding: 0;
-	position: relative;
+	/* position: relative; */
+	font-family: Arial;
+	font-size: 17px;
+	margin: 3px auto;
+	width: auto;
+	margin-top: 4px;
+	position: fixed;
 }
 
 h1{ font-size:28px;}
@@ -53,7 +86,12 @@ form:after {
 	visibility: hidden;
 }
 
-.container { margin: 25px auto; position: relative; width: 900px; }
+.container { 
+	margin-top: 25%;
+	margin-left: 60%;
+	position: relative; 
+	width: 900px; 
+}
 
 #content {
 	background: #f9f9f9;
@@ -242,7 +280,7 @@ form:after {
 }
 
 .button a {
-	background: url(http://cssdeck.com/uploads/media/items/8/8bcLQqF.png) 0 -112px no-repeat;
+	/* background: url(http://cssdeck.com/uploads/media/items/8/8bcLQqF.png) 0 -112px no-repeat; */
 	color: #7E7E7E;
 	font-size: 17px;
 	padding: 2px 0 2px 40px;
@@ -259,6 +297,3 @@ form:after {
 	color: #00aeef;
 }
 
-body {
-	background-image: URL("wolken.jpg");
-}
