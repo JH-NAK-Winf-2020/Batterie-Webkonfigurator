@@ -1,16 +1,15 @@
-<!--Darstellung der Eingabefelder durch die Ergebnisse eingeschränkt werden können
-  Enthalten als Wert zuletzt durch den Nutzer eingegebende Zeichen -> werden beim Aufruf in index.php, beim Nachladen in load.php definiert
-  Triggert updateData() in jquery.js, wenn in einem der Inputfelder eine Taste gedrückt wird -> Erneuerung des Contents der Ausgabe
--->
-<nav id='input'>
-  <ul>
-<form class="search" id='search' name='search' method="POST">
-<div class="ListenPosition">
-<h5 class="UeberschriftInput">Fahrzeugdaten:</h5>
-    <ul id='Liste' class="InputListe">
-      <input type="text" id="fahrzeug" name="fahrzeug" placeholder="Fahrzeugtyp" onkeyup="updateData()" > </br>
-     </ul>
-  <div id='DropDowns'>
+<?php
+    include './../include/class/db_input.php';
+    $fzgSop= new DB_Result();
+    $optionsFzgSop = $fzgSop->getOptionsFzgSop($_POST['fzgLabel'],$_POST['fzgSop'],$_POST['brLabel'], $_POST['baKapa'], $_POST['baTyp'], $_POST['asLabel']);
+    $brLabel= new DB_Result();
+    $optionsBrLabel = $brLabel->getOptionsBrLabel($_POST['fzgLabel'],$_POST['fzgSop'],$_POST['brLabel'], $_POST['baKapa'], $_POST['baTyp'], $_POST['asLabel']);
+    $baKapa= new DB_Result();
+    $optionsBaKapa = $baKapa->getOptionsBaKapa($_POST['fzgLabel'],$_POST['fzgSop'],$_POST['brLabel'], $_POST['baKapa'], $_POST['baTyp'], $_POST['asLabel']);
+    $baTyp= new DB_Result();
+    $optionsBaTyp = $baTyp->getOptionsBaTyp($_POST['fzgLabel'],$_POST['fzgSop'],$_POST['brLabel'], $_POST['baKapa'], $_POST['baTyp'], $_POST['asLabel']);
+?>
+<div id='DropDowns'> 
  <ul id='Liste' class="InputListe">  
 <select id="sop" style="width:150px" name="sop" placeholder="ab Baujahr" onChange="updateData()">
     <?php foreach($optionsFzgSop as $optionFzgSop){?>
@@ -39,15 +38,3 @@
   </select></br> 
 </ul> 
 </div>
-
- <h5 class="UeberschriftInput">Ausstattung:</h5>
-    <ul class="InputListe">
-       <input type="text" id="asLabel" name="asLabel"  placeholder="Zugangssystem" onkeyup="updateData()" ></input>
-       <label id="infoAu" name="infoAu" onClick="getInfoAu()">&#x1F6C8;</label>
-      </ul>
-</div>
-<input type="submit" class="button" value="Reset" onClick="resetInput()">
-</form>
-
-</ul>
-</nav>

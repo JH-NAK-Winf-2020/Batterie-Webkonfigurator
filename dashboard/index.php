@@ -1,6 +1,6 @@
 <?php
 include 'config/connect.php'; //Verbinung SQL DB herstellen
-include 'db_result.php';
+include './include/class/db_input.php';
     $NULL='(leer)';
     $firstOutput = new DB_Result();
     $data = $firstOutput->initialOutput();

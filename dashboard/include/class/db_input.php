@@ -41,7 +41,7 @@
 	}
 
 	function passSqlToDb2($sql){
-		include './config/connect.php';
+	    include $_SERVER['DOCUMENT_ROOT']. '/git/dashboard/config/connect.php';
 		$result = mysqli_query($conn, $sql);
 		$data = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		mysqli_free_result($result);
@@ -57,7 +57,7 @@
 			$this->baTyp = $baTyp;
 			$this->asLabel = $asLabel;
 
-	   include './config/connect.php';
+	    include $_SERVER['DOCUMENT_ROOT']. '/git/dashboard/config/connect.php';
 	   	$sqlFzgLabel = $this->createSQLlike('fahrzeug.label', mysqli_real_escape_string($conn, $this->fzgLabel));
   		$sqlFzgSop = $this->createSQLequal('fahrzeug.sop_Date', mysqli_real_escape_string($conn, $this->fzgSop));
   		$sqlBrLabel = $this->createSQLequal('batterieraum.label', mysqli_real_escape_string($conn, $this->brLabel));
@@ -71,7 +71,7 @@
    }
 
    function getNSatz($masterID){
-	   include './config/connect.php';
+	   include './../../config/connect.php';
 	   $masterID =  mysqli_real_escape_string($conn, $masterID);
 		$sqlCheckNsatz = "SELECT master.nachruestsatz as masterNsatz FROM master WHERE master.id = $masterID";
 		$checkResult = $this->passSqlToDb2($sqlCheckNsatz);
