@@ -69,6 +69,6 @@ function resetInput(){
 
   function getInfoAu(){
       $(document).ready(function(){
-        alert("Geben Sie hier Attribute ein, die das Zugangssystem des Fahrzeugsbeschreiben: zB:'ISM'");
+        alert("Geben Sie hier Attribute ein, die das Zugangssystem des Fahrzeug beschreiben: zB:'ISM'");
       });
   }
