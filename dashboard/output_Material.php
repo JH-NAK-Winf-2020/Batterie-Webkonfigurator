@@ -79,11 +79,11 @@ $matnrListe = array();
 	<?php };};?>
 	
 <?php if(!empty($dataBaMaterial)){?>
-<tr>
+					<tr>
 						<th rowspan="<?php echo count($dataBaMaterial); ?>" scope="row>">Batterie</th>	
 	<?php foreach($dataBaMaterial as $datasetBaMaterial){?>
 					
-						<td><?php echo $datasetBaMaterial['baMaterial'];array_push($matnrListe, $datasetBaMaterial['baMaterial']); ?></td>
+						<td><?php echo $datasetBaMaterial['baMaterial']; array_push($matnrListe, $datasetBaMaterial['baMaterial']); ?></td>
 						<td colspan="1"><?php echo $datasetBaMaterial['baTyp']; ?></td>
 						<td colspan="1"><?php echo $datasetBaMaterial['baKapa']. 'Ah'; ?></td>
 					</tr>
@@ -127,7 +127,7 @@ $matnrListe = array();
 </main>
 		</td>
 		<td style="min-width:200px; position: relative;">
-		<label style="position: absolute;top:15px;left:0;" >Materialnummern:</label></br>
+		<label style="position:absolute;top:15px;left:0;" >Materialnummern:</label></br>
 
 			<textarea id="matnrAusgabe"><?php foreach($matnrListe as $matnr){echo $matnr . '&#13;&#10;';};?></textarea>
 
