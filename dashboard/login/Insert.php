@@ -1,15 +1,11 @@
 <?php
-include 'config/connect.php'; //Verbinung SQL DB herstellen
+include '../config/connect.php'; //Verbinung SQL DB herstellen
 $resultSet = $conn->query("SELECT table_name FROM information_schema.tables
                             WHERE table_schema = 'final_lit'") or die($conn->error);
 ?>
 
-<<<<<<< HEAD:dashboard/Insert.php
 <!DOCTYPE html>
 <html lang="en" dir="ltr" id="frame">
-=======
-include '../config/connect.php'; //Verbinung SQL DB herstellen 
->>>>>>> 6b4d83c2d33485a8e05f8b8aa82f715675e9ac1a:dashboard/login/Insert.php
 
 <head>
     <meta charset="utf-8">
