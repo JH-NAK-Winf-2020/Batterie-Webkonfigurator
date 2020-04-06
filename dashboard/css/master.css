@@ -288,8 +288,8 @@ td {
 
 textarea {
   resize: none; 
-  width: 100px;
-  height: 100px;
-  top: 150px;
-  left: 50%;
+  position: absolute;
+  width: 120px;
+  height: 150px;
+  top:40px;
 }
