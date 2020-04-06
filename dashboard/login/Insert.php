@@ -95,7 +95,7 @@ if(isset($_POST["submitInsert"]))
     $sepCol = implode(', ', $arrColumns1);
     $sepVal = implode("', '", $newValues);
     $sepVal = "'".$sepVal."'";
-    
+
 //Insert new values into Database
     $sql = "INSERT INTO $getTable1 ($sepCol) VALUES ($sepVal)";
     
