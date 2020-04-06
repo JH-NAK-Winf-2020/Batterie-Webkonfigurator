@@ -6,11 +6,8 @@
 		private $baKapa;
 		private $baTyp;
 		private $asLabel;
+		private $includePATH = '/git/dashboard/config/connect.php';
 
-
-		public function __construct(){
-		}
-	
    function createSQLlike(String $spaltenName, String $inputValue){
     if($inputValue != ''){
 		 $test = $spaltenName . " like '%" . $inputValue . "%'";		
@@ -41,7 +38,7 @@
 	}
 
 	function passSqlToDb2($sql){
-	    include $_SERVER['DOCUMENT_ROOT']. '/git/dashboard/config/connect.php';
+	    include $_SERVER['DOCUMENT_ROOT']. $this->includePATH;
 		$result = mysqli_query($conn, $sql);
 		$data = mysqli_fetch_all($result, MYSQLI_ASSOC);
 		mysqli_free_result($result);
@@ -57,7 +54,7 @@
 			$this->baTyp = $baTyp;
 			$this->asLabel = $asLabel;
 
-	    include $_SERVER['DOCUMENT_ROOT']. '/git/dashboard/config/connect.php';
+	   include $_SERVER['DOCUMENT_ROOT']. $this->includePATH;
 	   	$sqlFzgLabel = $this->createSQLlike('fahrzeug.label', mysqli_real_escape_string($conn, $this->fzgLabel));
   		$sqlFzgSop = $this->createSQLequal('fahrzeug.sop_Date', mysqli_real_escape_string($conn, $this->fzgSop));
   		$sqlBrLabel = $this->createSQLequal('batterieraum.label', mysqli_real_escape_string($conn, $this->brLabel));
@@ -71,7 +68,7 @@
    }
 
    function getNSatz($masterID){
-	   include './../../config/connect.php';
+       include $_SERVER['DOCUMENT_ROOT']. $this->includePATH;
 	   $masterID =  mysqli_real_escape_string($conn, $masterID);
 		$sqlCheckNsatz = "SELECT master.nachruestsatz as masterNsatz FROM master WHERE master.id = $masterID";
 		$checkResult = $this->passSqlToDb2($sqlCheckNsatz);
