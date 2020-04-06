@@ -46,6 +46,7 @@ include './include/class/db_input.php';
 
   <footer>
       <h5>Diese Seite wurde von Studenten erstellt</h5>
+      <a class="login" href="login/login-formular.html">Zum Login</a>
   </footer>
 </html>
     
