@@ -125,12 +125,13 @@ $matnrListe = array();
 </tbody>
 </table>
 </main>
-			</td>
-		<td style="width:200px">
-		<label>Materialnummer:</label></br>
-			<textarea id="matnrAusgabe" cols="" rows="">
-			<?php foreach($matnrListe as $matnr){echo $matnr . '&#13;&#10;';};?>
-			</textarea></td>
+		</td>
+		<td style="min-width:200px; position: relative;">
+		<label style="position: absolute;top:15px;left:0;" >Materialnummern:</label></br>
+
+			<textarea id="matnrAusgabe"><?php foreach($matnrListe as $matnr){echo $matnr . '&#13;&#10;';};?></textarea>
+
+		</td>
 		</tr>
 	</table>
 </div>

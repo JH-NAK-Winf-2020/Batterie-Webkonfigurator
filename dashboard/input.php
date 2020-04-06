@@ -42,7 +42,8 @@
 
  <h5 class="UeberschriftInput">Ausstattung:</h5>
     <ul class="InputListe">
-       <input type="text" id="asLabel" name="asLabel"  placeholder="Zugangssystem" onkeyup="updateData()" >
+       <input type="text" id="asLabel" name="asLabel"  placeholder="Zugangssystem" onkeyup="updateData()" ></input>
+       <label id="infoAu" name="infoAu" onClick="getInfoAu()">&#x1F6C8;</label>
       </ul>
 </div>
 <input type="submit" class="button" value="Reset" onClick="resetInput()">

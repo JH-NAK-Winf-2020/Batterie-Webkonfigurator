@@ -65,5 +65,10 @@ function resetInput(){
     baTyp: "",
     asLabel: ""
   });
-
 }
+
+  function getInfoAu(){
+      $(document).ready(function(){
+        alert("Geben Sie hier Attribute ein, die das Zugangssystem des Fahrzeugsbeschreiben: zB:'ISM'");
+      });
+  }
