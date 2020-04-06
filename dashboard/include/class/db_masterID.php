@@ -1,4 +1,5 @@
 <?php 
+//Class enthält alle Statements, die zum Aufschluesseln der masterID in die Nachruestsatz ausgabe notwendig sind.
 class DB_MasterID{
     
     function passSqlToDb($sql){
