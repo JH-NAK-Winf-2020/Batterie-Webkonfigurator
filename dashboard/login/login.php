@@ -85,6 +85,12 @@
         header('Location: login-formular.html');
         mysqli_close($link); 
         exit(); 
+<<<<<<< HEAD
         }
         
+=======
+        } 
+
+
+>>>>>>> 45184a02cb13dfb1a1e401324bb7dc96c78d7a8d
     ?>
