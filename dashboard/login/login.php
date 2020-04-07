@@ -29,7 +29,7 @@
  
     # Ist die $_POST Variable submit nicht leer?
     # dann wurden Logindaten eingegeben, die müssen wir überprüfen
-    echo print_r($_POST);
+//     echo print_r($_POST);
     if (!empty($_POST["submit"])) 
         { 
         # Die Werte die im Loginformular eingegeben wurden "escapen", 
@@ -69,7 +69,7 @@
         //     } 
          } 
  # Hier wäre der User jetzt gültig angemeldet! Weiterleitung zur Backend-Oberfläche
-        include "Insert2.php";
+        include "Insert3.php";
 //  echo "Hallo, Sie sind jetzt eingeloggt und werden zur Backend-Oberfl&aumlche weitergeleitet"; 
     }
 
@@ -79,7 +79,7 @@
         { 
         # ist nicht eingeloggt, also Formular anzeigen, die Datenbank 
         # schliessen und das Programm beenden 
-        echo 'test';
+
         include "login-formular.html"; 
         mysqli_close($link); 
         exit(); 

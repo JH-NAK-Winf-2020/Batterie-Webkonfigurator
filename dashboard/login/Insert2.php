@@ -2,10 +2,12 @@
 include '../config/connect.php';
 $result = $conn->query("SELECT table_name FROM information_schema.tables WHERE table_schema = 'final_lit'") or die($conn->error);
 $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$getTable='';
 if(isset($_POST["submitTable"]))
 {
-    if (empty($_POST["final_lit"])) echo "Please select a table!";
-    else {
+    if (empty($_POST["final_lit"])){ 
+        $getTable='null!';
+    }else {
         $getTable = $_POST["final_lit"];
         $columnsResult = $conn->query("SELECT column_name FROM information_schema.columns WHERE table_schema = 'final_lit' AND table_name = '$getTable'") or die($conn->error);
         $columnsResultData = mysqli_fetch_all($columnsResult, MYSQLI_ASSOC);
@@ -69,13 +71,10 @@ if(isset($_POST["submitInsert"]))
 
 <input class="input1" type = 'submit' name = 'submitTable' value = 'Select Table'/> <br><br>
 </form>
-<?php 
-if(isset($_POST["submitTable"]))
-{
-    if (empty($_POST["final_lit"])){ ?>
-<label style='text-align:center'>Please select a table!</label>
-<?php }else{?>
-<label style='text-align:center'>.'The selected table is: '.$getTable."</label>
+<?php if($getTable=='NULL'){?>
+<label>Please select a table!</label>
+<?php }elseif($getTable!='' && $getTable !='NULL'){?>
+<label>The selected table is: <?php echo $getTable;?></label>
 <br>
 <form action = 'insert2.php' method = 'POST'>
 
@@ -93,7 +92,7 @@ if(isset($_POST["submitTable"]))
 
 <input type = 'submit' name = 'submitInsert' value = 'Insert'/> <br><br>
 </form>
-<?php }}?>
+<?php }?>
 
 <div class="SelectTable">
 </div>
