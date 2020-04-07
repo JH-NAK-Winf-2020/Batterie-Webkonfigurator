@@ -68,7 +68,9 @@
         //     echo "Die Logindaten sind nicht korrekt.<br>"; 
         //     } 
         
+        
             }else{
+               
                 //kein gueltiges Passwort
                 $_SESSION["login"] = 0; 
  # Hier wäre der User jetzt gültig angemeldet! Weiterleitung zur Backend-Oberfläche
@@ -80,6 +82,7 @@
         # ist nicht eingeloggt, also Formular anzeigen, die Datenbank 
         # schliessen und das Programm beenden 
         header('Location: login-formular.html');
+     
         mysqli_close($link); 
         exit(); 
             }
