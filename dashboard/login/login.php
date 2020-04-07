@@ -67,12 +67,13 @@
         //     { 
         //     echo "Die Logindaten sind nicht korrekt.<br>"; 
         //     } 
-         } 
+         
  # Hier wäre der User jetzt gültig angemeldet! Weiterleitung zur Backend-Oberfläche
-        include "insert3.php";
+//         include "insert3.php";
+                header('Location: insert3.php');
 //  echo "Hallo, Sie sind jetzt eingeloggt und werden zur Backend-Oberfl&aumlche weitergeleitet"; 
-    }
-
+            }
+        }
 
     # Ist der User eingeloggt?
     if (!isset($_SESSION["login"])) 
@@ -80,8 +81,10 @@
         # ist nicht eingeloggt, also Formular anzeigen, die Datenbank 
         # schliessen und das Programm beenden 
 
-        include "login-formular.html"; 
+        
+        header('Location: login-formular.html');
         mysqli_close($link); 
         exit(); 
-        } 
+        }
+        
     ?>
