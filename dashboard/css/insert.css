@@ -1,4 +1,6 @@
 
+
+
 header {
   background-color: #ffb900;
   background-image: url("logo.jpg");
@@ -72,6 +74,7 @@ background-position: bottom right;
 	margin-bottom: auto;
   width: 400px;
 }
+
 
  
 
@@ -163,4 +166,5 @@ header {
      color: blue; 
      background: #dfac20; 
  } 
+
 

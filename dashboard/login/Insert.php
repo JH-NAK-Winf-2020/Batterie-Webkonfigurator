@@ -11,7 +11,11 @@ $resultSet = $conn->query("SELECT table_name FROM information_schema.tables
 <head>
     <meta charset="utf-8">
     <title>Lithium-Ionen Webkonfigurator</title>
+<<<<<<< HEAD
+    <link rel="stylesheet" href="../css/insert.css?v=2">
+=======
     <link rel="stylesheet" href="../css/insert.css?v=1">
+>>>>>>> 881a91df566931297499df57753198505a0dd605
 </head>
 
 <body>
@@ -19,18 +23,30 @@ $resultSet = $conn->query("SELECT table_name FROM information_schema.tables
     <h1>Lithium-Ionen Webkonfigurator f&uumlr Nachr&uumlsts&aumltze</h1> 
 </header>
 
+<<<<<<< HEAD
 <form action="Insert.php" method ="POST">
 <select class="select1" name="final_lit">
 
 <?php 
 //Dropdown list for tables names
+=======
+<form>
+<select class="select1" name="final_lit">
+
+<?php
+echo 'her';
+>>>>>>> bd01257e4147554426df5b3397fac0f8a4407c59
 echo "<option selected disabled>-- select table --</option>";
 while($rows = $resultSet->fetch_assoc())
 {
     $table_name=$rows['table_name'];
     echo "<option value=$table_name>$table_name</option>";
+<<<<<<< HEAD
 }
 ?>
+=======
+}?>
+>>>>>>> bd01257e4147554426df5b3397fac0f8a4407c59
 
 <br><br>
 </select>
@@ -129,7 +145,12 @@ echo "</form>";
 </div>
 </center>
 </body>
+<<<<<<< HEAD
 <footer>
+=======
+
+ <footer>
+>>>>>>> bd01257e4147554426df5b3397fac0f8a4407c59
       <h5>Diese Seite wurde von Studenten erstellt</h5>
     </footer>
 </html>

@@ -3,6 +3,7 @@
 class DB_MasterID{
     
     function passSqlToDb($sql){
+        //Verweis auf config Datei
         include $_SERVER['DOCUMENT_ROOT']. '/git/dashboard/config/connect.php';
         $result = mysqli_query($conn, $sql);
         $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
