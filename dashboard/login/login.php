@@ -29,6 +29,7 @@
  
     # Ist die $_POST Variable submit nicht leer?
     # dann wurden Logindaten eingegeben, die müssen wir überprüfen
+    echo print_r($_POST);
     if (!empty($_POST["submit"])) 
         { 
         # Die Werte die im Loginformular eingegeben wurden "escapen", 
@@ -37,11 +38,7 @@
         $_password = mysqli_real_escape_string($link, $_POST["passwort"]); 
 
         # Befehl für die MySQL Datenbank 
-        $_sql = "SELECT * FROM users WHERE 
-                    username='$_username' AND 
-                    passwort='$_password'
-                LIMIT 1"; 
-
+        $_sql = "SELECT * FROM users WHERE user='".$_username."' AND passwort='".$_password."' LIMIT 1"; 
         # Prüfen, ob der User in der Datenbank existiert
         $_res = mysqli_query($link, $_sql); 
         $_anzahl = @mysqli_num_rows($_res); 
@@ -72,7 +69,7 @@
         //     } 
          } 
  # Hier wäre der User jetzt gültig angemeldet! Weiterleitung zur Backend-Oberfläche
-        include "Insert.php";
+        include "Insert2.php";
 //  echo "Hallo, Sie sind jetzt eingeloggt und werden zur Backend-Oberfl&aumlche weitergeleitet"; 
     }
 
@@ -82,6 +79,7 @@
         { 
         # ist nicht eingeloggt, also Formular anzeigen, die Datenbank 
         # schliessen und das Programm beenden 
+        echo 'test';
         include "login-formular.html"; 
         mysqli_close($link); 
         exit(); 

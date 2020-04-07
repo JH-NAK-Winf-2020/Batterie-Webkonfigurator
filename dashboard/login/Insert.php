@@ -10,7 +10,7 @@ $resultSet = $conn->query("SELECT table_name FROM information_schema.tables
 <head>
     <meta charset="utf-8">
     <title>Lithium-Ionen Webkonfigurator</title>
-    <link rel="stylesheet" href="./css/insert.css?v=1">
+    <link rel="stylesheet" href="../css/insert.css?v=2">
 </head>
 
 <body>
@@ -18,16 +18,18 @@ $resultSet = $conn->query("SELECT table_name FROM information_schema.tables
     <h1>Lithium-Ionen Webkonfigurator f&uumlr Nachr&uumlsts&aumltze</h1> 
 </header>
 
-<form method ="POST" >
+<form>
 <select class="select1" name="final_lit">
 
 <?php
+echo 'her';
 echo "<option selected disabled>-- select table --</option>";
 while($rows = $resultSet->fetch_assoc())
 {
     $table_name=$rows['table_name'];
     echo "<option value=$table_name>$table_name</option>";
 }?>
+
 <br><br>
  </select>
 
@@ -110,8 +112,8 @@ echo "</form>";
   </div>
 </body>
 
-<!--  <footer> -->
-<!--       <h5>Diese Seite wurde von Studenten erstellt</h5> -->
-<!--     </footer> -->
+ <footer>
+      <h5>Diese Seite wurde von Studenten erstellt</h5>
+    </footer>
 </html>
 

@@ -1,16 +1,21 @@
 <?php
 include './include/class/db_input.php';
-    $NULL='(leer)';
+    //Daten für InfoTable --> Anzeigen aller Werte
     $firstOutput = new DB_Result();
     $data = $firstOutput->initialOutput();
+    //Daten für Baujahr
     $initialFzgSop = new DB_Result();
     $optionsFzgSop = $initialFzgSop->getOptionsDropDown('fzgSop','all','','','','','','');
+    //Daten für DropDown BatterieRaum
     $initialBrLabel = new DB_Result();
     $optionsBrLabel = $initialBrLabel->getOptionsDropDown('brLabel','all','','','','','','');
+    //Daten für DropDown BatterieKapazitaet
     $initialBaKapa = new DB_Result();
     $optionsBaKapa = $initialBaKapa->getOptionsDropDown('baKapa','all','','','','','','');
+    //Daten für DropDown BatterieTyp
     $initialBaTyp = new DB_Result();
     $optionsBaTyp = $initialBaTyp->getOptionsDropDown('baTyp','all','','','','','','');
+    
     $nSatzData = '';
 ?>
 <!DOCTYPE html>
@@ -26,14 +31,10 @@ include './include/class/db_input.php';
 
 <body>
   <header>
-    
     <h1>Lithium-Ionen Webkonfigurator f&uumlr Nachr&uumlsts&aumltze</h1>
-    <form action="./login.php" method="POST">
-      <!--<input type="submit" id="login" value="Login" class="button" onClick="insert.php">-->
-    </form>
   </header>
 
-    <?php include './input/input.php' ?>
+    <?php include './input/input.php'; ?>
     <div id="outputNSatz"> </div>
     <?php include './infoTable/output_infoTable.php';?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
