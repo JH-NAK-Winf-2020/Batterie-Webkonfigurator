@@ -5,7 +5,7 @@
 ?>
 <nav id='input'>
   <ul>
-<form class="search" id='search' name='search' method="POST">
+<div class="search" id='search' name='search'>
 <div class="ListenPosition">
 <h5 class="UeberschriftInput">Fahrzeugdaten:</h5>
   
@@ -58,6 +58,6 @@
       
 </div>
 <input type="submit" class="button" value="Reset" onClick="resetInput()"><?php //Resetbutton ?>
-</form>
+</div>
 </ul>
 </nav>
