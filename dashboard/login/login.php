@@ -69,7 +69,7 @@
         //     } 
          } 
  # Hier wäre der User jetzt gültig angemeldet! Weiterleitung zur Backend-Oberfläche
-        include "Insert3.php";
+        include "insert3.php";
 //  echo "Hallo, Sie sind jetzt eingeloggt und werden zur Backend-Oberfl&aumlche weitergeleitet"; 
     }
 
