@@ -10,7 +10,11 @@ $resultSet = $conn->query("SELECT table_name FROM information_schema.tables
 <head>
     <meta charset="utf-8">
     <title>Lithium-Ionen Webkonfigurator</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="../css/insert.css?v=2">
+=======
+    <link rel="stylesheet" href="../css/insert.css?v=1">
+>>>>>>> 881a91df566931297499df57753198505a0dd605
 </head>
 
 <body>
@@ -38,7 +42,8 @@ while($rows = $resultSet->fetch_assoc())
 
 <div class="SelectTable">
 <?php
-session_start();
+echo print_r($_SESSION);
+// session_start();
 //"Select Table" button
 if(isset($_POST["submitTable"]))
 {   
@@ -96,6 +101,7 @@ if(isset($_POST["submitInsert"]))
     $sepCol = implode(', ', $arrColumns1);
     $sepVal = implode("', '", $newValues);
     $sepVal = "'".$sepVal."'";
+
 //Insert new values into Database
     $sql = "INSERT INTO $getTable1 ($sepCol) VALUES ($sepVal)";
     
