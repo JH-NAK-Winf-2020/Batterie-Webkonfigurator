@@ -1,5 +1,5 @@
 <?php 
- session_start();
+session_start();
 if(isset($_SESSION["login"])){
     if($_SESSION["login"]==1){
 
@@ -50,4 +50,4 @@ if(isset($_SESSION["login"])){
 
 </body>
 </html>
-<?php }}else{}?>
+<?php }}else{header('Location: login-formular.html');}?>

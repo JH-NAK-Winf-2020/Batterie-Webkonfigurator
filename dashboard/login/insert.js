@@ -24,4 +24,7 @@ function pushValues(tableName, arrColumns){
 		values: values
 	});
 	}
+function reload(){
+	$(document).load('insert3.php');	
+}
 	}
