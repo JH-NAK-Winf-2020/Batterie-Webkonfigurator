@@ -24,7 +24,7 @@ include './include/class/db_input.php';
   <head>
     <meta charset="utf-8">
     <title>Lithium-Ionen Webkonfigurator</title>
-    <link rel="stylesheet" href="./css/master.css?v=89">
+    <link rel="stylesheet" href="./css/master.css?v=90">
     <meta name="viewport" content="max-device-width, initial-scale=1">
 
   </head>
@@ -39,7 +39,7 @@ include './include/class/db_input.php';
     <?php include './infoTable/output_infoTable.php';?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"> </script>
-    <script src="./script/main.js?v=13"></script>
+    <script src="./script/main.js?v=14"></script>
 </body>
 
 

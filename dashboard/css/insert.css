@@ -6,13 +6,13 @@ header {
   background-position-x: 2%;
   background-position-y: auto;
   background-repeat: no-repeat;
-  height: 15%;
+  height: 90px;
   width: 100%;
-  /* margin-bottom: 5px; */
-  /* margin-top: -5px;  */
+  margin-bottom: 5px;
+  margin-top: -5px; 
   z-index: 5;
-  /* border-radius: 2px;
-  padding-top:5px; */
+  border-radius: 2px;
+  padding-top:5px;
   position: fixed;
   text-align: center;
   padding: .6em;
@@ -147,3 +147,48 @@ position: fixed;
 .login {
   float: left;
   }
+.SelectTable {
+	margin-left: 180%;
+	margin-right: 0%;
+	margin-top: 7%;
+	margin-bottom: auto;
+  width: 400px;
+}
+
+ .Trennlinie {
+    width: 100%; 
+    height: 5px;
+    margin-left: 152%;
+    color: blue;
+    background: #dfac20;
+ }
+.SelectTable {
+	margin-left: 180%;
+	margin-right: 0%;
+	margin-top: 7%;
+	margin-bottom: auto;
+  width: 400px;
+}
+
+ .Trennlinie {
+    width: 100%; 
+    height: 5px;
+    margin-left: 152%;
+    color: blue;
+    background: #dfac20;
+ }
+.SelectTable {
+	margin-left: 180%;
+	margin-right: 0%;
+	margin-top: 7%;
+	margin-bottom: auto;
+  width: 400px;
+}
+
+ .Trennlinie {
+    width: 100%; 
+    height: 5px;
+    margin-left: 152%;
+    color: blue;
+    background: #dfac20;
+ }
