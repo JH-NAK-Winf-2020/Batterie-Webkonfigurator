@@ -31,7 +31,7 @@ $dataZusatzInfo = $ZusatzInfo->getZusatzInfo($masterID);
 $BaMaterial = new DB_MasterID();
 $dataBaMaterial = $BaMaterial->getBaMaterial($masterID);
 //herrausfiltern der NULL-Eintraege fuer Batterie
-if ($dataBaMaterial['baMaterial'] == '' && $dataBaMaterial['baTyp'] == ''){
+if ($dataBaMaterial[0]['baMaterial'] == '' && $dataBaMaterial[0]['baTyp'] == ''){
     $dataBaMaterial='';
 };
 //Tabelle Fahrzeug
