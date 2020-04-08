@@ -8,11 +8,8 @@ header {
   background-repeat: no-repeat;
   height: 9%;
   width: 100%;
-  /* margin-bottom: 5px; */
   margin-top: -1.5%;
   z-index: 5;
-  /* border-radius: 2px;
-  padding-top:5px; */
   position: fixed;
   text-align: center;
   padding: 1%;
@@ -38,7 +35,8 @@ footer {
 	opacity: 0.6;
 	text-align: center;
 	clear: both;
-	width: 100%;
+  width: 100%;
+  height: 9%;
   position: fixed;
   padding: 1%;
   left: 0;
@@ -46,21 +44,21 @@ footer {
   bottom: 0%;
   background-image: url("Battery.jpg");
   background-repeat: no-repeat;
-  background-size: 10%;
+  background-size: 9%;
   background-attachment: fixed;
   background-position: bottom right;
 }
 
 .InfoBox {
   top: 15%;
-  left:  20%;
+  left: 23%;
   right: 40%;
   height: 50%;
   position: fixed;
 }
 
 .InfoTable table {
-  border: 1px solid #000000;
+  border: 2% solid #000000;
   background-color: #fbf3ea;
   width: 100%;
   text-align: left;
@@ -69,16 +67,16 @@ footer {
 
 table, th, td {
   border-collapse: collapse;
-  padding: 3px 2px;
+  padding: 1% 0.5%;
   font-size: 11pt;
 }
 
 .InfoTable td {
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
+  border-top: 2% solid #666;
+  border-bottom: 2% solid #666;
   text-align: left;
-  font-size: 13px;
-  padding: 3px 2px;
+  font-size: 115%;
+  padding: 0.5% 0.5%;
   border: 1px solid #666;
 }
 
@@ -89,8 +87,8 @@ table, th, td {
   -ms-overflow: scroll;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  max-height:300px;
-  font-size: 13px;
+  max-height: 300px;
+  font-size: 100%;
 }
 
 .scroll tbody {
@@ -130,13 +128,13 @@ table, th, td {
 
 nav {
   background-color: #6E6E6E;
-  border-radius: 15 px;
+  border-radius: 5%;
   width: 17%;
   height: 60%;
   line-height: 245%;
   position: fixed;
-  margin-top: 9%;
-  font-size: 18px;
+  margin-top: 7.5%;
+  font-size: 100%;
   box-shadow: 2px 2px 37px -1px rgba(0,0,0,0.39);
   z-index: 5;
   display: inline-block;
@@ -166,12 +164,12 @@ nav {
 
 .button {
   float: right;
-  width: 100px;
+  width: 35%;
   height: 35px;
   background: #ffb900;
   box-shadow: inset 0px 0px 3px #fff, inset 0px 0px px #fff;
   border: 1px solid #3c464b;
-  border-radius:1em;
+  border-radius: 1em;
   margin: 1em;
 }
 
@@ -184,7 +182,7 @@ nav {
   border-radius: 15px;
   float: right;
   opacity: 0.9em;
-  width: 600px;
+  width: 30%;
   height: auto;
   border-top-style: solid;
   border-top-width: 0px;
@@ -195,7 +193,7 @@ nav {
   }
 
   #count {
-  font-size:10pt;
+  font-size:90%;
   text-align: left;
   }
 
@@ -208,8 +206,8 @@ nav {
 
 .LadeAusgabe {
   position: fixed;
-  left: 20%;
-  top: 62%;
+  left: 23%;
+  top: 68%;
   max-height: 150px;
 }
 
