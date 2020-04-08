@@ -153,7 +153,7 @@ $matnrListe = array();
 </div>
 
 <div class="LadeAusgabe">
-	<table Id="LadeTable" class="fixed-header InfoTable scroll">
+	<table Id="LadeTable" class=" InfoTable fixed-header2 scroll">
 		<thead>
 		<tr>
 			<th colspan="3">Ladeger&aumlte</th>

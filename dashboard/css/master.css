@@ -208,11 +208,37 @@ nav {
   position: fixed;
   left: 23%;
   top: 68%;
-  max-height: 5%;
+  max-height: 100px;
+  width: 500px;
 }
 
 #LadeTable {
-  min-width: 200px;
+  min-width: 250px;
+  max-height: 20px;
+}
+
+#LadeTable tbody {
+  display: block;
+}
+
+.fixed-header2 tbody {
+  display:block;
+  overflow: auto;
+  overflow-x: hidden;
+  -ms-overflow: scroll;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  max-height: 120px;
+  font-size: 100%;
+}
+
+.fixed-header2 thead tr  {
+  display:block;
+  background-color: #ebcfae;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  border-left: 1px solid #666;
+  border-right: 1px solid #666
 }
 
 .MatnrAusgabe main {

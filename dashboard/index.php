@@ -24,7 +24,7 @@ include './include/class/db_input.php';
   <head>
     <meta charset="utf-8">
     <title>Lithium-Ionen Webkonfigurator</title>
-    <link rel="stylesheet" href="./css/master.css?v=90">
+    <link rel="stylesheet" href="./css/master.css?v=91">
     <meta name="viewport" content="max-device-width, initial-scale=1">
 
   </head>
@@ -42,13 +42,8 @@ include './include/class/db_input.php';
     <script src="./script/main.js?v=15"></script>
 </body>
 
-
-    
-
   <footer>
-      <h5>VK-LCS</h5>
+      <h5>F&uumlr Support und R&uumlckfragen, wenden Sie sich bitte an ihr Parts. Postfach im VK-Order Processing.</h5>
       <a class="login" href="login/login-formular.html">Zum Login</a>
   </footer>
 </html>
-    
- 
