@@ -43,13 +43,8 @@ include './include/class/db_input.php';
     <script src="./script/main.js?v=15"></script>
 </body>
 
-
-    
-
   <footer>
-      <h5>VK-LCS</h5>
+      <h5>F&uumlr Support und R&uumlckfragen, wenden Sie sich bitte an ihr Parts. Postfach im VK-Order Processing.</h5>
       <a class="login" href="login/login-formular.html">Zum Login</a>
   </footer>
 </html>
-    
- 

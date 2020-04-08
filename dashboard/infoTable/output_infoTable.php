@@ -13,12 +13,12 @@
 		  <th style="width: 400px" >Ausstattung</th>
 		</tr>
 		<hr>
-		  <th style="width: 90px">Fzg Typ </th>
-		  <th style="width: 70px">ab Baujahr</th>
-		  <th style="width: 82px">Batterie Raum</th>
-		  <th style="width: 90px">Batterie Kapazitaet</th>
+		  <th style="width: 77px">Fzg Typ </th>
+		  <th style="width: 81px">ab Baujahr</th>
+		  <th style="width: 79px">Batterie Raum</th>
+		  <th style="width: 84px">Batterie Kapazitaet</th>
 		  <th style="width: 70px">Batterie Typ</th>
-		  <th style="width: 250px">Zugangssystem</th>
+		  <th style="width: 230px">Zugangssystem</th>
 		</tr>
     </thead>
     <tbody class="hover">
@@ -26,10 +26,10 @@
     	        <tr class="test" id="<?php echo htmlspecialchars($dataset['masterId']) ?>"< onclick="selectRow(<?php echo htmlspecialchars($dataset['masterId'])?>)">
 		          <td class="fzg-data" style="width:130px" ><?php echo htmlspecialchars($dataset['fzgLabel'])?></td>
 		          <td class="fzg-data" style="width: 90px"><?php echo htmlspecialchars($dataset['fzgSop'])?></td>
-				  <td class="fzg-data" style="width: 100px"><?php echo htmlspecialchars($dataset['brLabel'])?></td>
-				  <td class="batterie-data" style="width: 130px"><?php echo htmlspecialchars($dataset['baKapa'])?></td>
-				  <td class="batterie-data" style="width: 110px"><?php echo htmlspecialchars($dataset['baTyp'])?></td>
-				  <td class="ausstattung-data" style="width: 380px"><?php echo htmlspecialchars($dataset['asLabel'])?></td>
+				  <td class="fzg-data" style="width: 80px"><?php echo htmlspecialchars($dataset['brLabel'])?></td>
+				  <td class="batterie-data" style="width: 145px"><?php echo htmlspecialchars($dataset['baKapa'])?></td>
+				  <td class="batterie-data" style="width: 90px"><?php echo htmlspecialchars($dataset['baTyp'])?></td>
+				  <td class="ausstattung-data" style="width: 320px"><?php echo htmlspecialchars($dataset['asLabel'])?></td>
 				</tr>
 	        <?php }; ?>
     </tbody>
