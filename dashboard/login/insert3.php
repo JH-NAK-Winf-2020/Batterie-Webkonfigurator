@@ -52,6 +52,7 @@ if(isset($_SESSION["login"])){
 
 </body>
 <footer>
+    <h5>VK-LCS</h5>
      <a class="login" href="logout.php">Ausloggen</a>
     </footer>
 </html>
