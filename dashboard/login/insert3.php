@@ -43,8 +43,9 @@ if(isset($_SESSION["login"])){
 		<option value="<?php echo $resultSet['table_name'];?>"><?php echo $resultSet['table_name'];?></option>
 		<?php };?>
      </select>
-            <hr class="Trennlinie">
-            </div>
+      
+            <hr class="Trennlinie"></hr>  
+       </div>
 <div class="divselect2" id="tableColums">
 </div>
 <div class="divselect3" id="insertValues">

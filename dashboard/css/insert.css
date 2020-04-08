@@ -120,7 +120,7 @@ left: 20%;
 .divselect2 {
 position: fixed;
   left: 40%;
-  top: 30%;
+  top: 32%;
 }
 
 .divselect3 {
@@ -133,6 +133,10 @@ position: fixed;
      width: 230%;  
      height: 5px;
      background: #dfac20; 
+     left: 30%;
+     right: 55%;
+     top: 20%;
+
  } 
 
 .input1 {
@@ -152,41 +156,10 @@ position: fixed;
 	margin-bottom: auto;
   width: 400px;
 }
-
- .Trennlinie {
-    width: 100%; 
+ 
+ .Trennlinie2 {
+    width: 150%; 
     height: 5px;
-    margin-left: 152%;
-    color: blue;
+    margin-left: 0%;
     background: #dfac20;
- }
-.SelectTable {
-	margin-left: 180%;
-	margin-right: 0%;
-	margin-top: 7%;
-	margin-bottom: auto;
-  width: 400px;
-}
-
- .Trennlinie {
-    width: 100%; 
-    height: 5px;
-    margin-left: 152%;
-    color: blue;
-    background: #dfac20;
- }
-.SelectTable {
-	margin-left: 180%;
-	margin-right: 0%;
-	margin-top: 7%;
-	margin-bottom: auto;
-  width: 400px;
-}
-
- .Trennlinie {
-    width: 100%; 
-    height: 5px;
-    margin-left: 152%;
-    color: blue;
-    background: #dfac20;
- }
+  }
