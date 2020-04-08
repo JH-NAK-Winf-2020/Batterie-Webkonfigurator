@@ -116,3 +116,4 @@ function resetInput(){
           alert("Materialnummenkreis entspricht allen notwendigen Montage Teilen (Nachrüstsatz). Batterie und Ladegerät sind nicht enthalten!");
         });
     }
+    
