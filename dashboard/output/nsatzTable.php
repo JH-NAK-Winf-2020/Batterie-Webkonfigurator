@@ -185,8 +185,6 @@ $matnrListe = array();
 				<td colspan="3"><?php echo "keine Ladegeraet-Option vorhanden"; ?></td>
 			</tr>
 	<?php };?>
-	
-	
 	</tbody>
 	</table>
 </div>
