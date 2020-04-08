@@ -1,6 +1,3 @@
-
-
-
 header {
   background-color: #ffb900;
   background-image: url("logo.jpg");
@@ -60,7 +57,7 @@ header {
    background-position: left; 
    background-position-x: 2%; 
    background-position-y: auto; 
-  background-repeat: no-repeat; 
+   background-repeat: no-repeat; 
    height: 90px; 
    width: 100%; 
    margin-bottom: 5px; 
