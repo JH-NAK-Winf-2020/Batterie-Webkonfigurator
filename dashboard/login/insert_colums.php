@@ -19,9 +19,9 @@ if (empty($_POST["tableName"])){
 ?>
 <div id="tableColums">
 	<?php if($getTable=='NULL'){?>
-	<label>Please select a table!</label>
+	<label class="select2">Please select a table!</label>
 	<?php }elseif($getTable!='' && $getTable !='NULL'){?>
-	<label>The selected table is: <?php echo $getTable;?></label><br>
+	<label class="select2">The selected table is: <?php echo $getTable;?></label><br>
 	
 	
 	<?php foreach($columnsResultData as $columns){if ($columns['column_name'] == "id"){?>
@@ -35,7 +35,7 @@ if (empty($_POST["tableName"])){
 		<input type = 'text' name ="<?php echo $columns['column_name'];?>" id ="<?php echo $columns['column_name'];?>">  
 		<br>
 		<?php }}?>
-		<input type = 'submit' name = 'submitInsert' value = 'Insert' onClick='pushValues("<?php echo $getTable;?>", <?php echo json_encode($arrColumns);?>)'/>
+		<br><input type = 'submit' name = 'submitInsert' value = 'Insert' onClick='pushValues("<?php echo $getTable;?>", <?php echo json_encode($arrColumns);?>)'/>
 	<?php };//END elseif zeile 15?>
 </div>
 <?php }}else{header('Location: login-formular.html');}?>

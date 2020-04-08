@@ -36,18 +36,23 @@ if(isset($_SESSION["login"])){
 <br>
 <br>
 <br>
-	<select id="selectTable" name="selectTable" onChange="getTable();">
+<div class="divselect1">
+	<select class="select1" id="selectTable" name="selectTable" onChange="getTable();">
 		<option selected disabled>-- select table --</option>
 		<?php foreach($result as $resultSet){?>
 		<option value="<?php echo $resultSet['table_name'];?>"><?php echo $resultSet['table_name'];?></option>
 		<?php };?>
- 	</select>
-
-<div id="tableColums">
+     </select>
+            <hr class="Trennlinie">
+            </div>
+<div class="divselect2" id="tableColums">
 </div>
-<div id="insertValues">
+<div class="divselect3" id="insertValues">
 </div>
 
 </body>
+<footer>
+     <a class="login" href="logout.php">Ausloggen</a>
+    </footer>
 </html>
 <?php }}else{header('Location: login-formular.html');}?>
