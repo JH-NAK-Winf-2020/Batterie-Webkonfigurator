@@ -20,7 +20,7 @@ if(isset($_SESSION["login"])){
 ?>
 <div id="insertValues">
 <label><?php echo $mess;?></label>
-<hr class="Trennlinie">
+<hr class="Trennlinie2">
 <input type="submit" name="new" value="neuen Wert" onClick="window.location.href = 'insert3.php'">
 </div>
 <?php }}else{header('Location: login-formular.html');}?>

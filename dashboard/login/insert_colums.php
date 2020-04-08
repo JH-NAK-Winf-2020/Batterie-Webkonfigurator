@@ -21,7 +21,7 @@ if (empty($_POST["tableName"])){
 	<?php if($getTable=='NULL'){?>
 	<label class="select2">Please select a table!</label>
 	<?php }elseif($getTable!='' && $getTable !='NULL'){?>
-	<label class="select2">The selected table is: <?php echo $getTable;?></label><br>
+	<label class="select2">The selected table is: <?php echo $getTable;?></label><br><br>
 	
 	
 	<?php foreach($columnsResultData as $columns){if ($columns['column_name'] == "id"){?>
