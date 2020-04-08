@@ -23,7 +23,7 @@ if(isset($_SESSION["login"])){
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"> </script>
-    <script src="insert.js?v=8"></script>
+    <script src="../script/insert.js?v=8"></script>
 <header>
     <h1>Lithium-Ionen Webkonfigurator f&uumlr Nachr&uumlsts&aumltze</h1> 
 </header>
