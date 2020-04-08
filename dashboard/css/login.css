@@ -1,40 +1,18 @@
-/* Reset CSS */
-/* html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-} */
-
 header {
   background-color: #ffb900;
   background-image: url("logo.jpg");
-  background-size: 165px;
+  background-size: 12%;
   background-position: left;
   background-position-x: 2%;
   background-position-y: auto;
   background-repeat: no-repeat;
-  height: 90px;
+  height: 9%;
   width: 100%;
-  margin-bottom: 5px;
-  margin-top: -5px; 
+  margin-top: -1.5%;
   z-index: 5;
-  border-radius: 2px;
-  padding-top:5px;
   position: fixed;
   text-align: center;
-  padding: .6em;
+  padding: 1%;
   left: 0;
   right: 0;
 }
@@ -47,36 +25,37 @@ body {
 	background-position-y: 3%;
 	background-color: #bdbdbd;
 	color: #000;
-	font: 14px Arial;
+	font: 120% Arial;
 	margin: 0 auto;
 	padding: 0;
 	/* position: relative; */
 	font-family: Arial;
-	font-size: 17px;
-	margin: 3px auto;
+	font-size: 120%;
+	margin: 2% auto;
 	width: auto;
-	margin-top: 4px;
+	margin-top: 1%;
 	position: fixed;
 }
 
+
 footer {
-background-color: #ffffff;
-border-radius: 10px;
-opacity: 0.6;
-text-align: center;
-clear: both;
-width: 100%;
-height: 10%;
-position: fixed;
-padding: .9em;
-left: 0;
-right: 0;
-bottom: 0px;
-background-image: url("Battery.jpg");
-background-repeat: no-repeat;
-background-size: 10%;
-background-attachment: fixed;
-background-position: bottom right;
+	background-color: #ffffff;
+	border-radius: 3%;
+	opacity: 0.6;
+	text-align: center;
+	clear: both;
+  width: 100%;
+  height: 9%;
+  position: fixed;
+  padding: 1%;
+  left: 0;
+  right: 0;
+  bottom: 0%;
+  background-image: url("Battery.jpg");
+  background-repeat: no-repeat;
+  background-size: 9%;
+  background-attachment: fixed;
+  background-position: bottom right;
 }
 
 h1{ font-size:28px;}
