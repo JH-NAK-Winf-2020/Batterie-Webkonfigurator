@@ -1,7 +1,7 @@
 header {
   background-color: #ffb900;
   background-image: url("logo.jpg");
-  background-size: 165px;
+  background-size: 12%;
   background-position: left;
   background-position-x: 2%;
   background-position-y: auto;
@@ -15,33 +15,35 @@ header {
   padding-top:5px; */
   position: fixed;
   text-align: center;
-  padding: .6em;
+  padding: 1%;
   left: 0;
   right: 0;
 }
 
 body {
+  padding: 0;
+  margin: 0;
   font-family: Arial;
-  font-size: 17px;
+  font-size: 120%;
   background-color: #bdbdbd;
-  margin: 3px auto;
+  margin: 2% auto;
   width: auto;
-  margin-top: 4px;
+  margin-top: 1%;
   position: fixed;
 }
 
 footer {
 	background-color: #ffffff;
-	border-radius: 10px;
+	border-radius: 3%;
 	opacity: 0.6;
 	text-align: center;
 	clear: both;
 	width: 100%;
   position: fixed;
-  padding: .9em;
+  padding: 1%;
   left: 0;
   right: 0;
-  bottom: 0px;
+  bottom: 0%;
   background-image: url("Battery.jpg");
   background-repeat: no-repeat;
   background-size: 10%;
