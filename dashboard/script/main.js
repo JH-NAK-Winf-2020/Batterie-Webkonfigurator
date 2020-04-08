@@ -47,16 +47,26 @@ function selectRow(value){
 }
 
 function resetInput(){
-  document.getElementById('fahrzeug').val('');
-  document.getElementById('asLabel').val('');
+  $(document).ready(function(){
+  document.getElementById('fahrzeug').value = '';
+  document.getElementById('asLabel').value = '';
 
   $("#DropDowns").load("./input/load_input.php", {
     fzgLabel: "",
-    fzgSop: "",
-    brLabel: "", 
-    baKapa: "",    
-    baTyp: "",
+    fzgSop: "all",
+    brLabel: "all", 
+    baKapa: "all",    
+    baTyp: "all",
     asLabel: ""
+  });
+  $("#output").load("./infoTable/load_infoTable.php", {
+    fzgLabel: '', //Fahrzeug.Label
+    fzgSop: 'all',       //Fahrzeug.sop
+    brLabel: 'all', //Batterieraum.Label
+    baKapa: 'all',    
+    baTyp: 'all',
+    asLabel: ''
+    }); 
   });
 }
 
