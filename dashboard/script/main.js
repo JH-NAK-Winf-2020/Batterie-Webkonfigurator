@@ -75,3 +75,14 @@ function resetInput(){
         alert("Geben Sie hier Attribute ein, die das Zugangssystem des Fahrzeug beschreiben: zB:'ISM'");
       });
   }
+    function getInfoAll(){
+      $(document).ready(function(){
+        var message= "Konfigurator zur Identifikation fahrzeugspezifischer Li-Ionen Nachrüstsätze./n Für die Identifikation benötigen Sie folgende Fahrzeuginformationen /n -	Fahrzeug Typ, z.B. ECE 225/n -	Fahrzeug Baujahr/n -	Zugangssystem z.B. Cancode/Candis, Minidisplay Schaltschloss oder Minidisplay TransponderKey/n Batterieraum z.B. SBE (seitliche Batterie entnahmen), Batterieraum L, M oder S/nDiese fahrzeugspezifische Informationen finden Sie z.B. in der JETI unter Angabe der Fahrzeugseriennummer.";
+        alert(message);
+    });
+  }
+    function getInfoAu(){
+      $(document).ready(function(){
+        alert("Geben Sie hier Attribute ein, die das Zugangssystem des Fahrzeug beschreiben: zB:'ISM'");
+      });
+  }

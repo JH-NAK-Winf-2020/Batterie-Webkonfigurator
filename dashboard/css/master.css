@@ -213,6 +213,7 @@ nav {
 }
 
 #LadeTable {
+<<<<<<< HEAD
   min-width: 250px;
   max-height: 20px;
 }
@@ -239,6 +240,9 @@ nav {
   border-bottom: 1px solid #666;
   border-left: 1px solid #666;
   border-right: 1px solid #666
+=======
+  min-width: 300px;
+>>>>>>> 9fe2d8f2fcc2307c2d4d8a014111c4ef173ed431
 }
 
 .MatnrAusgabe main {

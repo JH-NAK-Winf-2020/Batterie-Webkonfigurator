@@ -2,12 +2,13 @@
 session_start();
 if(isset($_SESSION["login"])){
     if($_SESSION["login"]==1){
-
+//nur wenn der user eingeloggt ist
     
     include '../config/connect.php';
     $sqlTables="SELECT table_name FROM information_schema.tables WHERE table_schema = 'final_lit'";
     $result= mysqli_query($conn, $sqlTables);
     $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    //result enthält alle tabellen namen der Datenbank
 
 ?>
 
@@ -57,4 +58,4 @@ if(isset($_SESSION["login"])){
      <a class="login" href="logout.php">Ausloggen</a>
     </footer>
 </html>
-<?php }}else{header('Location: login-formular.html');}?>
+<?php }}else{header('Location: login-formular.html');//wenn der user nicht eingeloggt ist}?>
