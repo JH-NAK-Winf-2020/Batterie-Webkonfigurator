@@ -23,6 +23,7 @@ $optionsBaTyp = $baTyp->getOptionsBaTyp($_POST['fzgLabel'], $_POST['fzgSop'], $_
       <option value="<?php echo $optionFzgSop;?>"><?php if($optionFzgSop =='all'){echo 'ab Baujahr';}elseif($optionFzgSop =='(leer)'){echo $optionFzgSop;}else{echo 'ab '.$optionFzgSop;};?></option>
     <?php };?>
   </select>
+  <label id="infoBj" name="infoBj" onClick="getInfoBj()">&#x1F6C8;</label> <?php //Infobutton neben Baujahr?>
 		</br>
 		<select id="batterieraum" style="width: 150px" name="batterieraum"
 			placeholder="Batterieraum" onChange="updateData()">
@@ -30,6 +31,7 @@ $optionsBaTyp = $baTyp->getOptionsBaTyp($_POST['fzgLabel'], $_POST['fzgSop'], $_
       <option value="<?php echo $optionBrLabel;?>"><?php if($optionBrLabel=='all'){echo 'Batterieraum';}else{echo $optionBrLabel;};?></option>
      <?php };?>
   </select>
+  <label id="infoBatraum" name="infoBatraum" onClick="getInfoBatraum()">&#x1F6C8;</label> <?php //Infobutton neben Batterieraum?>
 		</br>
 	</ul>
 
@@ -41,6 +43,7 @@ $optionsBaTyp = $baTyp->getOptionsBaTyp($_POST['fzgLabel'], $_POST['fzgSop'], $_
       <option value="<?php echo $optionBaKapa;?>"><?php if($optionBaKapa=='all'){echo 'Batteriekapazitaet';}else{echo $optionBaKapa;};?></option>
      <?php };?>
   </select>
+  <label id="infoBatKap" name="infoBatKap" onClick="getInfoBatKap()">&#x1F6C8;</label> <?php //Infobutton neben Batteriekapazität?>
 		</br>
 		<select id="baTyp" style="width: 150px" name="baTyp"
 			placeholder="Batterietyp" onChange="updateData()">

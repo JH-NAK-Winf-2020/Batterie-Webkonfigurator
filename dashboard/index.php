@@ -31,8 +31,9 @@ include './include/class/db_input.php';
 
 <body>
   <header>
-    <h1>Lithium-Ionen Webkonfigurator f&uumlr Nachr&uumlsts&aumltze</h1>
-  </header>
+    <h1>Lithium-Ionen Webkonfigurator f&uumlr Nachr&uumlsts&aumltze
+    <label id="infoAll" name="infoAll" onClick="getInfoAll()">&#x1F6C8;</label> <?php //Infobutton neben allgemein?>
+  </h1></header>
 
     <?php include './input/input.php'; ?>
     <div id="outputNSatz"> </div>

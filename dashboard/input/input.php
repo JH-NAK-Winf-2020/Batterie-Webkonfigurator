@@ -10,7 +10,8 @@
 <h5 class="UeberschriftInput">Fahrzeugdaten:</h5>
   
     <ul id='Liste' class="InputListe">
-      <input type="text" id="fahrzeug" name="fahrzeug" placeholder="Fahrzeugtyp" onkeyup="updateData()" > </br>
+      <input type="text" id="fahrzeug" name="fahrzeug" placeholder="Fahrzeugtyp" onkeyup="updateData()" > 
+             <label id="infoFzTyp" name="infoFzTyp" onClick="getInfoFzTyp()">&#x1F6C8;</label> <?php //Infobutton neben Fahrzeugtyp?></br>
      </ul>
   <div id='DropDowns'>
   <ul id='Liste' class="InputListe">  
@@ -20,13 +21,16 @@
       <option value="<?php echo $optionFzgSop;?>"><?php if($optionFzgSop =='all'){echo 'ab Baujahr';}elseif($optionFzgSop =='(leer)'){echo $optionFzgSop;}else{echo 'ab '.$optionFzgSop;};?></option>
     <?php };?>
   </select>
+         <label id="infoBj" name="infoBj" onClick="getInfoBj()">&#x1F6C8;</label> <?php //Infobutton neben Baujahr?>
   </br>
 
   <select id="batterieraum" style="width:150px" name="batterieraum"  placeholder="Batterieraum" onChange="updateData()">
      <?php foreach($optionsBrLabel as $optionBrLabel){ //Bereitstellung der Daten fuer Optionen durch index.php?>
       <option value="<?php echo $optionBrLabel;?>"><?php if($optionBrLabel=='all'){echo 'Batterieraum';}else{echo $optionBrLabel;};?></option>
      <?php };?>
-  </select></br>    
+  </select>
+         <label id="infoBatraum" name="infoBatraum" onClick="getInfoBatraum()">&#x1F6C8;</label> <?php //Infobutton neben Batterieraum?>
+         </br>    
 </ul>
 
 
@@ -37,7 +41,9 @@
      <?php foreach($optionsBaKapa as $optionBaKapa){ //Bereitstellung der Daten fuer Optionen durch index.php?>
       <option value="<?php echo $optionBaKapa;?>"><?php if($optionBaKapa=='all'){echo 'Batteriekapazitaet';}else{echo $optionBaKapa;};?></option>
      <?php };?>
-  </select></br>
+  </select>
+         <label id="infoBatKap" name="infoBatKap" onClick="getInfoBatKap()">&#x1F6C8;</label> <?php //Infobutton neben Batteriekapazität?>
+         </br>
   
   <select id="baTyp" style="width:150px" name="baTyp"  placeholder="Batterietyp" onChange="updateData()">
      <?php foreach($optionsBaTyp as $optionBaTyp){//Bereitstellung der Daten fuer Optionen durch index.php?>
@@ -55,7 +61,6 @@
        <input type="text" id="asLabel" name="asLabel"  placeholder="Zugangssystem" onkeyup="updateData()" ></input>
        <label id="infoAu" name="infoAu" onClick="getInfoAu()">&#x1F6C8;</label> <?php //Infobutton neben Zugangssystem?>
       </ul>
-      
 </div>
 <input type="submit" class="button" value="Reset" onClick="resetInput()"><?php //Resetbutton ?>
 </div>

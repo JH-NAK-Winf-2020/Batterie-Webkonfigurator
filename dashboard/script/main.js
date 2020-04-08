@@ -70,19 +70,49 @@ function resetInput(){
   });
 }
 
-  function getInfoAu(){
-      $(document).ready(function(){
-        alert("Geben Sie hier Attribute ein, die das Zugangssystem des Fahrzeug beschreiben: zB:'ISM'");
-      });
-  }
+//  function getInfoAu(){
+//      $(document).ready(function(){
+//        alert("Geben Sie hier Attribute ein, die das Zugangssystem des Fahrzeug beschreiben: zB:'ISM'");
+//      });
+//  }
     function getInfoAll(){
       $(document).ready(function(){
-        var message= "Konfigurator zur Identifikation fahrzeugspezifischer Li-Ionen Nachrüstsätze./n Für die Identifikation benötigen Sie folgende Fahrzeuginformationen /n -	Fahrzeug Typ, z.B. ECE 225/n -	Fahrzeug Baujahr/n -	Zugangssystem z.B. Cancode/Candis, Minidisplay Schaltschloss oder Minidisplay TransponderKey/n Batterieraum z.B. SBE (seitliche Batterie entnahmen), Batterieraum L, M oder S/nDiese fahrzeugspezifische Informationen finden Sie z.B. in der JETI unter Angabe der Fahrzeugseriennummer.";
+        var message= "Konfigurator zur Identifikation fahrzeugspezifischer Li-Ionen Nachrüstsätze.\nFür die Identifikation benötigen Sie folgende Fahrzeuginformationen\n-	Fahrzeug Typ, z.B. ECE 225\n-	Fahrzeug Baujahr\n-	Zugangssystem z.B. Cancode/Candis, Minidisplay Schaltschloss oder Minidisplay TransponderKey\nBatterieraum z.B. SBE (seitliche Batterie entnahmen), Batterieraum L, M oder S\nDiese fahrzeugspezifische Informationen finden Sie z.B. in der JETI unter Angabe der Fahrzeugseriennummer.";
         alert(message);
     });
   }
     function getInfoAu(){
       $(document).ready(function(){
-        alert("Geben Sie hier Attribute ein, die das Zugangssystem des Fahrzeug beschreiben: zB:'ISM'");
+        alert("Bitte klicken Sie auf das im Fahrzeug vorhandene Zugangssystem. Die möglichen Varianzen sehen Sie in der Selektion, sobald Fahrzeugdaten und Batteriedaten eingetragen sind.");
       });
   }
+    
+    function getInfoFzTyp(){
+        $(document).ready(function(){
+          alert("Bitte geben Sie hier den Fahrzeugtyp ein. Zwischen Fahrzeugabkürzung und Baureihe bitte immer ein Leerzeichen setzen, wie z.B. 'ECE 225'");
+        });
+    }
+    
+    function getInfoBj(){
+        $(document).ready(function(){
+          alert("Bitte wählen Sie das Baujahr entsprechend ihrem Fahrzeug");
+        });
+    }
+    
+    function getInfoBatraum(){
+        $(document).ready(function(){
+          alert("Bitte wählen Sie den passenden Batterieraum zu ihrem Fahrzeuges aus");
+        });
+    }
+    
+    function getInfoBatKap(){
+        $(document).ready(function(){
+          alert("Bitte wählen Sie die vom Kunden benötigte Batteriekapazität aus");
+        });
+    }
+    
+    function getInfoMatNr(){
+        $(document).ready(function(){
+          alert("Materialnummenkreis entspricht allen notwendigen Montage Teilen (Nachrüstsatz). Batterie und Ladegerät sind nicht enthalten!");
+        });
+    }

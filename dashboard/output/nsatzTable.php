@@ -143,7 +143,9 @@ $matnrListe = array();
 	</main>
 	</td>
 	<td style="min-width:200px; position: relative;">
-		<label style="position:absolute;top:45px;left:0;" >Materialnummern:</label></br>
+		<label style="position:absolute;top:45px;left:0px;" >Materialnummern:</label>
+		<label style="position:absolute;top:45px;left:125px;" id="infoMatNr" name="infoMatNr" onClick="getInfoMatNr()">&#x1F6C8;</label> <?php //Infobutton neben Zugangssystem?>
+		</br>
 
 			<textarea id="matnrAusgabe"><?php foreach($matnrListe as $matnr){echo $matnr . '&#13;&#10;';};?></textarea>
 
