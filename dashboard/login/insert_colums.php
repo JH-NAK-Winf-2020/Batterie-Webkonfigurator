@@ -5,14 +5,14 @@ if(isset($_SESSION["login"])){
         
 include '../config/connect.php';
 if (empty($_POST["tableName"])){
-    $getTable='NULL';
+    $getTable='NULL';//keine Tabelle im Dropdown selektiert
 }else {
-    $getTable = $_POST["tableName"];
+    $getTable = $_POST["tableName"];//tabelle selektiert
     $columnsResult = $conn->query("SELECT column_name FROM information_schema.columns WHERE table_schema = 'final_lit' AND table_name = '$getTable'") or die($conn->error);
-    $columnsResultData = mysqli_fetch_all($columnsResult, MYSQLI_ASSOC);
+    $columnsResultData = mysqli_fetch_all($columnsResult, MYSQLI_ASSOC);//enthält alle spaltennamen der Tabelle
     $arrColumns=array();
     foreach($columnsResultData as $columns){
-        array_push($arrColumns, $columns['column_name']); 
+        array_push($arrColumns, $columns['column_name']); //spaltennamen werden in Array gespeichert
     }
 }
 
@@ -38,4 +38,4 @@ if (empty($_POST["tableName"])){
 		<br><input type = 'submit' name = 'submitInsert' value = 'Insert' onClick='pushValues("<?php echo $getTable;?>", <?php echo json_encode($arrColumns);?>)'/>
 	<?php };//END elseif zeile 15?>
 </div>
-<?php }}else{header('Location: login-formular.html');}?>
+<?php }}else{header('Location: login-formular.html');//user nicht eingeloggt}?>
