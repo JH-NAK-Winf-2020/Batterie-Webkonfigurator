@@ -17,7 +17,7 @@ if(isset($_SESSION["login"])){
 <head>
     <meta charset="utf-8">
     <title>Lithium-Ionen Webkonfigurator</title>
-    <link rel="stylesheet" href="../css/insert.css?v=3">
+    <link rel="stylesheet" href="../css/insert.css?v=4">
 </head>
 
 <body>
