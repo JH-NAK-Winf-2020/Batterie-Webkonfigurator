@@ -6,13 +6,13 @@ header {
   background-position-x: 2%;
   background-position-y: auto;
   background-repeat: no-repeat;
-  height: 90px;
+  height: 9%;
   width: 100%;
-  margin-bottom: 5px;
-  margin-top: -5px; 
+  /* margin-bottom: 5px; */
+  margin-top: -1.5%;
   z-index: 5;
-  border-radius: 2px;
-  padding-top:5px;
+  /* border-radius: 2px;
+  padding-top:5px; */
   position: fixed;
   text-align: center;
   padding: .6em;
@@ -129,8 +129,8 @@ table, th, td {
 nav {
   background-color: #6E6E6E;
   border-radius: 15 px;
-  width: 295px;
-  height: 500px;
+  width: 17%;
+  height: 60%;
   line-height: 245%;
   position: fixed;
   margin-top: 9%;
