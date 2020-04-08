@@ -72,6 +72,16 @@ $matnrListe = array();
 			<?php };?>
 		</tr>
 		
+		<?php if(!empty($dataAuLabel)){?>
+		<tr>
+			<th rowspan="<?php echo count($dataAuLabel); ?>" scope="row>">f&uumlr Ausstattung: </th>
+			<?php foreach($dataAuMaterial as $datasetAuMaterial){ //<td colspan='1'><?php echo $datasetAuMaterial['auMaterial'];</td>?>
+			<?php };?>
+			<?php foreach($dataAuLabel as $datasetAuLabel){?>
+			<td colspan='3'><?php echo $datasetAuLabel['auLabel'];?></td>
+			<?php };?>
+		</tr>
+		<?php };?>
 		
 		<?php if(empty($dataNsatz)){?>
 	  	<tr>
@@ -116,16 +126,7 @@ $matnrListe = array();
 		</tr>
 		<?php };};?>
 	
-		<?php if(!empty($dataAuMaterial)){?>
-		<tr>
-			<th rowspan="<?php echo count($dataAuMaterial); ?>" scope="row>">Ausstattung</th>
-			<?php foreach($dataAuMaterial as $datasetAuMaterial){?>
-			<td colspan='1'><?php echo $datasetAuMaterial['auMaterial']; array_push($matnrListe, $datasetAuMaterial['auMaterial']); ?></td>
-			<?php foreach($dataAuLabel as $datasetAuLabel){?>
-			<td colspan='2'><?php echo $datasetAuLabel['auLabel'];?></td>
-			<?php };?>
-		</tr>
-		<?php };};?>
+
 
 		<?php if(!empty($dataZusatzInfo)){?>
 		<tr>
