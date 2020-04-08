@@ -24,7 +24,7 @@ include './include/class/db_input.php';
   <head>
     <meta charset="utf-8">
     <title>Lithium-Ionen Webkonfigurator</title>
-    <link rel="stylesheet" href="./css/master.css?v=88">
+    <link rel="stylesheet" href="./css/master.css?v=89">
     <meta name="viewport" content="max-device-width, initial-scale=1">
 
   </head>
