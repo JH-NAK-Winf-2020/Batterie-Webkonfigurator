@@ -1,5 +1,5 @@
 <?php
-//Bereitstellung der Daten fuer Ausgabe der nsatzTable, Mittels der masterID wird auf div. Tabellen zugegriffen 
+//Bereitstellung der Daten fuer Ausgabe der nsatzTable, Mittels der masterID wird auf div. Tabellen zugegriffen...
 include './../include/class/db_masterID.php';
 //MasterID des gewählten Eintrags in InfoTable- entspricht der ID in Tabelle master, um ausgewählte Kombinatino eindeutig zu identifizieren
 $masterID = $_POST['masterID'];
