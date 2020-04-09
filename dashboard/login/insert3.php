@@ -58,4 +58,4 @@ if(isset($_SESSION["login"])){
      <a class="login" href="logout.php">Ausloggen</a>
     </footer>
 </html>
-<?php }}else{header('Location: login-formular.html');//wenn der user nicht eingeloggt ist}?>
+<?php }}else{header('Location: login-formular.html');}//wenn der user nicht eingeloggt ist?>
