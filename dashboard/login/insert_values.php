@@ -23,4 +23,4 @@ if(isset($_SESSION["login"])){
 <hr class="Trennlinie2">
 <input type="submit" name="new" value="neuen Wert" onClick="window.location.href = 'insert3.php'">
 </div>
-<?php }}else{header('Location: login-formular.html');//user nicht eingeloggt}?>
+<?php }}else{header('Location: login-formular.html');}//user nicht eingeloggt?>

@@ -38,4 +38,4 @@ if (empty($_POST["tableName"])){
 		<br><input type = 'submit' name = 'submitInsert' value = 'Insert' onClick='pushValues("<?php echo $getTable;?>", <?php echo json_encode($arrColumns);?>)'/>
 	<?php };//END elseif zeile 15?>
 </div>
-<?php }}else{header('Location: login-formular.html');//user nicht eingeloggt}?>
+<?php }}else{header('Location: login-formular.html');}//user nicht eingeloggt?>
