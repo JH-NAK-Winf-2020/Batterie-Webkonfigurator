@@ -1,5 +1,5 @@
 <?php 
-session_start();//muss gestatet werden, da seite neu geladen und nciht nur includiert wurde
+session_start();//muss gestatet werden, da seite neu geladen und nicht nur includiert wurde
 if(isset($_SESSION["login"])){
     if($_SESSION["login"]==1){
     //wenn user eingeloggt
